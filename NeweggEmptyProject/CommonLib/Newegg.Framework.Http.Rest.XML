@@ -1,0 +1,297 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Newegg.Framework.Http.Rest</name>
+    </assembly>
+    <members>
+        <member name="T:Newegg.Framework.Http.Rest.Configuration.ResourceElement">
+            <summary>
+            Resource element.
+            </summary>
+        </member>
+        <member name="F:Newegg.Framework.Http.Rest.Configuration.ResourceElement.myURI">
+            <summary>
+            Field of RUI.
+            </summary>
+        </member>
+        <member name="F:Newegg.Framework.Http.Rest.Configuration.ResourceElement.myid">
+            <summary>
+            Field of name.
+            </summary>
+        </member>
+        <member name="F:Newegg.Framework.Http.Rest.Configuration.ResourceElement.myHosts">
+            <summary>
+            Field or hosts collection.
+            </summary>
+        </member>
+        <member name="P:Newegg.Framework.Http.Rest.Configuration.ResourceElement.ID">
+            <summary>
+            Resource name.
+            </summary>
+        </member>
+        <member name="P:Newegg.Framework.Http.Rest.Configuration.ResourceElement.URI">
+            <summary>
+            URI address.
+            </summary>
+        </member>
+        <member name="P:Newegg.Framework.Http.Rest.Configuration.ResourceElement.Hosts">
+            <summary>
+            Host list.
+            </summary>
+        </member>
+        <member name="M:Newegg.Framework.Http.Rest.Requests.WebRequestBuilderBase.AddQueryStringParametersToUri">
+            <summary>
+            组合Parameters中非OAuth的参数进入QueryString
+            </summary>
+        </member>
+        <member name="M:Newegg.Framework.Http.Rest.Requests.WebRequestBuilderBase.UrlEncode(System.String)">
+            <summary>
+            Encodes a value for inclusion in a URL querystring.
+            </summary>
+            <param name="value">The value to Url encode</param>
+            <returns>Returns a Url encoded string</returns>
+        </member>
+        <member name="M:Newegg.Framework.Http.Rest.Requests.WebRequestBuilderBase.BuildContentType">
+            <summary>
+            Build content type.
+            </summary>
+        </member>
+        <member name="M:Newegg.Framework.Http.Rest.Requests.WebRequestBuilderBase.BuildAcceptType">
+            <summary>
+            Build accept type.
+            </summary>
+        </member>
+        <member name="M:Newegg.Framework.Http.Rest.Requests.WebRequestBuilderBase.BuildUserAgent">
+            <summary>
+            Build user agent.
+            </summary>
+        </member>
+        <member name="M:Newegg.Framework.Http.Rest.Requests.WebRequestBuilderBase.BuildSerializer">
+            <summary>
+            Build serializer.
+            </summary>
+        </member>
+        <member name="P:Newegg.Framework.Http.Rest.Requests.WebRequestBuilderBase.ContentType">
+            <summary>
+            Gets or sets content type.
+            </summary>
+        </member>
+        <member name="P:Newegg.Framework.Http.Rest.Requests.WebRequestBuilderBase.Accept">
+            <summary>
+            Gets or sets accept type.
+            </summary>
+        </member>
+        <member name="P:Newegg.Framework.Http.Rest.Requests.WebRequestBuilderBase.UserAgent">
+            <summary>
+            Gets or sets user agent.
+            </summary>
+        </member>
+        <member name="P:Newegg.Framework.Http.Rest.Requests.WebRequestBuilderBase.MySerializer">
+            <summary>
+            Gets or sets Serializer.
+            </summary>
+        </member>
+        <member name="M:Newegg.Framework.Http.Rest.IRestClient`1.Get(System.String)">
+            <summary>
+            Get resource.
+            </summary>
+            <param name="elementID">Parameter of resource element id.</param>
+            <returns>Resource instance.</returns>
+        </member>
+        <member name="M:Newegg.Framework.Http.Rest.IRestClient`1.Get(System.String,System.Object[])">
+            <summary>
+            Get resource.
+            </summary>
+            <param name="elementID">Parameter of resource element id.</param>
+            <param name="args">Parameter of args.</param>
+            <returns>Resource instance.</returns>
+        </member>
+        <member name="M:Newegg.Framework.Http.Rest.IRestClient`1.Create``1(``0,System.String)">
+            <summary>
+            Create resource.
+            </summary>
+            <typeparam name="TRequest">Type of request.</typeparam>
+            <param name="request">Parameter of request.</param>
+            <param name="elementID">Parameter of element id.</param>
+            <returns>Resource instance.</returns>
+        </member>
+        <member name="M:Newegg.Framework.Http.Rest.IRestClient`1.Create``1(``0,System.String,System.Object[])">
+            <summary>
+            Create resource.
+            </summary>
+            <typeparam name="TRequest">Type of request.</typeparam>
+            <param name="request">Parameter of request.</param>
+            <param name="elementID">Parameter of element id.</param>
+            <param name="args">Parameter of args.</param>
+            <returns>Resource instance.</returns>
+        </member>
+        <member name="M:Newegg.Framework.Http.Rest.IRestClient`1.Update``1(``0,System.String)">
+            <summary>
+            Update resource.
+            </summary>
+            <typeparam name="TRequest">Type of request.</typeparam>
+            <param name="request">Parameter of request.</param>
+            <param name="elementID">Parameter of element id.</param>
+            <returns>Resource instance.</returns>
+        </member>
+        <member name="M:Newegg.Framework.Http.Rest.IRestClient`1.Update``1(``0,System.String,System.Object[])">
+            <summary>
+            Update resource.
+            </summary>
+            <typeparam name="TRequest">Type of request.</typeparam>
+            <param name="request">Parameter of request.</param>
+            <param name="elementID">Parameter of element id.</param>
+            <param name="args">Parameter of args.</param>
+            <returns>Resource instance.</returns>
+        </member>
+        <member name="M:Newegg.Framework.Http.Rest.IRestClient`1.Delete(System.String)">
+            <summary>
+            Delete resource.
+            </summary>
+            <param name="elementID">Parameter of element id.</param>
+            <returns>Resource instance.</returns>
+        </member>
+        <member name="M:Newegg.Framework.Http.Rest.IRestClient`1.Delete(System.String,System.Object[])">
+            <summary>
+            Delete resource.
+            </summary>
+            <param name="elementID">Parameter of element id.</param>
+            <param name="args">Parameter of args.</param>
+            <returns>Resource instance.</returns>
+        </member>
+        <member name="P:Newegg.Framework.Http.Rest.IRestClient`1.HeaderParameters">
+            <summary>
+            Gets the request header parameters for all operations.
+            </summary>
+            <value>The request parameters.</value>
+        </member>
+        <member name="P:Newegg.Framework.Http.Rest.IRestClient`1.QueryParameters">
+            <summary>
+            Gets the request query parameters for all operations.
+            </summary>
+        </member>
+        <member name="T:Newegg.Framework.Http.Rest.RestResponse`1">
+            <summary>
+            表示对一个Rest Resource请求的响应。
+            </summary>
+            <typeparam name="TResource">表示一个资源数据对象。</typeparam>
+        </member>
+        <member name="P:Newegg.Framework.Http.Rest.RestResponse`1.StatusCode">
+            <summary>
+            响应状态码。
+            </summary>
+        </member>
+        <member name="P:Newegg.Framework.Http.Rest.RestResponse`1.Content">
+            <summary>
+            原始的Json/Xml响应内容。
+            </summary>
+        </member>
+        <member name="P:Newegg.Framework.Http.Rest.RestResponse`1.Body">
+            <summary>
+            Json/Xml响应内容所表示的数据对象。
+            </summary>
+        </member>
+        <member name="P:Newegg.Framework.Http.Rest.RestResponse`1.Errors">
+            <summary>
+            响应错误。
+            </summary>
+        </member>
+        <member name="M:Newegg.Framework.Http.Rest.RestClientBase`1.Get(System.String)">
+            <summary>
+            Get resource.
+            </summary>
+            <param name="elementID">Parameter of resource element id.</param>
+            <returns>Resource instance.</returns>
+        </member>
+        <member name="M:Newegg.Framework.Http.Rest.RestClientBase`1.Get(System.String,System.Object[])">
+            <summary>
+            Get resource.
+            </summary>
+            <param name="elementID">Parameter of resource element id.</param>
+            <param name="args">Parameter of args.</param>
+            <returns>Resource instance.</returns>
+        </member>
+        <member name="M:Newegg.Framework.Http.Rest.RestClientBase`1.Create``1(``0,System.String)">
+            <summary>
+            Create resource.
+            </summary>
+            <typeparam name="TRequest">Type of request.</typeparam>
+            <param name="request">Parameter of request.</param>
+            <param name="elementID">Parameter of element id.</param>
+            <returns>Resource instance.</returns>
+        </member>
+        <member name="M:Newegg.Framework.Http.Rest.RestClientBase`1.Create``1(``0,System.String,System.Object[])">
+            <summary>
+            Create resource.
+            </summary>
+            <typeparam name="TRequest">Type of request.</typeparam>
+            <param name="request">Parameter of request.</param>
+            <param name="elementID">Parameter of element id.</param>
+            <param name="args">Parameter of args.</param>
+            <returns>Resource instance.</returns>
+        </member>
+        <member name="M:Newegg.Framework.Http.Rest.RestClientBase`1.Update``1(``0,System.String)">
+            <summary>
+            Update resource.
+            </summary>
+            <typeparam name="TRequest">Type of request.</typeparam>
+            <param name="request">Parameter of request.</param>
+            <param name="elementID">Parameter of element id.</param>
+            <returns>Resource instance.</returns>
+        </member>
+        <member name="M:Newegg.Framework.Http.Rest.RestClientBase`1.Update``1(``0,System.String,System.Object[])">
+            <summary>
+            Update resource.
+            </summary>
+            <typeparam name="TRequest">Type of request.</typeparam>
+            <param name="request">Parameter of request.</param>
+            <param name="elementID">Parameter of element id.</param>
+            <param name="args">Parameter of args.</param>
+            <returns>Resource instance.</returns>
+        </member>
+        <member name="M:Newegg.Framework.Http.Rest.RestClientBase`1.Delete(System.String)">
+            <summary>
+            Delete resource.
+            </summary>
+            <param name="elementID">Parameter of element id.</param>
+            <returns>Resource instance.</returns>
+        </member>
+        <member name="M:Newegg.Framework.Http.Rest.RestClientBase`1.Delete(System.String,System.Object[])">
+            <summary>
+            Delete resource.
+            </summary>
+            <param name="elementID">Parameter of element id.</param>
+            <param name="args">Parameter of args.</param>
+            <returns>Resource instance.</returns>
+        </member>
+        <member name="M:Newegg.Framework.Http.Rest.RestClientBase`1.HandleException(System.Exception,Newegg.Framework.Http.Rest.RestResponse{`0}@)">
+            <summary>
+            对异常的处理。
+            </summary>
+            <returns>如果有对异常做过处理则返回true, 反之返回false。</returns>
+        </member>
+        <member name="P:Newegg.Framework.Http.Rest.RestClientBase`1.HeaderParameters">
+            <summary>
+            Gets the request parameters.
+            </summary>
+            <value>The request parameters.</value>
+        </member>
+        <member name="T:Newegg.Framework.Http.Rest.SerializerFactory">
+            <summary>
+            Serializer factory.
+            </summary>
+        </member>
+        <member name="M:Newegg.Framework.Http.Rest.SerializerFactory.CreateSerializer(System.String)">
+            <summary>
+            Build serializer.
+            </summary>
+        </member>
+        <member name="M:Newegg.Framework.Http.Rest.Utility.ReadStream(System.IO.Stream)">
+            <summary>
+            Reads the stream into a byte array.
+            </summary>
+            <param name="responseStream">The response stream.</param>
+            <returns>A byte array.</returns>
+        </member>
+    </members>
+</doc>

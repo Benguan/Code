@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Newegg.Framework.Serialization</name>
+    </assembly>
+    <members>
+        <member name="T:Newegg.Framework.Serialization.SerializerBase">
+            <summary>
+            序列化基类。
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:Newegg.Framework.Serialization.Formatters.IGenericFormatter" -->
+        <member name="T:Newegg.Framework.IO.EncodedStringWriter">
+            <summary>
+            实现一个用于将信息写入字符串的 <see cref="T:System.IO.TextWriter"/>。
+            该信息存储在基础 <see cref="T:System.Text.StringBuilder"/> 中。
+            </summary>
+        </member>
+        <member name="M:Newegg.Framework.IO.EncodedStringWriter.#ctor">
+            <summary>
+            初始化 <b>StringWriter</b> 类的新实例。 
+            </summary>
+        </member>
+        <member name="M:Newegg.Framework.IO.EncodedStringWriter.#ctor(System.IFormatProvider)">
+            <summary>
+            使用指定的格式控制初始化 <b>StringWriter</b> 类的新实例。 
+            </summary>
+            <param name="formatProvider">控制格式设置的 <see cref="T:System.IFormatProvider"/> 对象。</param>
+        </member>
+        <member name="M:Newegg.Framework.IO.EncodedStringWriter.#ctor(System.Text.StringBuilder)">
+            <summary>
+            初始化写入指定 <b>StringBuilder</b> 的 <b>StringWriter</b> 类的新实例。  
+            </summary>
+            <param name="sb">要写入的 <b>StringBuilder</b>。</param>
+        </member>
+        <member name="M:Newegg.Framework.IO.EncodedStringWriter.#ctor(System.Text.StringBuilder,System.IFormatProvider)">
+            <summary>
+            初始化写入指定 <b>StringBuilder</b> 并具有指定格式提供程序的 <b>StringWriter</b> 类的新实例。 
+            </summary>
+            <param name="sb">要写入的 <b>StringBuilder</b>。</param>
+            <param name="formatProvider">控制格式设置的 <see cref="T:System.IFormatProvider"/> 对象。</param>
+        </member>
+        <member name="M:Newegg.Framework.IO.EncodedStringWriter.#ctor(System.Text.Encoding)">
+            <summary>
+            初始化具有指定编码的 <b>StringWriter</b> 新实例。 
+            </summary>
+            <param name="encoding">要使用的字符编码。</param>
+        </member>
+        <member name="M:Newegg.Framework.IO.EncodedStringWriter.#ctor(System.Text.StringBuilder,System.Text.Encoding)">
+            <summary>
+            初始化写入指定 <b>StringBuilder</b> 并具有指定编码的 <b>StringWriter</b> 新实例。 
+            </summary>
+            <param name="sb">要写入的 <b>StringBuilder</b>。</param>
+            <param name="encoding">要使用的字符编码。</param>
+        </member>
+        <member name="M:Newegg.Framework.IO.EncodedStringWriter.#ctor(System.Text.StringBuilder,System.IFormatProvider,System.Text.Encoding)">
+            <summary>
+            初始化写入指定 <b>StringBuilder</b> 并具有指定格式提供程序和指定编码的 <b>StringWriter</b> 新实例。 
+            </summary>
+            <param name="sb">要写入的 <b>StringBuilder</b>。</param>
+            <param name="formatProvider">控制格式设置的 <see cref="T:System.IFormatProvider"/> 对象。</param>
+            <param name="encoding">要使用的字符编码。</param>
+        </member>
+        <member name="P:Newegg.Framework.IO.EncodedStringWriter.Encoding">
+            <summary>
+            获取将输出写入到其中的 <see cref="T:System.Text.Encoding"/>。 
+            </summary>
+            <value>在当前实例的构造函数中指定的 <b>Encoding</b>；或者如果未指定编码，则为 <see cref="T:System.Text.UTF8Encoding"/>。</value>
+        </member>
+        <member name="P:Newegg.Framework.Serialization.SerializationSettings.Indent">
+            <summary>
+            缩进标识。
+            </summary>
+        </member>
+        <member name="T:Newegg.Framework.Serialization.Utility.TypeHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Newegg.Framework.Serialization.Utility.TypeHelper.ArrayEquals(System.Type[],System.Type[])">
+            <summary>
+            判断两个Type的数组是否相等。
+            </summary>
+            <param name="a1"></param>
+            <param name="a2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Newegg.Framework.Serialization.Utility.TypeHelper.GetArrayHashCode(System.Type[])">
+            <summary>
+            获取类型数组Hash键值。
+            </summary>
+            <param name="types"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Newegg.Framework.Serialization.Utility.StringHelper.IsNullOrWhiteSpace(System.String)">
+            <summary>
+            指示指定的字符串是 null、空还是仅由空白字符组成。
+            </summary>
+            <param name="value">要测试的字符串。</param>
+            <returns>
+            如果 <paramref name="value"/> 参数为 null 或 <typeparamref name="String.Empty"/>，
+            或者如果 <paramref name="value"/> 仅由空白字符组成，则为 true。
+            </returns>
+        </member>
+        <member name="T:Newegg.Framework.Serialization.Xml.SerializerCacheDelegate">
+            <summary>
+            缓存序列化事件。
+            </summary>
+        </member>
+        <member name="T:Newegg.Framework.Serialization.Xml.SignatureExtractor">
+            <summary>
+            签名。
+            </summary>
+        </member>
+        <member name="T:Newegg.Framework.Serialization.Xml.XmlAttributeOverridesThumbprinter">
+            <summary>
+            XmlAttributeOverrides 缩略信息集成器。
+            </summary>
+        </member>
+        <member name="T:Newegg.Framework.Serialization.Xml.XmlSerializerCacheKey">
+            <summary>
+            表示 XmlSerializer 缓存键。
+            </summary>
+        </member>
+        <member name="M:Newegg.Framework.Serialization.Xml.XmlSerializerCacheKey.#ctor(System.Type)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="type"></param>
+        </member>
+        <member name="M:Newegg.Framework.Serialization.Xml.XmlSerializerCacheKey.#ctor(System.Type,System.Type[])">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="type"></param>
+            <param name="extraTypes"></param>
+        </member>
+        <member name="M:Newegg.Framework.Serialization.Xml.XmlSerializerCacheKey.#ctor(System.Type,System.String)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="type"></param>
+            <param name="defaultNamespace"></param>
+        </member>
+        <member name="M:Newegg.Framework.Serialization.Xml.XmlSerializerCacheKey.#ctor(System.Type,System.Xml.Serialization.XmlAttributeOverrides)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="type"></param>
+            <param name="overrides"></param>
+        </member>
+        <member name="M:Newegg.Framework.Serialization.Xml.XmlSerializerCacheKey.#ctor(System.Type,System.Xml.Serialization.XmlRootAttribute)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="type"></param>
+            <param name="root"></param>
+        </member>
+        <member name="M:Newegg.Framework.Serialization.Xml.XmlSerializerCacheKey.#ctor(System.Type,System.Xml.Serialization.XmlAttributeOverrides,System.Type[],System.Xml.Serialization.XmlRootAttribute,System.String)">
+            <summary>
+            构造函数。
+            </summary>
+            <param name="type"></param>
+            <param name="overrides"></param>
+            <param name="extraTypes"></param>
+            <param name="root"></param>
+            <param name="defaultNamespace"></param>
+        </member>
+        <member name="M:Newegg.Framework.Serialization.Xml.XmlSerializerCacheKey.Equals(System.Object)">
+            <summary>
+            重写相等操作。
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Newegg.Framework.Serialization.Xml.XmlSerializerCacheKey.GetHashCode">
+            <summary>
+            获取Hash键值。
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

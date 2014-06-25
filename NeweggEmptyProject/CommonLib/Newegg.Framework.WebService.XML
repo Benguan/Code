@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Newegg.Framework.WebService</name>
+    </assembly>
+    <members>
+        <member name="T:Newegg.Framework.WebService.Configuration.ConfigurationManager.InternalConfiguration">
+            <summary>
+            this is the adaptee class that implemented the actual property interfaces.
+            all properties are instance properties.
+            </summary>
+        </member>
+        <member name="T:Newegg.Framework.WebService.WebServiceCommand">
+            <summary>
+            Class that is responsible for calling web services in the newegg website infrastructure. this class also
+            takes care of retry, load-balancing features.
+            </summary>
+        </member>
+        <member name="M:Newegg.Framework.WebService.WebServiceCommand.InvokeWithRefParameters``1(System.String,System.Object[])">
+            <summary>
+            Invokes the with ref parameters.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="methodName">Name of the method.</param>
+            <param name="parameters">The parameters.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Newegg.Framework.WebService.WebServiceCommand.Invoke``1(System.String,System.Object[])">
+            <summary>
+            Invokes the specified method name.
+            </summary>
+            <typeparam name="T">The Proxy Class</typeparam>
+            <param name="methodName">Name of the method.</param>
+            <param name="parameters">The parameters.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Newegg.Framework.WebService.WebServiceCommand.Invoke``1(System.Int32,System.String,System.Object[])">
+            <summary>
+            Invokes the specified method name.
+            </summary>
+            <typeparam name="T">The Proxy Class</typeparam>
+            <param name="methodName">Name of the method.</param>
+            <param name="timeout">The timeout.</param>
+            <param name="parameters">The parameters.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Newegg.Framework.WebService.WebServiceCommand.GetWebServiceInstanceUrl(System.String,System.String)">
+            <summary>
+            获取服务实例的访问入口Url。
+            </summary>
+            <param name="rootPath">Url根路径。</param>
+            <param name="relativePath">Url相对路径。</param>
+            <returns>服务实例的访问入口Url。</returns>
+        </member>
+    </members>
+</doc>

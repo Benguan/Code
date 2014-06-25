@@ -1,0 +1,129 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Newegg.Website.Configuration", "Newegg.Website.Configuration\Newegg.Website.Configuration.csproj", "{73FD06A1-691F-4773-9DF9-DEA9FF000099}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Newegg.Website.Service", "Newegg.Website.Service\Newegg.Website.Service.csproj", "{185C630D-C31E-4450-97EC-FD5863B5F5E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Newegg.Website.WebModel", "Newegg.Website.WebModel\Newegg.Website.WebModel.csproj", "{8737617A-31C1-4533-807A-CCD3972A0C43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Newegg.Website.DomainModel", "Newegg.Website.DomainModel\Newegg.Website.DomainModel.csproj", "{9BF9EDA3-6E3E-4474-BBAA-31C5CD2A88AE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CommonLib", "CommonLib", "{756587C0-FC9D-4A99-9F46-A2F3705B0F7E}"
+	ProjectSection(SolutionItems) = preProject
+		CommonLib\Newegg.Framework.Common.dll = CommonLib\Newegg.Framework.Common.dll
+		CommonLib\Newegg.Framework.Common.pdb = CommonLib\Newegg.Framework.Common.pdb
+		CommonLib\Newegg.Framework.Common.XML = CommonLib\Newegg.Framework.Common.XML
+		CommonLib\Newegg.Framework.Configuration.dll = CommonLib\Newegg.Framework.Configuration.dll
+		CommonLib\Newegg.Framework.Configuration.pdb = CommonLib\Newegg.Framework.Configuration.pdb
+		CommonLib\Newegg.Framework.Configuration.XML = CommonLib\Newegg.Framework.Configuration.XML
+		CommonLib\Newegg.Framework.Data.dll = CommonLib\Newegg.Framework.Data.dll
+		CommonLib\Newegg.Framework.Data.pdb = CommonLib\Newegg.Framework.Data.pdb
+		CommonLib\Newegg.Framework.Data.XML = CommonLib\Newegg.Framework.Data.XML
+		CommonLib\Newegg.Framework.EntityAttribute.dll = CommonLib\Newegg.Framework.EntityAttribute.dll
+		CommonLib\Newegg.Framework.EntityAttribute.pdb = CommonLib\Newegg.Framework.EntityAttribute.pdb
+		CommonLib\Newegg.Framework.EntityAttribute.XML = CommonLib\Newegg.Framework.EntityAttribute.XML
+		CommonLib\Newegg.Framework.Http.Rest.dll = CommonLib\Newegg.Framework.Http.Rest.dll
+		CommonLib\Newegg.Framework.Http.Rest.pdb = CommonLib\Newegg.Framework.Http.Rest.pdb
+		CommonLib\Newegg.Framework.Http.Rest.XML = CommonLib\Newegg.Framework.Http.Rest.XML
+		CommonLib\Newegg.Framework.Serialization.dll = CommonLib\Newegg.Framework.Serialization.dll
+		CommonLib\Newegg.Framework.Serialization.pdb = CommonLib\Newegg.Framework.Serialization.pdb
+		CommonLib\Newegg.Framework.Serialization.xml = CommonLib\Newegg.Framework.Serialization.xml
+		CommonLib\Newegg.Framework.Web.dll = CommonLib\Newegg.Framework.Web.dll
+		CommonLib\Newegg.Framework.Web.pdb = CommonLib\Newegg.Framework.Web.pdb
+		CommonLib\Newegg.Framework.Web.XML = CommonLib\Newegg.Framework.Web.XML
+		CommonLib\Newegg.Framework.WebService.dll = CommonLib\Newegg.Framework.WebService.dll
+		CommonLib\Newegg.Framework.WebService.pdb = CommonLib\Newegg.Framework.WebService.pdb
+		CommonLib\Newegg.Framework.WebService.XML = CommonLib\Newegg.Framework.WebService.XML
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Newegg.Website.UI", "Newegg.Website.UI", "{E049C5D3-D72E-4F7C-84E6-FF3FF6D65588}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		ProjectReferences = "{185c630d-c31e-4450-97ec-fd5863b5f5e1}|Newegg.Website.Service.dll;{9BF9EDA3-6E3E-4474-BBAA-31C5CD2A88AE}|Newegg.Website.DomainModel.dll;{73fd06a1-691f-4773-9df9-dea9ff000099}|Newegg.Website.Configuration.dll;{8737617a-31c1-4533-807a-ccd3972a0c43}|Newegg.Website.WebModel.dll;{a3f7530d-1013-44ef-a642-6289f17858a4}|Newegg.Website.HttpModule.OutPutCacheModule.dll;{7daeb95f-5840-42bd-88ec-caa77b65ccb2}|Newegg.Website.HttpHandle.UrlMappingHandler.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_57453"
+		Debug.AspNetCompiler.PhysicalPath = "Newegg.Website.UI\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57453\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_57453"
+		Release.AspNetCompiler.PhysicalPath = "Newegg.Website.UI\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57453\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "7813"
+		VWDDynamicPort = "false"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Newegg.Website.HttpModule", "Newegg.Website.HttpModule", "{46C7E0E4-DFEA-4C64-A46C-3B936056CFB0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Newegg.Website.HttpHanlde", "Newegg.Website.HttpHanlde", "{73E5D0F0-866A-4176-83ED-9FE3DEC2A6BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Newegg.Website.HttpModule.OutPutCacheModule", "Newegg.Website.HttpModule\Newegg.Website.HttpModule.OutPutCacheModule\Newegg.Website.HttpModule.OutPutCacheModule.csproj", "{A3F7530D-1013-44EF-A642-6289F17858A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Newegg.Website.HttpHandle.UrlMappingHandler", "Newegg.Website.HttpHandle\Newegg.Website.HttpHandle.UrlMappingHandler\Newegg.Website.HttpHandle.UrlMappingHandler.csproj", "{7DAEB95F-5840-42BD-88EC-CAA77B65CCB2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{73FD06A1-691F-4773-9DF9-DEA9FF000099}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73FD06A1-691F-4773-9DF9-DEA9FF000099}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73FD06A1-691F-4773-9DF9-DEA9FF000099}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73FD06A1-691F-4773-9DF9-DEA9FF000099}.Release|Any CPU.Build.0 = Release|Any CPU
+		{185C630D-C31E-4450-97EC-FD5863B5F5E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{185C630D-C31E-4450-97EC-FD5863B5F5E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{185C630D-C31E-4450-97EC-FD5863B5F5E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{185C630D-C31E-4450-97EC-FD5863B5F5E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8737617A-31C1-4533-807A-CCD3972A0C43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8737617A-31C1-4533-807A-CCD3972A0C43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8737617A-31C1-4533-807A-CCD3972A0C43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8737617A-31C1-4533-807A-CCD3972A0C43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BF9EDA3-6E3E-4474-BBAA-31C5CD2A88AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BF9EDA3-6E3E-4474-BBAA-31C5CD2A88AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BF9EDA3-6E3E-4474-BBAA-31C5CD2A88AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BF9EDA3-6E3E-4474-BBAA-31C5CD2A88AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E049C5D3-D72E-4F7C-84E6-FF3FF6D65588}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E049C5D3-D72E-4F7C-84E6-FF3FF6D65588}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E049C5D3-D72E-4F7C-84E6-FF3FF6D65588}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{E049C5D3-D72E-4F7C-84E6-FF3FF6D65588}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{A3F7530D-1013-44EF-A642-6289F17858A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3F7530D-1013-44EF-A642-6289F17858A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3F7530D-1013-44EF-A642-6289F17858A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3F7530D-1013-44EF-A642-6289F17858A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DAEB95F-5840-42BD-88EC-CAA77B65CCB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DAEB95F-5840-42BD-88EC-CAA77B65CCB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DAEB95F-5840-42BD-88EC-CAA77B65CCB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DAEB95F-5840-42BD-88EC-CAA77B65CCB2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A3F7530D-1013-44EF-A642-6289F17858A4} = {46C7E0E4-DFEA-4C64-A46C-3B936056CFB0}
+		{7DAEB95F-5840-42BD-88EC-CAA77B65CCB2} = {73E5D0F0-866A-4176-83ED-9FE3DEC2A6BE}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 1
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://mistfs:8080/tfs/mistfsupgradecollection
+		SccWebProject0 = true
+		SccProjectUniqueName0 = Newegg.Website.UI
+		SccProjectName0 = Newegg.Website.UI
+		SccAuxPath0 = http://mistfs:8080/tfs/mistfsupgradecollection
+		SccLocalPath0 = Newegg.Website.UI
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectEnlistmentChoice0 = 2
+	EndGlobalSection
+EndGlobal

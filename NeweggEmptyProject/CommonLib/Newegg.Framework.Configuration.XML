@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Newegg.Framework.Configuration</name>
+    </assembly>
+    <members>
+        <member name="T:Newegg.Framework.Configuration.ConfigManager`1">
+            <summary>
+            Newee configuration manager.
+            </summary>
+            <typeparam name="TConfig">Type of configuration.</typeparam>
+        </member>
+        <member name="F:Newegg.Framework.Configuration.ConfigManager`1.CacheManagerName">
+            <summary>
+            Cache manager name.
+            </summary>
+        </member>
+        <member name="M:Newegg.Framework.Configuration.ConfigManager`1.GetConfiguration(System.String)">
+            <summary>
+            Get configuration.
+            </summary>
+            <param name="fileName">Parameter of file name.</param>
+            <returns>Object of configuration.</returns>
+        </member>
+        <member name="M:Newegg.Framework.Configuration.ConfigManager`1.GetConfigurationFromCache(System.String)">
+            <summary>
+            Get configuration from cache.
+            </summary>
+            <param name="fileName">Parameter of file name.</param>
+            <returns>Object of configuration.</returns>
+        </member>
+        <member name="M:Newegg.Framework.Configuration.ConfigManager`1.GetConfigurationFromFile(System.String)">
+            <summary>
+            Get configuration from file.
+            </summary>
+            <param name="fileName">Parameter of file name.</param>
+            <returns>Object of configuration.</returns>
+        </member>
+        <member name="M:Newegg.Framework.Configuration.ConfigManager`1.AddConfigurationToCache(System.String,System.Object)">
+            <summary>
+            Get configuration from cache.
+            </summary>
+            <param name="fileName">Parameter of file name.</param>
+            <param name="configuration">Parameter of configuration.</param>
+        </member>
+        <member name="M:Newegg.Framework.Configuration.ConfigManager`1.GetCacheKey(System.String)">
+            <summary>
+            Get cache key string.
+            </summary>
+            <param name="keyString">Parameter of cache key string.</param>
+            <returns>Cache key.</returns>
+        </member>
+    </members>
+</doc>
