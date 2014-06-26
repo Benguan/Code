@@ -12,7 +12,7 @@
 <body>
      <header  class="header">
         <div class="content">
-            <div class="logo"><a href="<%:Html.ActionLink("NEG Website","Tutorial"%>"><img src="" width="182px" height="182px" /></a></div>
+            <div class="logo"><a href="<%:Html.ActionLink("NEG Website", "Tutorial");%>"><img src="" width="182px" height="182px" /></a></div>
             <nav>
                 <ul class="menu_01_font01">
         		    <li> <a href="AboutNEG.html">ABOUT NEG</a></li>
