@@ -124,6 +124,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Controllers\DemoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -198,6 +199,7 @@
     <Content Include="Scripts\Widget\Module2.js" />
     <Content Include="Scripts\Widget\Popup.js" />
     <Content Include="Scripts\Widget\Switch.js" />
+    <Content Include="Views\Demo\List.aspx" />
     <Content Include="Views\Home\About.aspx" />
     <Content Include="Views\Home\API.aspx" />
     <Content Include="Views\Home\Tutorial.aspx" />

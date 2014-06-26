@@ -19,11 +19,11 @@
             </div>
             <nav>
                 <ul class="menu_01_font01">
-        		    <li> <a href="AboutNEG.html">ABOUT NEG</a></li>
-        		    <li> <a href="index.html"  class="hover">TUTORIAL</a></li>
-                    <li> <a href="API.html">API</a> </li>
-                    <li> <a href="COMPONENTS.html" >MODULE</a> </li>
-                    <li> <a href="Demo.html">DEMO</a> </li>
+        		    <li><%:Html.ActionLink("ABOUT NEG","About","Home") %></li>
+        		    <li><%:Html.ActionLink("TUTORIAL","Tutorial","Home") %></li>
+                    <li><%:Html.ActionLink("API","List","API") %></li>
+                    <li><%:Html.ActionLink("MODULE","List","Module") %></li>
+                    <li><%:Html.ActionLink("DEMO","List","Demo") %></li>
         	    </ul>
             </nav>
         </div>

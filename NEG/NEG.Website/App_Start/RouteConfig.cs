@@ -17,7 +17,7 @@ namespace NEG.Website
                name: "Default",
                url: "{action}",
                defaults: new { controller = "Home", action = "Tutorial", id = UrlParameter.Optional }
-           );
+            );
 
             routes.MapRoute(
                 name: "General",

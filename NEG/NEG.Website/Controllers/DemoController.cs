@@ -6,16 +6,9 @@ using System.Web.Mvc;
 
 namespace MVCTest.Controllers
 {
-    public class HomeController : Controller
+    public class DemoController : Controller
     {
-        public ActionResult Tutorial()
-        {
-            ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
-
-            return View();
-        }
-
-        public ActionResult About()
+        public ActionResult List()
         {
             ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
 
