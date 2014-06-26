@@ -1,0 +1,221 @@
+* {margin:0;border:0;padding:0;}
+ul,ol,dl,li,dt,dd {}
+body {
+    font: 13px Helvetica,arial,freesans,clean,sans-serif;
+    line-height: 1.4;
+    color: #333;
+    background:#F0EADB;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+code, .syntax, .code_word {
+    font-family: 'DejaVu Sans Mono',Monaco,Consolas;
+}
+
+a,a:hover {color:#F48A19}
+
+.logo {
+    background-image: url(../images/Newegg.jpg);
+    width: 216px;
+    height: 102px;
+    text-indent:-999px;
+}
+
+.guide {
+    width:666px;
+    margin : 0  auto;
+
+}
+
+.guideItem {
+    background: #FCD62F;
+    /*background:-webkit-linear-gradient(#FFFFF5,#FCD62F);*/
+    width: 200px;
+    height: 200px ;
+    float:left;
+    margin:10px;
+    display : block;
+    font-weight: bold;
+    text-align: center;
+    line-height: 200px;
+}
+
+.egCode {
+    resize:vertical;
+    white-space:pre;
+    font-family:consolas;
+    box-sizing:content-box;
+    width: 96%;
+}
+
+#egCode  {
+    margin: 5px 0px;
+    background: #F2F7E2;
+    border: 1px solid #D6E0B7;
+    padding: 10px;
+    line-height: 1.2em;
+    border-radius: 5px;
+    word-wrap: break-word;
+    margin-bottom: 20px;
+    width: 96%;
+    outline:none;
+    display:block;
+}
+
+.aside {
+    width:15%;
+    display:inline;
+    vertical-align:top;
+    overflow:hidden;
+    float:left;
+    line-height:2;
+    color:#F48A19;
+}
+
+.aside dt {
+    padding-left:10px;
+    background:#F48A19;
+    color:#fff;
+    cursor:pointer;
+    border-bottom:1px solid #fff;
+}
+
+.aside dd {
+    border-bottom:1px solid #fff;
+    background:#FFF3D6;
+}
+
+.main {
+    display: inline;
+    width:85%;
+    float:left;
+    overflow:hidden;
+}
+
+.main article {
+    padding: 0 15px;
+    font-size:1.2em;
+    position:relative;
+}
+
+article h1 {
+    font-size : 1.8em;
+    font-weight:400;
+    border-bottom:1px solid #ccc;
+}
+
+article h2 {
+    font-size : 1.4em;
+    color:#F48A19;
+    margin:10px 0;    
+}
+
+.description {
+    margin:20px 0;
+    max-width:970px;
+}
+
+.syntax {
+    margin: 5px 10px 5px 30px;
+    background: #F2F7E2;
+    border: 1px solid #D6E0B7;
+    padding: 10px;
+    line-height: 1.2em;
+    border-radius: 5px;
+    word-wrap: break-word;
+    margin-bottom: 20px;
+    width: 96%;
+}
+
+.description {
+    margin: 20px 0;
+    max-width: 970px;
+}
+
+
+.argu {
+    margin: 10px 0 10px 30px;
+    width: 100%;
+}
+
+.argu code {
+    background: #E1EBC1;
+    padding: 0 5px;
+}
+
+.argu_table {
+    margin-left: 28px;
+    margin-right: 10px;
+    width: 98%;
+    min-width: 680px;
+}
+
+.argu_table caption {
+    text-align: left;
+    background: #E1EBC1;
+    padding: 0 5px;
+    border: 2px solid white;
+}
+
+.argu_table th {
+    background: #91AECD;
+    border: 2px solid white;
+    color: white;
+    font-weight: 400;
+    line-height: 2;
+}
+
+.argu_table tr:nth-of-type(even) {
+    background: #EEF4F7;
+}
+
+.argu_table td {
+    border: 2px solid white;
+    padding: 5px;
+}
+
+.argu_table td:first-of-type {
+    width: 140px;
+}
+
+.default_data {
+    color: #89A41C;
+}
+
+.meta {
+    margin-left: 30px;
+}
+
+.versions {
+    margin-left: 87px;
+}
+
+.example {
+    margin-left: 30px;
+    margin-right: 15px;
+}
+
+#codeFull {
+    position: absolute;
+    right: 30px;
+    margin-top: -38px;
+    background: black;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    opacity: .6;
+}
+
+.footer {
+    /*background: #E7E7E7;*/
+    text-align: center;
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+    margin-bottom: 10px;
+}
+

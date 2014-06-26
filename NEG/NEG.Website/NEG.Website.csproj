@@ -39,6 +39,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -49,6 +52,9 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -110,8 +116,12 @@
       <Private>True</Private>
       <HintPath>packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
+    <Reference Include="WebGrease">
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -122,11 +132,55 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Content\Demo.css" />
+    <Content Include="Content\GooglePretty\desert.css" />
+    <Content Include="Content\GooglePretty\prettify.css" />
+    <Content Include="Content\NEG.css" />
+    <Content Include="Content\neg_site.css" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\Biz\Cookie.js" />
+    <Content Include="Scripts\Biz\InvodoVideo.js" />
+    <Content Include="Scripts\Biz\Items.js" />
+    <Content Include="Scripts\Biz\Resource.js" />
+    <Content Include="Scripts\Biz\SearchKeywords.js" />
+    <Content Include="Scripts\FixForOldVersion.js" />
+    <Content Include="Scripts\GooglePretty\prettify.js" />
+    <Content Include="Scripts\NEG.0.2.1.js" />
+    <Content Include="Scripts\NEG\Resource\Widget\ImageGallery\imageGallery.png" />
+    <Content Include="Scripts\NEG\Resource\Widget\ImageGallery\none.gif" />
+    <Content Include="Scripts\NEG\Resource\Widget\ImageGallery\spr_product.6.6.2.png" />
+    <Content Include="Scripts\NEG\Resource\Widget\ImageZoomer\tile.gif" />
+    <Content Include="Scripts\NEG\ThirdParty\jQuery.js" />
+    <Content Include="Scripts\NEG\ThirdParty\JSON.js" />
+    <Content Include="Scripts\NEG\ThirdParty\SwfObject.js" />
+    <Content Include="Scripts\NEG\Utility\QueryStringBuilder.js" />
+    <Content Include="Scripts\NEG\Widget\FilterManager\Model.js" />
+    <Content Include="Scripts\NEG\Widget\FilterManager\UI.js" />
+    <Content Include="Scripts\NEG\Widget\Form\Textarea.js" />
+    <Content Include="Scripts\NEG\Widget\History.js" />
+    <Content Include="Scripts\NEG\Widget\ImageGallery.js" />
+    <Content Include="Scripts\NEG\Widget\ImageSummary.js" />
+    <Content Include="Scripts\NEG\Widget\ImageZoomer.js" />
+    <Content Include="Scripts\NEG\Widget\Mask.js" />
+    <Content Include="Scripts\NEG\Widget\Popup.js" />
+    <Content Include="Scripts\NEG\Widget\RangeSlider.js" />
+    <Content Include="Scripts\NEG\Widget\Scroll.js" />
+    <Content Include="Scripts\NEG\Widget\Viewport.js" />
+    <Content Include="Scripts\Utility\Cookie.js" />
+    <Content Include="Scripts\Utility\jQuery.js" />
+    <Content Include="Scripts\Utility\JSON.js" />
+    <Content Include="Scripts\Utility\SwfObject.js" />
+    <Content Include="Scripts\Utility\UserCodeRunner.js" />
+    <Content Include="Scripts\Widget\Module1.js" />
+    <Content Include="Scripts\Widget\Module2.js" />
+    <Content Include="Scripts\Widget\Popup.js" />
+    <Content Include="Scripts\Widget\Switch.js" />
     <Content Include="Views\Home\About.aspx" />
     <Content Include="Views\Home\API.aspx" />
     <Content Include="Views\Home\Tutorial.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -137,10 +191,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\" />
     <Folder Include="Images\" />
     <Folder Include="Models\" />
-    <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
