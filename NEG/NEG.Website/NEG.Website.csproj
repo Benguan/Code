@@ -138,6 +138,27 @@
     <Content Include="Content\NEG.css" />
     <Content Include="Content\neg_site.css" />
     <Content Include="Global.asax" />
+    <Content Include="Images\02.jpg" />
+    <Content Include="Images\02.png" />
+    <Content Include="Images\03.png" />
+    <Content Include="Images\close.png" />
+    <Content Include="Images\demo01.jpg" />
+    <Content Include="Images\Demo\bigImage.jpg" />
+    <Content Include="Images\Demo\FilterManager.png" />
+    <Content Include="Images\Demo\imagegallery.png" />
+    <Content Include="Images\Demo\imagesummary.png" />
+    <Content Include="Images\Demo\ImageZoomer.png" />
+    <Content Include="Images\Demo\Mask.png" />
+    <Content Include="Images\Demo\PointView.jpg" />
+    <Content Include="Images\Demo\Popup.jpg" />
+    <Content Include="Images\Demo\slider.jpg" />
+    <Content Include="Images\Demo\smallImage.jpg" />
+    <Content Include="Images\Demo\Switch.jpg" />
+    <Content Include="Images\logo02.jpg" />
+    <Content Include="Images\menu_bg01.jpg" />
+    <Content Include="Images\menu_bg02.jpg" />
+    <Content Include="Images\neg_stie_bg01.png" />
+    <Content Include="Images\top01.png" />
     <Content Include="Scripts\Biz\Cookie.js" />
     <Content Include="Scripts\Biz\InvodoVideo.js" />
     <Content Include="Scripts\Biz\Items.js" />
@@ -191,7 +212,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Images\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
