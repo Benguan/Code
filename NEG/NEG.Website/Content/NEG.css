@@ -19,7 +19,7 @@ code, .syntax, .code_word {
 a,a:hover {color:#F48A19}
 
 .logo {
-    background-image: url(../images/Newegg.jpg);
+    background-image: url(/Images/Newegg.jpg);
     width: 216px;
     height: 102px;
     text-indent:-999px;

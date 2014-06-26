@@ -24,7 +24,7 @@ h2 {
 .neg-close-x{ 
     display: block;
     background: no-repeat;
-    background-image: url("../images/close.png");
+    background-image: url("/Images/close.png");
     height: 13px;
     text-indent: -9999px;
     width: 13px;

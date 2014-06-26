@@ -12,8 +12,9 @@ namespace NEG.Website
                 ));
 
             bundles.Add(new StyleBundle("~/Content/CommonCSS").Include(
-                      "~/Content/NEG.css",
-                      "~/Content/neg_site.css"));
+                 "~/Content/neg_site.css",
+                "~/Content/GooglePretty/prettify.css"
+               ));
         }
     }
 }

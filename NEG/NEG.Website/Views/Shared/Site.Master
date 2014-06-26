@@ -12,7 +12,11 @@
 <body>
      <header  class="header">
         <div class="content">
-            <div class="logo"><a href="<%:Html.ActionLink("NEG Website", "Tutorial");%>"><img src="" width="182px" height="182px" /></a></div>
+            <div class="logo">
+                <a href="/Tutorial">
+                    <img src="<%:Url.Content("~/Images/02.png") %>" width="182px" height="182px" />
+                </a>
+            </div>
             <nav>
                 <ul class="menu_01_font01">
         		    <li> <a href="AboutNEG.html">ABOUT NEG</a></li>
@@ -23,13 +27,16 @@
         	    </ul>
             </nav>
         </div>
-    </header>
-    
+    </header>     <article class="article">
+        <div class="content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            
+        </div>
+    </article>
+
     <footer>
-        <div class="content-wrapper">
-            <div class="float-left">
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET MVC Application</p>
-            </div>
+        <div class="foot01">
+            NEG.JS © <%: DateTime.Now.Year %>·NESC &nbsp; &nbsp;<a href="mailto:nesc-sh.mis.neweggec.developer.UI@newegg.com">Contact Us</a>
         </div>
     </footer>
 
