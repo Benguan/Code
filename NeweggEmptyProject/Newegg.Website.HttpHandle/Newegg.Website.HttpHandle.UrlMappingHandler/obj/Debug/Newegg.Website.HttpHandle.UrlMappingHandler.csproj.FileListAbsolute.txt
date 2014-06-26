@@ -1,5 +1,0 @@
-E:\05.Work\Git\Code\NeweggEmptyProject\Newegg.Website.HttpHandle\Newegg.Website.HttpHandle.UrlMappingHandler\bin\Debug\Newegg.Website.HttpHandle.UrlMappingHandler.dll
-E:\05.Work\Git\Code\NeweggEmptyProject\Newegg.Website.HttpHandle\Newegg.Website.HttpHandle.UrlMappingHandler\bin\Debug\Newegg.Website.HttpHandle.UrlMappingHandler.pdb
-E:\05.Work\Git\Code\NeweggEmptyProject\Newegg.Website.HttpHandle\Newegg.Website.HttpHandle.UrlMappingHandler\obj\Debug\Newegg.Website.HttpHandle.UrlMappingHandler.dll
-E:\05.Work\Git\Code\NeweggEmptyProject\Newegg.Website.HttpHandle\Newegg.Website.HttpHandle.UrlMappingHandler\obj\Debug\Newegg.Website.HttpHandle.UrlMappingHandler.pdb
-E:\05.Work\Git\Code\NeweggEmptyProject\Newegg.Website.HttpHandle\Newegg.Website.HttpHandle.UrlMappingHandler\obj\Debug\Newegg.Website.HttpHandle.UrlMappingHandler.csprojResolveAssemblyReference.cache

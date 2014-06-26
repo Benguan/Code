@@ -1,5 +1,0 @@
-E:\05.Work\Git\Code\NeweggEmptyProject\Newegg.Website.HttpModule\Newegg.Website.HttpModule.OutPutCacheModule\bin\Debug\Newegg.Website.HttpModule.OutPutCacheModule.dll
-E:\05.Work\Git\Code\NeweggEmptyProject\Newegg.Website.HttpModule\Newegg.Website.HttpModule.OutPutCacheModule\bin\Debug\Newegg.Website.HttpModule.OutPutCacheModule.pdb
-E:\05.Work\Git\Code\NeweggEmptyProject\Newegg.Website.HttpModule\Newegg.Website.HttpModule.OutPutCacheModule\obj\Debug\Newegg.Website.HttpModule.OutPutCacheModule.dll
-E:\05.Work\Git\Code\NeweggEmptyProject\Newegg.Website.HttpModule\Newegg.Website.HttpModule.OutPutCacheModule\obj\Debug\Newegg.Website.HttpModule.OutPutCacheModule.pdb
-E:\05.Work\Git\Code\NeweggEmptyProject\Newegg.Website.HttpModule\Newegg.Website.HttpModule.OutPutCacheModule\obj\Debug\Newegg.Website.HttpModule.OutPutCacheModule.csprojResolveAssemblyReference.cache

@@ -37,7 +37,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CommonLib", "CommonLib", "{
 		CommonLib\Newegg.Framework.WebService.XML = CommonLib\Newegg.Framework.WebService.XML
 	EndProjectSection
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Newegg.Website.UI", "Newegg.Website.UI", "{E049C5D3-D72E-4F7C-84E6-FF3FF6D65588}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Newegg.Website.UI", "Newegg.Website.UI\", "{E049C5D3-D72E-4F7C-84E6-FF3FF6D65588}"
 	ProjectSection(WebsiteProperties) = preProject
 		SccProjectName = "SAK"
 		SccAuxPath = "SAK"
@@ -71,6 +71,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Newegg.Website.HttpModule.OutPutCacheModule", "Newegg.Website.HttpModule\Newegg.Website.HttpModule.OutPutCacheModule\Newegg.Website.HttpModule.OutPutCacheModule.csproj", "{A3F7530D-1013-44EF-A642-6289F17858A4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Newegg.Website.HttpHandle.UrlMappingHandler", "Newegg.Website.HttpHandle\Newegg.Website.HttpHandle.UrlMappingHandler\Newegg.Website.HttpHandle.UrlMappingHandler.csproj", "{7DAEB95F-5840-42BD-88EC-CAA77B65CCB2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{45F7F466-1069-4844-B172-BF162004F1EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTest", "Test\ConsoleTest\ConsoleTest.csproj", "{E9DAF15D-49AB-4FD5-AA65-AFD0F140F961}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -106,6 +110,10 @@ Global
 		{7DAEB95F-5840-42BD-88EC-CAA77B65CCB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DAEB95F-5840-42BD-88EC-CAA77B65CCB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DAEB95F-5840-42BD-88EC-CAA77B65CCB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9DAF15D-49AB-4FD5-AA65-AFD0F140F961}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9DAF15D-49AB-4FD5-AA65-AFD0F140F961}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9DAF15D-49AB-4FD5-AA65-AFD0F140F961}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9DAF15D-49AB-4FD5-AA65-AFD0F140F961}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -113,17 +121,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{A3F7530D-1013-44EF-A642-6289F17858A4} = {46C7E0E4-DFEA-4C64-A46C-3B936056CFB0}
 		{7DAEB95F-5840-42BD-88EC-CAA77B65CCB2} = {73E5D0F0-866A-4176-83ED-9FE3DEC2A6BE}
-	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 1
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = http://mistfs:8080/tfs/mistfsupgradecollection
-		SccWebProject0 = true
-		SccProjectUniqueName0 = Newegg.Website.UI
-		SccProjectName0 = Newegg.Website.UI
-		SccAuxPath0 = http://mistfs:8080/tfs/mistfsupgradecollection
-		SccLocalPath0 = Newegg.Website.UI
-		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccProjectEnlistmentChoice0 = 2
+		{E9DAF15D-49AB-4FD5-AA65-AFD0F140F961} = {45F7F466-1069-4844-B172-BF162004F1EA}
 	EndGlobalSection
 EndGlobal

@@ -6,11 +6,3 @@ G:\01.Project\NeweggEmptyProject\Newegg.Website.Configuration\bin\Debug\Newegg.F
 G:\01.Project\NeweggEmptyProject\Newegg.Website.Configuration\obj\Debug\Newegg.Website.Configuration.dll
 G:\01.Project\NeweggEmptyProject\Newegg.Website.Configuration\obj\Debug\Newegg.Website.Configuration.pdb
 G:\01.Project\NeweggEmptyProject\Newegg.Website.Configuration\obj\Debug\Newegg.Website.Configuration.csprojResolveAssemblyReference.cache
-E:\05.Work\Git\Code\NeweggEmptyProject\Newegg.Website.Configuration\bin\Debug\Newegg.Website.Configuration.dll
-E:\05.Work\Git\Code\NeweggEmptyProject\Newegg.Website.Configuration\bin\Debug\Newegg.Website.Configuration.pdb
-E:\05.Work\Git\Code\NeweggEmptyProject\Newegg.Website.Configuration\bin\Debug\Newegg.Framework.Common.dll
-E:\05.Work\Git\Code\NeweggEmptyProject\Newegg.Website.Configuration\bin\Debug\Newegg.Framework.Common.pdb
-E:\05.Work\Git\Code\NeweggEmptyProject\Newegg.Website.Configuration\bin\Debug\Newegg.Framework.Common.xml
-E:\05.Work\Git\Code\NeweggEmptyProject\Newegg.Website.Configuration\obj\Debug\Newegg.Website.Configuration.dll
-E:\05.Work\Git\Code\NeweggEmptyProject\Newegg.Website.Configuration\obj\Debug\Newegg.Website.Configuration.pdb
-E:\05.Work\Git\Code\NeweggEmptyProject\Newegg.Website.Configuration\obj\Debug\Newegg.Website.Configuration.csprojResolveAssemblyReference.cache
