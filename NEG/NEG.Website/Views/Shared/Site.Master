@@ -1,4 +1,5 @@
 ﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+<%@ Import namespace="NEG.Website.Controls.Common" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,18 +14,17 @@
      <header  class="header">
         <div class="content">
             <div class="logo">
-                <a href="/Tutorial">
-                    <img src="<%:Url.Content("~/Images/02.png") %>" width="182px" height="182px" />
-                </a>
+                <%:Html.ActionLinkWithImage(Url.Content("~/Images/02.png"),"Tutorial","Home") %>
             </div>
             <nav>
                 <ul class="menu_01_font01">
-        		    <li><%:Html.ActionLink("ABOUT NEG","About","Home") %></li>
-        		    <li><%:Html.ActionLink("TUTORIAL","Tutorial","Home") %></li>
-                    <li><%:Html.ActionLink("API","List","API") %></li>
-                    <li><%:Html.ActionLink("MODULE","List","Module") %></li>
-                    <li><%:Html.ActionLink("DEMO","List","Demo") %></li>
+                    <li><%:Html.TabLink("ABOUT NEG", "About", "Home") %></li>
+                    <li><%:Html.TabLink("TUTORIAL", "Tutorial", "Home") %></li>
+                    <li><%:Html.TabLink("API", "API", "Home") %></li>
+                    <li><%:Html.TabLink("MODULE", "MODULE", "Home") %></li>
+                    <li><%:Html.TabLink("DEMO", "DEMO", "Home") %></li>
         	    </ul>
+                
             </nav>
         </div>
     </header>     <article class="article">
