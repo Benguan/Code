@@ -88,7 +88,7 @@ NEG.run(function(require){
                 jQuery(".learmore").html(nextText);
             }
             else if ($this.html() == nextText) {
-                window.location.href = "API.html";
+                window.location.href = "API";
             }
         })
     </script>
