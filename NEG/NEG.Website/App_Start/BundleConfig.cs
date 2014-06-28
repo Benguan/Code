@@ -8,13 +8,15 @@ namespace NEG.Website
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/Scripts/CommonJS").Include(
-                "~/Scripts/GooglePretty/prettify.js"
+                "~/Scripts/GooglePretty/prettify.js",
+                "~/Scripts/jquery1.7.min.js"
                 ));
 
             bundles.Add(new StyleBundle("~/Content/CommonCSS").Include(
                  "~/Content/neg_site.css",
                 "~/Content/GooglePretty/prettify.css"
                ));
+
         }
     }
 }

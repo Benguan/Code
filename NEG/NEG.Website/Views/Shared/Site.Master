@@ -30,7 +30,6 @@
     </header>     <article class="article">
         <div class="content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server" />
-            
         </div>
     </article>
 
@@ -39,7 +38,8 @@
             NEG.JS © <%: DateTime.Now.Year %>·NESC &nbsp; &nbsp;<a href="mailto:nesc-sh.mis.neweggec.developer.UI@newegg.com">Contact Us</a>
         </div>
     </footer>
-
+    
+    <script>if (prettyPrint) { prettyPrint(); }</script>
     <asp:ContentPlaceHolder ID="ScriptsSection" runat="server" />
 </body>
 </html>

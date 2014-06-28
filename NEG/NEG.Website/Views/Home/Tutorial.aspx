@@ -78,7 +78,7 @@ NEG.run(function(require){
 
 
 <asp:Content ID="Content4" ContentPlaceHolderID="ScriptsSection" runat="server">
-     <script>prettyPrint();</script>
+    
     <script>
         jQuery('.learmore').click(function () {
             var $this = jQuery(this);
