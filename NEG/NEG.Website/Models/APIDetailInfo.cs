@@ -6,6 +6,7 @@ namespace NEG.Website.Models
     public class APIDetailInfo
     {
         [Key]
+        [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int APIID { get; set; }
 
         [StringLength(150)]

@@ -135,6 +135,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="Controllers\DemoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManagerController.cs" />
     <Compile Include="Controls\Common\Helper.cs" />
     <Compile Include="Controls\Common\LocalizationHelpers.cs" />
     <Compile Include="Global.asax.cs">
@@ -229,6 +230,8 @@
     <Content Include="Views\Home\Module.aspx" />
     <Content Include="Views\Home\Demo.aspx" />
     <Content Include="Views\Home\Tutorial.aspx" />
+    <Content Include="Views\Manager\API.aspx" />
+    <Content Include="Views\Manager\Demo.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
