@@ -6,6 +6,6 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>DemoList</h2>
+<h2>APIList</h2>
 
 </asp:Content>
