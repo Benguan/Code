@@ -13,6 +13,7 @@ namespace NEG.Website.Controllers
         public ManagerController()
         {
             db = new NEGWebsiteEntities();
+
         }
 
 
@@ -25,8 +26,7 @@ namespace NEG.Website.Controllers
         [ValidateInput(false)]
         public ActionResult Demo(DemoDetailInfo model)
         {
-            Database.SetInitializer(new Drop);
-            
+            //Database.SetInitializer(new DropCreateDatabaseIfModelChanges<NEGWebsiteEntities>());
 
             try
             {
@@ -46,8 +46,6 @@ namespace NEG.Website.Controllers
         {
             return View();
         }
-
-
 
     }
 }

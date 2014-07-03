@@ -8,11 +8,14 @@ namespace MVCTest.Controllers
 {
     public class DemoController : Controller
     {
-        public ActionResult List()
+
+        public ActionResult DemoDetail()
         {
-            ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
+
 
             return View();
         }
+
+
     }
 }

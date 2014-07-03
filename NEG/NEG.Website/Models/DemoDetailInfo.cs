@@ -15,7 +15,6 @@ namespace NEG.Website.Models
         [StringLength(150)]
         public string DemoName { get; set; }
 
-        [StringLength(MaxLengthAttribute)]
         public string DemoShowParts { get; set; }
 
         [StringLength(3000)]
@@ -25,5 +24,9 @@ namespace NEG.Website.Models
         public string HtmlCode { get; set; }
 
         public bool Status { get; set; }
+
+        [StringLength(100)]
+        public string ShowImage { get; set; }
+        
     }
 }

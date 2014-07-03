@@ -16,7 +16,7 @@
     <div class="body">
         <% using (Html.BeginForm())
            { %>
-        <input type="hidden" name="status" value="1"/>
+        <input type="hidden" name="status" value="true"/>
         <table>
             <tr>
                 <td>Demo名</td>
@@ -34,7 +34,11 @@
             </tr>
             <tr>
                 <td>HTML Code</td>
-                <td><textarea id="htmlCode" name="htmlCode"></textarea>></td>
+                <td><textarea id="htmlCode" name="htmlCode"></textarea></td>
+            </tr>
+            <tr>
+                <td>Image Url</td>
+                <td><input id="showImage" name="showImage" /></td>
             </tr>
             <tr>
                 <td></td>
