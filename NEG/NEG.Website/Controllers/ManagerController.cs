@@ -17,6 +17,20 @@ namespace NEG.Website.Controllers
         }
 
 
+        public ActionResult DemoList()
+        {
+            return View();
+        }
+        public ActionResult APIList()
+        {
+            return View();
+        }
+        public ActionResult ModuleList()
+        {
+            return View();
+        }
+
+
         public ActionResult Demo()
         {
             return View();

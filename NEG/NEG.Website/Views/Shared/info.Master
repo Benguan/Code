@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<%@ Import Namespace="NEG.Website.Controls.Common" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+    </title>
+    <link href="<%: Url.Content("~/favicon.ico") %>" rel="shortcut icon" type="image/x-icon" />
+    <%: Styles.Render("~/Content/CommonCSS") %>
+    <%: Scripts.Render("~/Scripts/CommonJS") %>
+    <asp:ContentPlaceHolder ID="StyleContent" runat="server" />
+</head>
+<body>
+    <header>
+        <div class="index_03">
+            <div class="page">
+                <!-- loog -->
+                <div class="index_04">
+                    <%:Html.ActionLinkWithImage(Url.Content("~/Images/logo02.jpg"),"Tutorial","Home") %>
+                </div>
+                <!-- menu -->
+                <div class="menu_03">
+                    <ul class="menu_03_font01">
+                        <li><%:Html.TabLink("ABOUT NEG", "About", "Home","") %></li>
+                        <li><%:Html.TabLink("TUTORIAL", "Tutorial", "Home","") %></li>
+                        <li><%:Html.TabLink("API", "API", "Home","") %></li>
+                        <li><%:Html.TabLink("MODULE", "MODULE", "Home","") %></li>
+                        <li><%:Html.TabLink("DEMO", "DEMO", "Home","") %></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <article>
+        <div class="body">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+    </article>
+
+    <footer>
+        <div class="foot01">
+            NEG.JS © <%: DateTime.Now.Year %>·NESC &nbsp; &nbsp;<a href="mailto:nesc-sh.mis.neweggec.developer.UI@newegg.com">Contact Us</a>
+        </div>
+    </footer>
+    
+     <script>if (prettyPrint) { prettyPrint(); }</script>
+</body>
+</html>

@@ -16,7 +16,7 @@
                 StringBuilder detailInfo = new StringBuilder();
                 foreach (var data in (List<DemoDetailInfo>) (ViewData["DemoDetailInfos"]))
                 {
-                    detailInfo.Append(Html.ActionHover(data.ShowImage, data.DemoName, "DemoDetail", "hover"));
+                    detailInfo.Append(Html.ActionHover(data.ShowImage, "DemoDetail", "Demo", "hover",null,data.DemoName));
                 }
 
                 this.Response.Write(detailInfo.ToString());

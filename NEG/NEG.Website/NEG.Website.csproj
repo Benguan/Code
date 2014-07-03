@@ -232,7 +232,10 @@
     <Content Include="Views\Home\Demo.aspx" />
     <Content Include="Views\Home\Tutorial.aspx" />
     <Content Include="Views\Manager\API.aspx" />
+    <Content Include="Views\Manager\ModuleList.aspx" />
+    <Content Include="Views\Manager\APIList.aspx" />
     <Content Include="Views\Manager\Demo.aspx" />
+    <Content Include="Views\Manager\DemoList.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -265,6 +268,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\info.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Manager.Master" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

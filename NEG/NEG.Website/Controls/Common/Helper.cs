@@ -45,7 +45,7 @@ namespace NEG.Website.Controls.Common
             return new MvcHtmlString(tagBuilder.ToString(TagRenderMode.Normal));
         }
 
-        public static MvcHtmlString ActionHover(this HtmlHelper html, string imgSrc, string actionName, string controllerName, string className, object routeValue = null)
+        public static MvcHtmlString ActionHover(this HtmlHelper html, string imgSrc, string actionName, string controllerName, string className, object routeValue = null, string id = null)
         {
             var urlHelper = new UrlHelper(html.ViewContext.RequestContext);
 
@@ -56,7 +56,7 @@ namespace NEG.Website.Controls.Common
             imgTagBuilder.MergeAttribute("height", "144");
             string img = imgTagBuilder.ToString(TagRenderMode.SelfClosing);
 
-            string url = urlHelper.Action(actionName, controllerName, routeValue);
+            string url = urlHelper.Action(actionName, controllerName, new {id});
 
             TagBuilder tagBuilderDiv = new TagBuilder("div")
                 {

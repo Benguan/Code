@@ -17,6 +17,9 @@ namespace NEG.Website
                 "~/Content/GooglePretty/prettify.css"
                ));
 
+            bundles.Add(new StyleBundle("~/Content/DemoCSS").Include(
+                "~/Content/Demo.css"
+              ));
         }
     }
 }
