@@ -10,11 +10,14 @@
     <div class="center">
         <div class="menu_manager">
             <ul>
-                <% 
-                    foreach (var demo in (List<DemoDetailInfo>)ViewData["DemoDetailInfos"])
+                <%
+                    StringBuilder sb = new StringBuilder();
+
+                    foreach (var demo in (List<DemoDetailInfo>) ViewData["DemoDetailInfos"])
                     {
-                        this.Response.Write(Html.ActionLink(demo.DemoName, "Demo", "Manager", new {id = demo.DemoID}, null));
-                    } 
+                        sb.AppendFormat("<li>{0}</li>", Html.ActionLink(demo.DemoName, "Demo", "Manager", new {id = demo.DemoID}, null).ToString());
+                    }
+                    this.Response.Write(sb.ToString());
                 %>
             </ul>
         </div>
