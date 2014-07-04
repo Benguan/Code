@@ -31,8 +31,8 @@
             </div>
         </div>
     </header>
-    <article>
-        <div class="body">
+    <article class="article">
+        <div class="content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server" />
         </div>
     </article>
@@ -43,6 +43,6 @@
         </div>
     </footer>
     
-     <script>if (prettyPrint) { prettyPrint(); }</script>
+     <script>if (typeof (prettyPrint) != "undefined") { prettyPrint(); }</script>
 </body>
 </html>

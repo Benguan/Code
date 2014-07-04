@@ -9,7 +9,8 @@ namespace NEG.Website
         {
             bundles.Add(new ScriptBundle("~/Scripts/CommonJS").Include(
                 "~/Scripts/GooglePretty/prettify.js",
-                "~/Scripts/jquery1.7.min.js"
+                "~/Scripts/jquery1.7.min.js",
+                "~/Scripts/NEG.0.2.1.js"
                 ));
 
             bundles.Add(new StyleBundle("~/Content/CommonCSS").Include(

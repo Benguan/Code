@@ -534,3 +534,29 @@ div #learmore {
 .none-list li .number{color:#CC0000;}
 .aboutNEG .none-list li:first-child{padding-top:0px; }
 .aboutNEG .b{text-indent: 1.5em;}
+
+
+.menu_manager {
+    border-left: 1px solid #e2d9c6;
+    width: 200px;
+    padding: 0px 20px 0px 8px;
+}
+
+    .menu_manager li a {
+        width: 200px;
+        padding-left: 5px;
+        line-height: 35px;
+    }
+
+        .menu_manager li a:hover {
+            width: 200px;
+            padding: 5px 30px 5px 5px;
+            background: #e2d9c6;
+        }
+
+    .menu_manager li span {
+        font-size: 22px;
+        color: #6d5e47;
+        padding-left: 5px;
+        height: 45px;
+    }

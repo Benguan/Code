@@ -1,8 +1,9 @@
-﻿using System;
-using System.Data.Entity;
-using System.Data.Entity.Validation;
-using System.Web.Mvc;
+﻿
+using System.Collections.Generic;
 using NEG.Website.Models;
+using System.Data.Entity.Validation;
+using System.Linq;
+using System.Web.Mvc;
 
 namespace NEG.Website.Controllers
 {
@@ -19,6 +20,7 @@ namespace NEG.Website.Controllers
 
         public ActionResult DemoList()
         {
+            ViewData["DemoDetailInfos"] = db.DemoDetailInfos.ToList() as List<DemoDetailInfo>;
             return View();
         }
         public ActionResult APIList()

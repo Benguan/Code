@@ -60,7 +60,7 @@ namespace NEG.Website.Controls.Common
 
             TagBuilder tagBuilderDiv = new TagBuilder("div")
                 {
-                    InnerHtml = img + actionName
+                    InnerHtml = img + id
                 };
 
             if (!string.IsNullOrWhiteSpace(className))
