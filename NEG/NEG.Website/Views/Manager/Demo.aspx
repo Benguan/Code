@@ -14,7 +14,7 @@
 <body>
    
     <div class="body">
-        <% using (Html.BeginForm())
+        <% using (Html.BeginForm(Convert.ToBoolean(ViewData["IsUpdate"])?"DemoUpdate":"DemoAdd", "Manager", FormMethod.Post))
            { %>
         <input type="hidden" name="status" value="true"/>
         <table>
@@ -42,7 +42,7 @@
             </tr>
             <tr>
                 <td></td>
-                <td><input id="buttom" type="submit" value="添加"/></td>
+                <td><input id="buttom" type="submit" value="<%:Convert.ToBoolean(ViewData["IsUpdate"])?"更新":"添加" %>"/></td>
             </tr>
         </table>
          <% } %>

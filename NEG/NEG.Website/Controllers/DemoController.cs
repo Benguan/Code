@@ -13,7 +13,7 @@ namespace MVCTest.Controllers
 
         public ActionResult DemoDetail()
         {
-            string demoName =  Convert.ToString(RouteData.Route.GetRouteData(this.HttpContext).Values["id"]);
+            string demoName = Convert.ToString(RouteData.Values["id"]);
 
             if (!string.IsNullOrWhiteSpace(demoName))
             {

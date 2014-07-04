@@ -35,12 +35,14 @@ namespace NEG.Website.Controllers
 
         public ActionResult Demo()
         {
+            ViewData["IsUpdate"] = RouteData.Values["id"] != null ? true : false;
+
             return View();
         }
 
         [HttpPost]
         [ValidateInput(false)]
-        public ActionResult Demo(DemoDetailInfo model)
+        public ActionResult DemoAdd(DemoDetailInfo model)
         {
             //Database.SetInitializer(new DropCreateDatabaseIfModelChanges<NEGWebsiteEntities>());
 
@@ -54,7 +56,27 @@ namespace NEG.Website.Controllers
                 throw ex;
             }
 
-            return View();
+            return RedirectToAction("DemoList", "Manager");
+        }
+
+
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult DemoUpdate(DemoDetailInfo model)
+        {
+            //Database.SetInitializer(new DropCreateDatabaseIfModelChanges<NEGWebsiteEntities>());
+
+            try
+            {
+                db.DemoDetailInfos.Add(model);
+                db.SaveChanges();
+            }
+            catch (DbEntityValidationException ex)
+            {
+                throw ex;
+            }
+
+            return RedirectToAction("DemoList", "Manager");
         }
 
 

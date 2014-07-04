@@ -13,7 +13,7 @@
                 <% 
                     foreach (var demo in (List<DemoDetailInfo>)ViewData["DemoDetailInfos"])
                     {
-                        this.Response.Write(Html.ActionLink(demo.DemoName, "Demo", "Manager", new {ID = demo.DemoName}));
+                        this.Response.Write(Html.ActionLink(demo.DemoName, "Demo", "Manager", new {id = demo.DemoID}, null));
                     } 
                 %>
             </ul>
