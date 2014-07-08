@@ -18,19 +18,10 @@ namespace NEG.Website.Controllers
             db = new NEGWebsiteEntities();
         }
 
+        #region Demo相关，list，add，update
         public ActionResult DemoList()
         {
             ViewData["DemoDetailInfos"] = db.DemoDetailInfos.ToList() as List<DemoDetailInfo>;
-            return View();
-        }
-
-        public ActionResult APIList()
-        {
-            return View();
-        }
-
-        public ActionResult ModuleList()
-        {
             return View();
         }
 
@@ -109,12 +100,29 @@ namespace NEG.Website.Controllers
 
             return RedirectToAction("DemoList", "Manager");
         }
+        #endregion
 
+
+        #region API相关，list, add, update
+
+        public ActionResult APIList()
+        {
+            return View();
+        }
 
         public ActionResult API()
         {
             return View();
         }
+
+        #endregion
+
+
+        public ActionResult ModuleList()
+        {
+            return View();
+        }
+
 
     }
 }

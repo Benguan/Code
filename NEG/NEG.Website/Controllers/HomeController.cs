@@ -15,21 +15,21 @@ namespace MVCTest.Controllers
 
         public ActionResult Tutorial()
         {
-            ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
 
             return View();
         }
 
         public ActionResult About()
         {
-            ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
 
             return View();
         }
 
         public ActionResult API()
         {
-            ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
+
+            ViewData["apiCategories"] = db.APICategories.ToList();
+            ViewData["apiDetailInfos"] = db.APIDetailInfos.ToList();
 
             return View();
         }
@@ -42,8 +42,6 @@ namespace MVCTest.Controllers
 
         public ActionResult Module()
         {
-            ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
-
             return View();
         }
     }

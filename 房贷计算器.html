@@ -15,7 +15,9 @@
                     <tr>
                         <td>公积金年数</td>
                         <td>商业年数</td>
-                        <td>每月还款</td>
+                        <td>公积金还款/月</td>
+                        <td>商业还款/月</td>
+                        <td>总还款/月</td>
                         <td>总还款</td>
                     </tr>
                 </thead>
@@ -54,7 +56,7 @@
                 for (var j = 10; j <= 20; j++) {
                     var money1 = calculate(monthRate1, wantMoney1, j);
 
-                    result.push({ "G": i, "S": j, "monthly": money + money1, "Total": (money * i*12 + money1 * j*12) });
+                    result.push({ "G": i, "S": j, "GM": money, "SM": money1, "monthly": money + money1, "Total": (money * i * 12 + money1 * j * 12) });
                 }
             }
 
@@ -68,7 +70,12 @@
             for (var k = 0; k < sortResult.length; k++) {
 
                 var tr= document.createElement("tr");
-                tr.innerHTML = "<td>" + sortResult[k].G + "</td>" + "<td>" + sortResult[k].S + "</td>" + "<td>" + parseInt(sortResult[k].monthly) + "</td>" + "<td>" + parseInt(sortResult[k].Total) + "</td>";
+                tr.innerHTML = "<td>" + sortResult[k].G + "</td>" +
+                    "<td>" + sortResult[k].S + "</td>" +
+                    "<td>" + parseInt(sortResult[k].GM) + "</td>" +
+                    "<td>" + parseInt(sortResult[k].SM) + "</td>" +
+                    "<td>" + parseInt(sortResult[k].monthly) + "</td>" +
+                    "<td>" + parseInt(sortResult[k].Total) + "</td>";
 
                 document.getElementById("tbody").appendChild(tr);
 

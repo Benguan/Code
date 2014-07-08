@@ -101,6 +101,17 @@ namespace NEG.Website.Controls.Common
             }
         }
 
+        public static MvcHtmlString Span(this HtmlHelper html, string text)
+        {
+            TagBuilder tagBuilder = new TagBuilder("span")
+                {
+                    InnerHtml = text
+                };
+
+
+            return new MvcHtmlString(tagBuilder.ToString(TagRenderMode.Normal));
+
+        }
 
     }
 }

@@ -7,11 +7,11 @@ namespace NEG.Website.Models
     {
         [Key]
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
-        public int categoryID { get; set; }
+        public int CategoryID { get; set; }
 
         [StringLength(50)]
-        public string categoryName { get; set; }
+        public string CategoryName { get; set; }
 
-        public int? priority { get; set; }
+        public int? Priority { get; set; }
     }
 }
