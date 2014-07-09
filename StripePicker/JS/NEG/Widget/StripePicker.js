@@ -121,8 +121,8 @@ NEG.Module('NEG.Widget.StripePicker', function (require) {
 
                 var key = _option.stripes[i].getAttribute(_option.dataKey);
                 var stripeEnable = (i == 0);
-                var defaultStripeText = jQuery(_option.stripes[i]).find()
-                stripeStatus[i] = new strip(stripeEnable, false, false ,key, defaultStripeText);
+                var defaultStripeTextList = jQuery("["+_option.defaultStripeText+ "]");
+                stripeStatus[i] = new strip(stripeEnable, false, false ,key, defaultStripeTextList[i]);
             };
 
             afterProcessData(0);
@@ -188,6 +188,7 @@ NEG.run(function (require) {
         ,contentSelector: ".atsDDAnchor .atsDD"
         ,processData: function (selectedData, preStripe, nextStripe) {
             
+            debugger;
             // TO DO 
             var $nextStripe = jQuery(nextStripe);
 
