@@ -50,188 +50,188 @@
     "use strict";
     var internalClass = {};
 
-internalClass._String = (function () {
-    var constructor = function (str) {
-        this.source = str;
-    };
+    internalClass._String = (function () {
+        var constructor = function (str) {
+            this.source = str;
+        };
 
-    var thePrototype = (function () {
-        var result = {};
-        var sp = String.prototype;
-        var baseFn = ["valueOf", "toString", "charAt", "charCodeAt", "concat", "indexOf", "lastIndexOf", "localeCompare", "match", "replace", "search", "slice", "split", "sub", "sup",
-            "substring", "substr", "toLowerCase", "toLocaleLowerCase", "toUpperCase", "toLocaleUpperCase", "anchor", "link", "fontcolor", "fontsize", "big", "blink", "bold", "fixed", "italics", "small", "strike"];
-        for (var i = 0; i < baseFn.length ; i++) {
-            (function (arg) {
-                result[arg] = function () {
-                    return sp[arg].apply(this.source, arguments);
+        var thePrototype = (function () {
+            var result = {};
+            var sp = String.prototype;
+            var baseFn = ["valueOf", "toString", "charAt", "charCodeAt", "concat", "indexOf", "lastIndexOf", "localeCompare", "match", "replace", "search", "slice", "split", "sub", "sup",
+                "substring", "substr", "toLowerCase", "toLocaleLowerCase", "toUpperCase", "toLocaleUpperCase", "anchor", "link", "fontcolor", "fontsize", "big", "blink", "bold", "fixed", "italics", "small", "strike"];
+            for (var i = 0; i < baseFn.length ; i++) {
+                (function (arg) {
+                    result[arg] = function () {
+                        return sp[arg].apply(this.source, arguments);
+                    };
+                })(baseFn[i]);
+            }
+
+            //ECMAScript5 functions implement
+            if ("trim" in sp && sp.trim) {
+                result.trim = function () {
+                    return sp.trim.apply(this.source, arguments);
                 };
-            })(baseFn[i]);
-        }
+            } else {
+                result.trim = function () {
+                    return this.source.replace(/(^\s+)|(\s+$)/g, '');
+                };
+            }
 
-        //ECMAScript5 functions implement
-        if ("trim" in sp && sp.trim) {
-            result.trim = function () {
-                return sp.trim.apply(this.source, arguments);
-            };
-        } else {
-            result.trim = function () {
-                return this.source.replace(/(^\s+)|(\s+$)/g, '');
-            };
-        }
+            if ("trimLeft" in sp && sp.trim) {
+                result.trimLeft = function () {
+                    return sp.trimLeft.apply(this.source, arguments);
+                };
+            } else {
+                result.trimLeft = function () {
+                    return this.source.replace(/^\s+/, '');
+                };
+            }
 
-        if ("trimLeft" in sp && sp.trim) {
-            result.trimLeft = function () {
-                return sp.trimLeft.apply(this.source, arguments);
-            };
-        } else {
-            result.trimLeft = function () {
-                return this.source.replace(/^\s+/, '');
-            };
-        }
+            if ("trimRight" in sp && sp.trim) {
+                result.trimRight = function () {
+                    return sp.trimRight.apply(this.source, arguments);
+                };
+            } else {
+                result.trimRight = function () {
+                    return this.source.replace(/\s+$/, '');
+                };
+            }
 
-        if ("trimRight" in sp && sp.trim) {
-            result.trimRight = function () {
-                return sp.trimRight.apply(this.source, arguments);
-            };
-        } else {
-            result.trimRight = function () {
-                return this.source.replace(/\s+$/, '');
-            };
-        }
+            return result;
+        })();
 
-        return result;
+
+        //begin customlize function
+        thePrototype.constructor = constructor;
+
+
+        constructor.prototype = thePrototype;
+        return constructor;
     })();
 
 
-    //begin customlize function
-    thePrototype.constructor = constructor;
+    internalClass._Array = (function () {
+        var constructor = function (array) {
+            this.source = array;
+        };
 
+        var thePrototype = (function () {
+            var result = {};
+            var ap = Array.prototype;
+            var baseFn = ["join", "toString", "pop", "push", "concat", "reverse", "shift", "unshift", "slice", "splice", "sort"];
+            for (var i = 0; i < baseFn.length ; i++) {
+                (function (arg) {
+                    result[arg] = function () {
+                        return ap[arg].apply(this.source, arguments);
+                    };
+                })(baseFn[i]);
+            }
 
-    constructor.prototype = thePrototype;
-    return constructor;
-})();
-
-
-internalClass._Array = (function () {
-    var constructor = function (array) {
-        this.source = array;
-    };
-
-    var thePrototype = (function () {
-        var result = {};
-        var ap = Array.prototype;
-        var baseFn = ["join", "toString", "pop", "push", "concat", "reverse", "shift", "unshift", "slice", "splice", "sort"];
-        for (var i = 0; i < baseFn.length ; i++) {
-            (function (arg) {
-                result[arg] = function () {
-                    return ap[arg].apply(this.source, arguments);
+            //ECMAScript5 functions implement
+            if ("indexOf" in ap && ap.indexOf) {
+                result.indexOf = function () {
+                    return ap.indexOf.apply(this.source, arguments);
                 };
-            })(baseFn[i]);
-        }
-
-        //ECMAScript5 functions implement
-        if ("indexOf" in ap && ap.indexOf) {
-            result.indexOf = function () {
-                return ap.indexOf.apply(this.source, arguments);
-            };
-        } else {
-            result.indexOf = function (obj) {
-                var i = this.source.length;
-                for (; i--;) {
-                    if (this.source[i] === obj) {
-                        break;
+            } else {
+                result.indexOf = function (obj) {
+                    var i = this.source.length;
+                    for (; i--;) {
+                        if (this.source[i] === obj) {
+                            break;
+                        }
                     }
-                }
-                return i;
-            };
-        }
-        result.addRange = function (array) {
-            if (array) {
-                var len = array.length;
-                if (len && array instanceof Array) {
-                    len > 0 && ap.push.apply(this.source, array);
-                } else {
-                    this.source.push(array);
-                }
-                return this.source.length;
+                    return i;
+                };
             }
+            result.addRange = function (array) {
+                if (array) {
+                    var len = array.length;
+                    if (len && array instanceof Array) {
+                        len > 0 && ap.push.apply(this.source, array);
+                    } else {
+                        this.source.push(array);
+                    }
+                    return this.source.length;
+                }
+            };
+            return result;
+        })();
+
+        //begin customlize function
+        thePrototype.constructor = constructor;
+
+        thePrototype.each = function (fn) {
+            var len = this.source.length;
+            for (var i = 0; i < len; i++) {
+                var res = fn.apply(this.source[i], [this.source[i], i]);
+                if (res) {
+                    break;
+                }
+            };
         };
-        return result;
+
+        thePrototype.get = function (index) {
+            if (typeof index == "number") {
+                return this.source[index];
+            }
+            return null;
+        };
+
+        constructor.prototype = thePrototype;
+        return constructor;
     })();
 
-    //begin customlize function
-    thePrototype.constructor = constructor;
 
-    thePrototype.each = function (fn) {
-        var len = this.source.length;
-        for (var i = 0; i < len; i++) {
-            var res = fn.apply(this.source[i], [this.source[i], i]);
-            if (res) {
-                break;
+    neg.cast = function (toBeTransfered) {
+        var res = null;
+        var typeStr = typeof (toBeTransfered);
+
+        //switch (typeStr) {
+        //    case "string":
+        //        res = new internalClass.String(toBeTransfered);
+        //        break;
+
+        //    case "number":
+        //        break;
+
+        //    case "boolean":
+        //        break;
+
+        //    case "object":
+        //        if (toBeTransfered instanceof String) {
+        //            res = new internalClass.String(toBeTransfered.toString());
+        //        }
+        //        else if (toBeTransfered instanceof Array) {
+        //            res = new internalClass.Array(toBeTransfered);
+        //        }
+
+        //        break;
+
+        //    case "undefined":
+        //    default:
+        //}
+
+        if (typeStr == "string") {
+            return new internalClass._String(new String(toBeTransfered));
+        }
+        else if (typeStr == "object") {
+            if (toBeTransfered instanceof String) {
+                res = new internalClass._String(toBeTransfered);
             }
-        };
+            else if (toBeTransfered instanceof internalClass._String.constructor) {
+                return toBeTransfered;
+            }
+            else if (toBeTransfered instanceof Array) {
+                res = new internalClass._Array(toBeTransfered);
+            }
+            else if (toBeTransfered instanceof internalClass._Array.constructor) {
+                return toBeTransfered;
+            }
+        }
+        return res;
     };
-
-    thePrototype.get = function (index) {
-        if (typeof index == "number") {
-            return this.source[index];
-        }
-        return null;
-    };
-
-    constructor.prototype = thePrototype;
-    return constructor;
-})();
-
-
-neg.cast = function (toBeTransfered) {
-    var res = null;
-    var typeStr = typeof (toBeTransfered);
-
-    //switch (typeStr) {
-    //    case "string":
-    //        res = new internalClass.String(toBeTransfered);
-    //        break;
-
-    //    case "number":
-    //        break;
-
-    //    case "boolean":
-    //        break;
-
-    //    case "object":
-    //        if (toBeTransfered instanceof String) {
-    //            res = new internalClass.String(toBeTransfered.toString());
-    //        }
-    //        else if (toBeTransfered instanceof Array) {
-    //            res = new internalClass.Array(toBeTransfered);
-    //        }
-
-    //        break;
-
-    //    case "undefined":
-    //    default:
-    //}
-
-    if (typeStr == "string") {
-        return new internalClass._String(new String(toBeTransfered));
-    }
-    else if (typeStr == "object") {
-        if (toBeTransfered instanceof String) {
-            res = new internalClass._String(toBeTransfered);
-        }
-        else if (toBeTransfered instanceof internalClass._String.constructor) {
-            return toBeTransfered;
-        }
-        else if (toBeTransfered instanceof Array) {
-            res = new internalClass._Array(toBeTransfered);
-        }
-        else if (toBeTransfered instanceof internalClass._Array.constructor) {
-            return toBeTransfered;
-        }
-    }
-    return res;
-};
 
 })(NEG);
 ; (function (neg) {
@@ -397,7 +397,7 @@ neg.cast = function (toBeTransfered) {
         //}
     };
     _base.merge(base, _base);
-})(NEG);!function (neg) {
+})(NEG); !function (neg) {
     var base = neg.base || {};
 
     var _Event = {};
@@ -1044,7 +1044,7 @@ neg.cast = function (toBeTransfered) {
     var theUtility = neg.utility;
 
     var vc = (function () {
-        var versions = [],  theModules = neg.cast([]);
+        var versions = [], theModules = neg.cast([]);
 
         return {
             getVersion: function (module) {
@@ -1330,7 +1330,7 @@ neg.cast = function (toBeTransfered) {
     }
     neg.base.Module = _module;
 })(NEG);
-;(function (neg) {
+; (function (neg) {
     var runnerQueue = [];
     var eventer = neg.base.Event;
     var requireEvent = neg.base.Require.Event;
@@ -1360,12 +1360,12 @@ neg.cast = function (toBeTransfered) {
         this.runNow && eventer.addEventListener(this, requireEvent.LOADED, function (e, data) {
             var moduleName = data.moduleName.toLowerCase();
             requireOfRun[moduleName] = true;
-            neg.base.ArrayIndexOf(requireOfRun, moduleName)>=0 && isRequireComplete() && runBody && runBody();
+            neg.base.ArrayIndexOf(requireOfRun, moduleName) >= 0 && isRequireComplete() && runBody && runBody();
         });
 
         this.run = function (runner) {
             runBody = runner;
-            
+
 
             if (this.runNow) {
                 isRequireComplete() && runner();
@@ -1375,23 +1375,23 @@ neg.cast = function (toBeTransfered) {
             }
         };
 
-        this.require = function (module,url) {
-            neg.base.Require(module,url);
+        this.require = function (module, url) {
+            neg.base.Require(module, url);
 
             module = module.toLowerCase();
             requireOfRun.push(module);
-            if(!url){
+            if (!url) {
                 var ns = module.match(/(^.*)\.(\w*)$/);
                 var nsPath = ns[1];
                 var moduleName = ns[2];
-                neg.base.NS(nsPath,neg.base)[moduleName];
+                neg.base.NS(nsPath, neg.base)[moduleName];
             }
 
-            
-            var moduleBody = neg.base.NS(module,neg.base);
-            return  moduleBody;
+
+            var moduleBody = neg.base.NS(module, neg.base);
+            return moduleBody;
         };
-     
+
 
     }
 
@@ -1401,7 +1401,7 @@ neg.cast = function (toBeTransfered) {
         if (!(this instanceof me)) {
             return new me(fn, runNow);
         }
-        
+
         var context = this;
         context.runNow = runNow;
         _run.call(context);
@@ -1414,21 +1414,21 @@ neg.cast = function (toBeTransfered) {
             return isString ? str : ''
         });
 
-        var requireName = fnBody.replace(/^function\s*?\(\s*?([^,\)]+)[\w\W]*$/i, function(fnbody, reqName){
-                              return reqName ;
-                            }).replace(fnBody,'');
-        var reg = requireName && new RegExp("\\b" + requireName + "\\s*\\(([^\\)]+)\\)","igm");
+        var requireName = fnBody.replace(/^function\s*?\(\s*?([^,\)]+)[\w\W]*$/i, function (fnbody, reqName) {
+            return reqName;
+        }).replace(fnBody, '');
+        var reg = requireName && new RegExp("\\b" + requireName + "\\s*\\(([^\\)]+)\\)", "igm");
         var requireQueue = [];
-        reg && fnBody.replace(reg, function(requireString,nsPath){
+        reg && fnBody.replace(reg, function (requireString, nsPath) {
             var moduleName = nsPath.replace(/['"]/g, '');
             context.require(moduleName);
         });
 
-        
-        context.run(function(){
+
+        context.run(function () {
             fn(context.require, context.run);
         });
-        
+
     };
 
     /**
@@ -1622,7 +1622,7 @@ neg.cast = function (toBeTransfered) {
        , isEventSupported: isEventSupported
     };
 })(NEG);
-;(function (neg) {
+; (function (neg) {
     // 此方法待重构
     var isReady = false;
     var readyHandleQueue = [];
@@ -1634,7 +1634,7 @@ neg.cast = function (toBeTransfered) {
 
 
         //readyHandle = function () { };
-        
+
         //fn();
         var acctiveHandle;
         while (acctiveHandle = readyHandleQueue.shift()) {
@@ -1677,45 +1677,45 @@ neg.cast = function (toBeTransfered) {
     base.NS("NEG.base.BOM").DOMReady = _domReady;
 })(NEG);
 
-;(function (moduleName, neg) {
-    
-    function Loader(jsURL, completeHandle){
+; (function (moduleName, neg) {
+
+    function Loader(jsURL, completeHandle) {
         var jscount = 1;
-        this.loadJS = function(){
-            if(/\bArray\b/.test(Object.prototype.toString.call(jsURL))){
+        this.loadJS = function () {
+            if (/\bArray\b/.test(Object.prototype.toString.call(jsURL))) {
                 jscount = jsURL.length;
                 for (var i = jscount - 1; i >= 0; i--) {
-                    _loadJs(jsURL[i], function(){
+                    _loadJs(jsURL[i], function () {
                         --jscount || completeHandle();
                     });
                 };
-            }else{
+            } else {
                 _loadJs(jsURL, completeHandle);
             }
         };
     }
 
-    function JSLoader(){
+    function JSLoader() {
         var jsQueue = [];
         jsQueue.currentJs = null;
 
-        this.loadJS = function(jsURL, completeHandle){
-            var fixHandle = function(){
+        this.loadJS = function (jsURL, completeHandle) {
+            var fixHandle = function () {
                 jsQueue.currentJs = null;
                 completeHandle && completeHandle();
                 startLoad();
-            };                
+            };
             jsQueue.push(new Loader(jsURL, fixHandle));
-            startLoad();            
+            startLoad();
             return this;
         };
 
-        function startLoad(){
-            if(!jsQueue.currentJs){
+        function startLoad() {
+            if (!jsQueue.currentJs) {
                 jsQueue.currentJs = jsQueue.shift();
                 jsQueue.currentJs && jsQueue.currentJs.loadJS();
-            }        
-        }        
+            }
+        }
 
     }
 
@@ -1733,8 +1733,8 @@ neg.cast = function (toBeTransfered) {
                completeHandle && completeHandle();
            }
            , readyHandle = function () {
-               if (/loaded|complete/.test(jsLoader.readyState) && isComplate == false) {                 
-                    loadCompleteHandle();                 
+               if (/loaded|complete/.test(jsLoader.readyState) && isComplate == false) {
+                   loadCompleteHandle();
                }
            };
         jsLoader.async = true;
@@ -1754,7 +1754,7 @@ neg.cast = function (toBeTransfered) {
         isExisted || head.appendChild(jsLoader);
     };
 
-    function loadJs(jsURL, completeHandle){
+    function loadJs(jsURL, completeHandle) {
         var jsLoader = new JSLoader();
         jsLoader.loadJS(jsURL, completeHandle);
         return jsLoader;
@@ -1771,7 +1771,7 @@ neg.cast = function (toBeTransfered) {
     */
     NEG.base.BOM[moduleName] = loadJs;
 })("loadJS", NEG);
-;(function (neg) {
+; (function (neg) {
     var bom = neg.base.BOM = neg.base.BOM || {};
     bom.Utility = bom.Utility || {};
     function isHTMLElement(obj) {
