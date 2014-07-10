@@ -9,7 +9,7 @@
 <body>
 
     <div id="asYmmChooserStripe" class="asYmmChooser" style="display: block;">
-        <div id="ddYearStripe" class="atsTextButtonSelect asYmmYear" neg-sp-data-key="year">
+        <div id="ddYearStripe" class="atsTextButtonSelect asYmmYear" neg-sp-data-key="year" >
             <div class="atsWrap">
                 <div class="atsTop">
                     <div class="atsUR"></div>
@@ -18,7 +18,7 @@
                 </div>
                 <div class="atsCenter">
                     <div class="atsContent">
-                        <label class="atsLabel" neg-sp-data-defaultStrip="Year">Year</label><span class="atsCaret"></span><input type="hidden" name="ddYearStripe_value" id="ddYearStripe_value" value="">
+                        <label class="atsLabel" neg-sp-data-defaultstrip="Year">Year</label><span class="atsCaret"></span><input type="hidden" name="ddYearStripe_value" id="ddYearStripe_value" value="">
                     </div>
                 </div>
                 <div class="atsBottom">
@@ -242,7 +242,7 @@
                 </table>
             </div>
         </div>
-        <div id="ddMakeStripe" class="atsTextButtonSelect atsDisabled asYmmMake" neg-sp-data-key="make">
+        <div id="ddMakeStripe" class="atsTextButtonSelect atsDisabled asYmmMake" neg-sp-data-key="make" neg-sp-data-autoExpand="true">
             <div class="atsWrap">
                 <div class="atsTop">
                     <div class="atsUR"></div>
@@ -251,7 +251,7 @@
                 </div>
                 <div class="atsCenter">
                     <div class="atsContent">
-                        <label class="atsLabel" neg-sp-data-defaultStrip="Make">Make</label><span class="atsCaret"></span><input type="hidden" name="ddMakeStripe_value" id="ddMakeStripe_value" value="">
+                        <label class="atsLabel" neg-sp-data-defaultstrip="Make">Make</label><span class="atsCaret"></span><input type="hidden" name="ddMakeStripe_value" id="ddMakeStripe_value" value="">
                     </div>
                 </div>
                 <div class="atsBottom">
@@ -284,7 +284,7 @@
                 </table>
             </div>
         </div>
-        <div id="ddModelStripe" class="atsTextButtonSelect atsDisabled asYmmModel" neg-sp-data-key="model">
+        <div id="ddModelStripe" class="atsTextButtonSelect atsDisabled asYmmModel" neg-sp-data-key="model" neg-sp-data-autoExpand="true">
             <div class="atsWrap">
                 <div class="atsTop">
                     <div class="atsUR"></div>
@@ -293,7 +293,7 @@
                 </div>
                 <div class="atsCenter">
                     <div class="atsContent">
-                        <label class="atsLabel" neg-sp-data-defaultStrip="Model">Model</label><span class="atsCaret"></span><input type="hidden" name="ddModelStripe_value" id="ddModelStripe_value" value="">
+                        <label class="atsLabel" neg-sp-data-defaultstrip="Model">Model</label><span class="atsCaret"></span><input type="hidden" name="ddModelStripe_value" id="ddModelStripe_value" value="">
                     </div>
                 </div>
                 <div class="atsBottom">
@@ -326,6 +326,92 @@
                 </table>
             </div>
         </div>
+        
+        <div id="bentestCategory" class="atsTextButtonSelect atsDisabled asYmmModel" neg-sp-data-key="category" neg-sp-data-autoExpand="">
+            <div class="atsWrap">
+                <div class="atsTop">
+                    <div class="atsUR"></div>
+                    <div class="atsUL"></div>
+                    <div class="atsCF"></div>
+                </div>
+                <div class="atsCenter">
+                    <div class="atsContent">
+                        <label class="atsLabel" neg-sp-data-defaultstrip="Model">Category</label><span class="atsCaret"></span><input type="hidden" name="ddModelStripe_value" id="Hidden1" value="">
+                    </div>
+                </div>
+                <div class="atsBottom">
+                    <div class="atsLR"></div>
+                    <div class="atsLL"></div>
+                    <div class="atsCF"></div>
+                </div>
+            </div>
+            <div class="atsDDAnchor">
+                <table class="atsDD" style="display: none;">
+                    <tbody>
+                        <tr class="atsDDTop">
+                            <td class="atsDDUL"></td>
+                            <td class="atsDDUC"></td>
+                            <td class="atsDDUR"></td>
+                        </tr>
+                        <tr class="atsDDCenter">
+                            <td class="atsDDCL"></td>
+                            <td class="atsDDCC">
+                                <div class="atsDDContent"></div>
+                            </td>
+                            <td class="atsDDCR"></td>
+                        </tr>
+                        <tr class="atsDDBottom">
+                            <td class="atsDDLL"></td>
+                            <td class="atsDDLC"></td>
+                            <td class="atsDDLR"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="bentestSubCategory" class="atsTextButtonSelect atsDisabled asYmmModel" neg-sp-data-key="subcategory" >
+            <div class="atsWrap">
+                <div class="atsTop">
+                    <div class="atsUR"></div>
+                    <div class="atsUL"></div>
+                    <div class="atsCF"></div>
+                </div>
+                <div class="atsCenter">
+                    <div class="atsContent">
+                        <label class="atsLabel" neg-sp-data-defaultstrip="Model">Subcategory</label><span class="atsCaret"></span><input type="hidden" name="ddModelStripe_value" id="Hidden2" value="">
+                    </div>
+                </div>
+                <div class="atsBottom">
+                    <div class="atsLR"></div>
+                    <div class="atsLL"></div>
+                    <div class="atsCF"></div>
+                </div>
+            </div>
+            <div class="atsDDAnchor">
+                <table class="atsDD" style="display: none;">
+                    <tbody>
+                        <tr class="atsDDTop">
+                            <td class="atsDDUL"></td>
+                            <td class="atsDDUC"></td>
+                            <td class="atsDDUR"></td>
+                        </tr>
+                        <tr class="atsDDCenter">
+                            <td class="atsDDCL"></td>
+                            <td class="atsDDCC">
+                                <div class="atsDDContent"></div>
+                            </td>
+                            <td class="atsDDCR"></td>
+                        </tr>
+                        <tr class="atsDDBottom">
+                            <td class="atsDDLL"></td>
+                            <td class="atsDDLC"></td>
+                            <td class="atsDDLR"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!---->
     </div>
 
     <div id="ddSubmit" class="atbTextButton atbDisabled">
@@ -381,6 +467,6 @@
 
     <div id="asBottom"></div>
 
-    <script src="JS\NEG\Widget\StripePicker.js"></script>
+    <script src="JS\NEG\Widget\AutoConfigurator.js"></script>
 </body>
 </html>
