@@ -3,7 +3,6 @@ NEG.Module('NEG.Widget.AutoConfigurator', function (require) {
     var jQuery = require('Utility.JQuery');
 
     function AutoConfigurator(option, container) {
-
         var me = arguments.callee
             , stripeStatus = []
             , selectedData = []
@@ -17,6 +16,10 @@ NEG.Module('NEG.Widget.AutoConfigurator', function (require) {
                 this.contentLeaveEventDefined = !_option.enableMouseLeave;
             }
             , isCompleted = false;
+
+        if (!(this instanceof me)) {
+            return new me(option, container);
+        }
 
         selectedData.get = function (stripe) {
             var d = this;
@@ -38,9 +41,7 @@ NEG.Module('NEG.Widget.AutoConfigurator', function (require) {
             this.push({ "stripe": stripe, "value": value });
         }
 
-        if (!(this instanceof me)) {
-            return new me(option, container);
-        }
+        if (!container) { container = "container"; }
 
         var Event = {
             buttonGo: container + "AutoConfigurator_Button_Go"
@@ -139,11 +140,22 @@ NEG.Module('NEG.Widget.AutoConfigurator', function (require) {
         var contentLeaveHandler = function (e) {
             var stripTarget = jQuery(e.target).parents(_option.stripeSelector)[0];
             var step = NEG.ArrayIndexOf(_option.stripes, stripTarget);
-                       
-            t = helper.setTimeout(hideContent, 1000, _option.contents[step]);
+
+            if (jQuery(_option.contents[step]).is(":hidden")) {
+                return;
+            }
+
+            t = helper.setTimeout(hideContent, 500, _option.contents[step]);
         }
 
         var contentEnterHandler = function (e) {
+            var stripeTarget = jQuery(e.target).parents(_option.stripeSelector)[0];
+            console.log(stripeTarget);
+            var step = NEG.ArrayIndexOf(_option.stripes, stripeTarget);
+            if (jQuery(_option.contents[step]).is(":hidden")) {
+                return;
+            }
+            console.log("clear");
             window.clearTimeout(t);
         }
 
@@ -219,7 +231,6 @@ NEG.Module('NEG.Widget.AutoConfigurator', function (require) {
             jQuery(_option.contents).hide();
             isHidden ? jQuery(content).show() : jQuery(content).hide();
         }
-
 
         var afterProcessData = function (step, selectedData) {
             //第一个stripe 绑定click事件.
