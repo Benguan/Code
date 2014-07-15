@@ -7,13 +7,14 @@ NEG.Module('NEG.Widget.AutoConfigurator', function (require) {
         var me = arguments.callee
             , stripeStatus = []
             , selectedData = []
-            , strip = function (StripeEnable, EventDefined, ContentEventDefined, Key, DefaultStripeText, AutoExpand) {
+            , strip = function (StripeEnable, Key, DefaultStripeText, AutoExpand) {
                 this.stripeEnable = StripeEnable
-                this.stripeEventDefined = EventDefined;
-                this.contentEventDefined = ContentEventDefined;
+                this.stripeEventDefined = false;
+                this.contentEventDefined = false;
                 this.stripeKey = Key;
                 this.defaultStripeText = DefaultStripeText;
                 this.autoExpand = AutoExpand;
+                this.contentLeaveEventDefined = !_option.enableMouseLeave;
             }
             , isCompleted = false;
 
@@ -41,16 +42,6 @@ NEG.Module('NEG.Widget.AutoConfigurator', function (require) {
             return new me(option, container);
         }
 
-        var stopPropagation = function (e) {
-            e = e || window.event;
-            if (e.stopPropagation) { //W3C阻止冒泡方法  
-                e.stopPropagation();
-            }
-            else {
-                e.cancelBubble = true; //IE阻止冒泡方法  
-            }
-        };
-
         var Event = {
             buttonGo: container + "AutoConfigurator_Button_Go"
         };
@@ -70,6 +61,7 @@ NEG.Module('NEG.Widget.AutoConfigurator', function (require) {
            , stripeValue: "neg-sp-data-value"
            , defaultStripeText: "neg-sp-data-defaultStrip"
            , autoExpandKey: "neg-sp-data-autoExpand"
+           , enableMouseLeave: true
         }
         
         NEG.merge(_option, option);
@@ -89,7 +81,7 @@ NEG.Module('NEG.Widget.AutoConfigurator', function (require) {
 
             var arrayLength = selectedData.length;
             var needRefresh = arrayLength - step > 1;
-            /*重新选择了前面的filter,需要初始化后续filter*/
+            /*重新选择了前面的filter,需要初始化后续stripe*/
             if (needRefresh) {
                 isCompleted = false;
                 if (!$buttonGo.hasClass(_option.buttonGoDisableClass)) {
@@ -102,14 +94,13 @@ NEG.Module('NEG.Widget.AutoConfigurator', function (require) {
                     selectedData.pop();
                 };
 
-
                 for (var i = step + 1 ; i < _option.stripes.length; i++) {
                     var $stripe = jQuery(_option.stripes[i]);
                     $stripe.addClass(_option.strileDisableClass);
                     $stripe.find(_option.stripeTextSelector).text(stripeStatus[i].defaultStripeText);
                     //解除事件绑定
                     if (stripeStatus[i].stripeEventDefined) {
-                        _option.stripes[i] && NEG(_option.stripes[i]).off("click", stripeClickHanlder);
+                        _option.stripes[i] && NEG(_option.stripes[i]).off("click", stripeClickHandler);
                         stripeStatus[i].stripeEventDefined = false;
                     }
                 }
@@ -120,17 +111,53 @@ NEG.Module('NEG.Widget.AutoConfigurator', function (require) {
             NEG.trigger(Event.buttonGo, selectedData);
         }
 
+        var helper = {
+            setTimeout: function (callBack, timeout, param) {
+                var args = Array.prototype.slice.call(arguments, 2);
+                var _cb = function () {
+                    callBack.apply(null, args);
+                }
+                return window.setTimeout(_cb, timeout);
+            },
+            stopPropagation : function (e) {
+                e = e || window.event;
+                if (e.stopPropagation) { //W3C阻止冒泡方法 
+                    e.stopPropagation();
+                }
+                else {
+                    e.cancelBubble = true; //IE阻止冒泡方法  
+                }
+            }
+        };
+
+        var t = null;
+
+        var hideContent = function (target) {
+            jQuery(target).hide();
+        }
+
+        var contentLeaveHandler = function (e) {
+            var stripTarget = jQuery(e.target).parents(_option.stripeSelector)[0];
+            var step = NEG.ArrayIndexOf(_option.stripes, stripTarget);
+                       
+            t = helper.setTimeout(hideContent, 1000, _option.contents[step]);
+        }
+
+        var contentEnterHandler = function (e) {
+            window.clearTimeout(t);
+        }
+
         var contentClickHandler = function (e) {
             //NEG.ArrayIndexOf()
-            var tag = e.toElement;
+            var target = e.toElement;
 
             //获取当前的step
-            var step = NEG.ArrayIndexOf(_option.contents, jQuery(tag).parents(_option.contentSelector)[0]);
+            var step = NEG.ArrayIndexOf(_option.contents, jQuery(target).parents(_option.contentSelector)[0]);
 
-            var key = tag.getAttribute(_option.stripeValue)
-                , value = tag.innerHTML;
+            var key = target.getAttribute(_option.stripeValue)
+                , value = target.innerHTML;
 
-            stopPropagation(e);
+            helper.stopPropagation(e);
 
             if (!key) {
                 return;
@@ -162,16 +189,18 @@ NEG.Module('NEG.Widget.AutoConfigurator', function (require) {
             }
         }
 
-        var stripeClickHanlder = function (e) {
+        var stripeClickHandler = function (e) {
 
             var tag = e.target;
 
-            //鼠标触发的click和 NEG.trigger 触发的click 不一致，后续check 
+            //鼠标触发的click和 NEG.trigger 触发的click 不一致，后续check neg代码
             var step = NEG.ArrayIndexOf(_option.stripes, tag) > -1 ?
                         NEG.ArrayIndexOf(_option.stripes, tag) :
                         NEG.ArrayIndexOf(_option.stripes, jQuery(tag).parents(_option.stripeSelector)[0]);
 
-            var content = _option.contents[step];
+            var content = _option.contents[step]
+                , stripe = _option.stripes[step];
+
             var isHidden = jQuery(content).is(":hidden");
 
             if (stripeStatus[step] && !stripeStatus[step].contentEventDefined) {
@@ -180,17 +209,23 @@ NEG.Module('NEG.Widget.AutoConfigurator', function (require) {
                 stripeStatus[step].contentEventDefined = true;
             }
 
+            if (stripeStatus[step] && !stripeStatus[step].contentLeaveEventDefined) {
+                jQuery(stripe).on("mouseleave", contentLeaveHandler);
+                jQuery(stripe).on("mouseenter", contentEnterHandler);
+
+                stripeStatus[step].contentLeaveEventDefined = true;
+            }
+
             jQuery(_option.contents).hide();
             isHidden ? jQuery(content).show() : jQuery(content).hide();
         }
 
 
         var afterProcessData = function (step, selectedData) {
-
             //第一个stripe 绑定click事件.
             if (!stripeStatus[step]) { return };
             if (!stripeStatus[step].stripeEventDefined) {
-                _option.stripes[step] && NEG(_option.stripes[step]).on("click", stripeClickHanlder);
+                _option.stripes[step] && NEG(_option.stripes[step]).on("click", stripeClickHandler);
                 stripeStatus[step].stripeEventDefined = true;
             }
 
@@ -200,12 +235,14 @@ NEG.Module('NEG.Widget.AutoConfigurator', function (require) {
 
             //需要自动触发的
             if (stripeStatus[step].autoExpand) {
-                NEG(_option.stripes[step]).trigger("click", "need data");
+                NEG(_option.stripes[step]).trigger("click", "");
             }
 
             if (isCompleted) {
                 jQuery(_option.buttonGoSelector).removeClass(_option.buttonGoDisableClass);
             }
+
+            clearTimeout(t);
         }
 
         var init = function () {
@@ -220,7 +257,7 @@ NEG.Module('NEG.Widget.AutoConfigurator', function (require) {
                     autoExpandLength++;
                 }
 
-                stripeStatus[i] = new strip(stripeEnable, false, false, key, jQuery(defaultStripeTextList[i]).text(), autoExpand);
+                stripeStatus[i] = new strip(stripeEnable,  key, jQuery(defaultStripeTextList[i]).text(), autoExpand);
             };
 
             stripeStatus.autoExpandLength = autoExpandLength;
@@ -235,57 +272,3 @@ NEG.Module('NEG.Widget.AutoConfigurator', function (require) {
     return AutoConfigurator;
 
 });
-
-function o(key, value) {
-    this.key = key;
-    this.value = value;
-}
-
-var testData = [];
-
-for (var i = 0; i < 10; i++) {
-    testData.push(new o(i, "Make" + i));
-}
-
-for (var i = 0; i < 10; i++) {
-    testData.push(new o(i, "Model" + i));
-}
-
-for (var i = 0; i < 10; i++) {
-    testData.push(new o(i, "Category" + i));
-}
-
-for (var i = 0; i < 10; i++) {
-    testData.push(new o(i, "SubCategory" + i));
-}
-
-
-NEG.run(function (require) {
-
-    var stripePicker = require("NEG.Widget.AutoConfigurator");
-
-    var container = stripePicker({
-        stripeSelector: ".atsTextButtonSelect"
-        , contentSelector: ".atsDDAnchor .atsDD"
-        , buttonGoSelector: "#ddSubmit"
-        , processData: function (selectedData, preStripe, nextStripe) {
-            var length = selectedData.length;
-
-            var liString = "<ul>";
-            for (var i = (length - 1) * 10; i < length * 10 && i < testData.length; i++) {
-                liString += "<li><a href='#' neg-sp-data-value=" + testData[i].key + ">" + testData[i].value + "</a></li>";
-            }
-            liString += "</ul>";
-
-            var $nextStripe = jQuery(nextStripe);
-            $nextStripe.find(".atsDDContent").html(liString);
-            return true;
-        }
-        , go: function (e, selectedData) {
-            console.log(selectedData);
-        }
-    }, "asYmmChooserStripe");
-
-});
-
-
