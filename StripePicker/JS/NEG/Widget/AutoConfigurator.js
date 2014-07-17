@@ -53,9 +53,8 @@ NEG.Module('NEG.Widget.AutoConfigurator', function (require) {
            , buttonGoSelector: ""
            , stripes: []
            , contents: []
-           , stripeTextSelector: ".atsLabel"
-           , strileDisableClass: "atsDisabled"
-           , buttonGoDisableClass: "atbDisabled"
+           , strileDisableClass: ""
+           , buttonGoDisableClass: ""
            , processData: null
            , go: null
            , stripeKey: "neg-sp-data-Key"
@@ -64,7 +63,7 @@ NEG.Module('NEG.Widget.AutoConfigurator', function (require) {
            , autoExpandKey: "neg-sp-data-autoExpand"
            , enableMouseLeave: true
         }
-        
+
         NEG.merge(_option, option);
         NEG.on(Event.buttonGo, _option.go);
 
@@ -78,7 +77,7 @@ NEG.Module('NEG.Widget.AutoConfigurator', function (require) {
 
             $preStripe.find(_option.contentSelector).hide();
             var stripeKey = $preStripe.attr(_option.stripeKey);
-            $preStripe.find(_option.stripeTextSelector).text(selectedData.get(stripeKey).value);
+            $preStripe.find("[" + _option.defaultStripeText + "]").text(selectedData.get(stripeKey).value);
 
             var arrayLength = selectedData.length;
             var needRefresh = arrayLength - step > 1;
@@ -98,7 +97,8 @@ NEG.Module('NEG.Widget.AutoConfigurator', function (require) {
                 for (var i = step + 1 ; i < _option.stripes.length; i++) {
                     var $stripe = jQuery(_option.stripes[i]);
                     $stripe.addClass(_option.strileDisableClass);
-                    $stripe.find(_option.stripeTextSelector).text(stripeStatus[i].defaultStripeText);
+                    $stripe.find("[" + _option.defaultStripeText + "]").text(stripeStatus[i].defaultStripeText);
+
                     //解除事件绑定
                     if (stripeStatus[i].stripeEventDefined) {
                         _option.stripes[i] && NEG(_option.stripes[i]).off("click", stripeClickHandler);
@@ -120,7 +120,7 @@ NEG.Module('NEG.Widget.AutoConfigurator', function (require) {
                 }
                 return window.setTimeout(_cb, timeout);
             },
-            stopPropagation : function (e) {
+            stopPropagation: function (e) {
                 e = e || window.event;
                 if (e.stopPropagation) { //W3C阻止冒泡方法 
                     e.stopPropagation();
@@ -150,12 +150,10 @@ NEG.Module('NEG.Widget.AutoConfigurator', function (require) {
 
         var contentEnterHandler = function (e) {
             var stripeTarget = jQuery(e.target).parents(_option.stripeSelector)[0];
-            console.log(stripeTarget);
             var step = NEG.ArrayIndexOf(_option.stripes, stripeTarget);
             if (jQuery(_option.contents[step]).is(":hidden")) {
                 return;
             }
-            console.log("clear");
             window.clearTimeout(t);
         }
 
@@ -268,7 +266,7 @@ NEG.Module('NEG.Widget.AutoConfigurator', function (require) {
                     autoExpandLength++;
                 }
 
-                stripeStatus[i] = new strip(stripeEnable,  key, jQuery(defaultStripeTextList[i]).text(), autoExpand);
+                stripeStatus[i] = new strip(stripeEnable, key, jQuery(defaultStripeTextList[i]).text(), autoExpand);
             };
 
             stripeStatus.autoExpandLength = autoExpandLength;

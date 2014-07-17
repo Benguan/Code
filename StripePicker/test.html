@@ -468,62 +468,12 @@
     <div id="asBottom"></div>
 
     <script>
+        var handle = function () {
 
-        function o(key, value) {
-            this.key = key;
-            this.value = value;
         }
 
-        var testData = [];
-
-        for (var i = 0; i < 10; i++) {
-            testData.push(new o(i, "Make" + i));
-        }
-
-        for (var i = 0; i < 10; i++) {
-            testData.push(new o(i, "Model" + i));
-        }
-
-        for (var i = 0; i < 10; i++) {
-            testData.push(new o(i, "Category" + i));
-        }
-
-        for (var i = 0; i < 10; i++) {
-            testData.push(new o(i, "SubCategory" + i));
-        }
-
-
-        NEG.run(function (require) {
-
-            var stripePicker = require("NEG.Widget.AutoConfigurator");
-
-            var container = stripePicker({
-                stripeSelector: ".atsTextButtonSelect"
-                , contentSelector: ".atsDDAnchor .atsDD"
-                , buttonGoSelector: "#ddSubmit"
-                , strileDisableClass: "atsDisabled"
-                , buttonGoDisableClass: "atbDisabled"
-                , processData: function (selectedData, preStripe, nextStripe) {
-                    var length = selectedData.length;
-
-                    var liString = "<ul>";
-                    for (var i = (length - 1) * 10; i < length * 10 && i < testData.length; i++) {
-                        liString += "<li><a href='#' neg-sp-data-value=" + testData[i].key + ">" + testData[i].value + "</a></li>";
-                    }
-                    liString += "</ul>";
-
-                    var $nextStripe = jQuery(nextStripe);
-                    $nextStripe.find(".atsDDContent").html(liString);
-                    return true;
-                }
-                , go: function (e, selectedData) {
-                    console.log(selectedData);
-                }
-            }, "asYmmChooserStripe");
-
-        });
-
-
+        var element = document.getElementById("ddYearStripe");
+        NEG(element).on("click");
 
     </script>
 </body>
