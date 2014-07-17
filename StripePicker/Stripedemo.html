@@ -512,7 +512,7 @@
                     }
                     liString += "</ul>";
 
-                    var $nextStripe = jQuery(nextStripe);
+                    var $nextStripe = jQuery(nextStripe.content);
                     $nextStripe.find(".atsDDContent").html(liString);
                     return true;
                 }

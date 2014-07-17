@@ -37,7 +37,6 @@ NEG.Module('NEG.Widget.AutoConfigurator', function (require) {
                     return;
                 }
             }
-
             this.push({ "stripe": stripe, "value": value });
         }
 
@@ -54,7 +53,7 @@ NEG.Module('NEG.Widget.AutoConfigurator', function (require) {
            , stripes: []
            , contents: []
            , strileDisableClass: ""
-           , buttonGoDisableClass: ""
+           , buttonGoDisableClass: null
            , processData: null
            , go: null
            , stripeKey: "neg-sp-data-Key"
@@ -69,13 +68,15 @@ NEG.Module('NEG.Widget.AutoConfigurator', function (require) {
 
         _option.stripes = jQuery(_option.stripeSelector);
         _option.contents = jQuery(_option.contentSelector);
+        _option.buttonGoDisableClass || (_option.buttonGoDisableClass = _option.strileDisableClass);
 
         var beforeProcessData = function (step, selectedData) {
 
             var $preStripe = jQuery(_option.stripes[step])
+                , $preContent = jQuery(_option.contentSelector)
                 , $buttonGo = jQuery(_option.buttonGoSelector);
 
-            $preStripe.find(_option.contentSelector).hide();
+            $preContent.hide();
             var stripeKey = $preStripe.attr(_option.stripeKey);
             $preStripe.find("[" + _option.defaultStripeText + "]").text(selectedData.get(stripeKey).value);
 
@@ -174,7 +175,6 @@ NEG.Module('NEG.Widget.AutoConfigurator', function (require) {
             };
 
             selectedData.set(stripeStatus[step].stripeKey, { "key": key, "value": value });
-
             beforeProcessData(step, selectedData);
 
             //处理下一个
@@ -182,9 +182,11 @@ NEG.Module('NEG.Widget.AutoConfigurator', function (require) {
 
             var preStep = step - 1
             , preStripe = _option.stripes[preStep]
-            , nextStripe = _option.stripes[step];
+            , nextStripe = _option.stripes[step]
+            , preContent = _option.contents[preStep]
+            , nextContent = _option.contents[step];
 
-            if (_option.processData(selectedData, preStripe, nextStripe)) {
+            if (_option.processData(selectedData, { "stripe": preStripe, "content": preContent }, { "stripe": nextStripe, "content": nextContent })) {
 
                 if (step >= _option.stripes.length || step > stripeStatus.autoExpandLength) {
                     isCompleted = true;
@@ -195,6 +197,7 @@ NEG.Module('NEG.Widget.AutoConfigurator', function (require) {
                     }
                 };
 
+              
                 afterProcessData(step, selectedData);
             }
         }
