@@ -133,6 +133,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Controllers\APIController.cs" />
     <Compile Include="Controllers\DemoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManagerController.cs" />
@@ -143,6 +144,8 @@
     </Compile>
     <Compile Include="Models\APICategory.cs" />
     <Compile Include="Models\APIDetailInfo.cs" />
+    <Compile Include="Models\ModuleDetailInfo.cs" />
+    <Compile Include="Models\ModuleCategory.cs" />
     <Compile Include="Models\DemoDetailInfo.cs" />
     <Compile Include="Models\NEGWebsiteEntities.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -225,6 +228,7 @@
     <Content Include="Scripts\Widget\Module2.js" />
     <Content Include="Scripts\Widget\Popup.js" />
     <Content Include="Scripts\Widget\Switch.js" />
+    <Content Include="Views\API\APIDetail.aspx" />
     <Content Include="Views\Demo\DemoDetail.aspx" />
     <Content Include="Views\Home\About.aspx" />
     <Content Include="Views\Home\API.aspx" />

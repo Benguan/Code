@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<dynamic>" %>
+
 <%@ Import Namespace="NEG.Website.Models" %>
 <%@ Import Namespace="NEG.Website.Controls.Common" %>
 
@@ -20,12 +21,24 @@
         <div class="menu_02_01">
             <ul>
                 <li><%:Html.Span(category.CategoryName) %></li>
+
+                <% 
+                foreach (APIDetailInfo info in apiDetailInfos)
+                {
+                %>
+
+                <li><%:Html.ActionLink(info.APIName, "APIDetail","API") %></li>
+
+                <%
+                } 
+                   
+                %>
             </ul>
         </div>
         <%
             } 
         %>
-   <%--     <div class="menu_02_01">
+        <%--     <div class="menu_02_01">
             <ul>
                 <li><span>BASE<span> </span></span></li>
                 <li><a href="API/BaseAPI/NEG.merge.html">NEG.merge </a></li>
@@ -41,7 +54,6 @@
                 <li><a href="API/BaseAPI/NEG.trigger.html">NEG.trigger </a></li>
             </ul>
         </div>--%>
-    
     </div>
 </asp:Content>
 

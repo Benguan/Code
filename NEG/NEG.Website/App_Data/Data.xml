@@ -1,0 +1,965 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+	<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:Locale="">
+			<xs:complexType>
+				<xs:choice minOccurs="0" maxOccurs="unbounded">
+					<xs:element name="Table">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="SectionID" type="xs:int" minOccurs="0" />
+								<xs:element name="SectionName" type="xs:string" minOccurs="0" />
+								<xs:element name="DisplayText" type="xs:string" minOccurs="0" />
+								<xs:element name="LinkURL" type="xs:string" minOccurs="0" />
+								<xs:element name="LinkTitle" type="xs:string" minOccurs="0" />
+								<xs:element name="StoreTypeID" type="xs:int" minOccurs="0" />
+								<xs:element name="StoreID" type="xs:int" minOccurs="0" />
+								<xs:element name="StoreIDVice" type="xs:int" minOccurs="0" />
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+	</xs:schema>
+	<Table>
+		<SectionID>25</SectionID>
+		<SectionName>Learning Center 147</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=244</LinkURL>
+		<LinkTitle>Desktop Memory Buying Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>147</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>25</SectionID>
+		<SectionName>Learning Center 147</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=124</LinkURL>
+		<LinkTitle>Understanding DDR and DDR2 Memory</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>147</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>25</SectionID>
+		<SectionName>Learning Center 147</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=126</LinkURL>
+		<LinkTitle>Do I Need ECC and Registered Memory?</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>147</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>25</SectionID>
+		<SectionName>Learning Center 147</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=227</LinkURL>
+		<LinkTitle>Memory Glossary</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>147</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>29</SectionID>
+		<SectionName>Learning Center 22</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=193</LinkURL>
+		<LinkTitle>AMD Compatible Motherboard Buying Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>22</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>29</SectionID>
+		<SectionName>Learning Center 22</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=135</LinkURL>
+		<LinkTitle>AMD Compatible Desktop Chipset Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>22</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>29</SectionID>
+		<SectionName>Learning Center 22</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=129</LinkURL>
+		<LinkTitle>Motherboard Installation Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>22</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>29</SectionID>
+		<SectionName>Learning Center 22</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=133</LinkURL>
+		<LinkTitle>Motherboard Glossary</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>22</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>30</SectionID>
+		<SectionName>Learning Center 7</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=192</LinkURL>
+		<LinkTitle>Computer Case Buying Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>7</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>30</SectionID>
+		<SectionName>Learning Center 7</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=106</LinkURL>
+		<LinkTitle>Introduction to Computer Case Accessories</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>7</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>31</SectionID>
+		<SectionName>Learning Center 280</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=194</LinkURL>
+		<LinkTitle>Intel Compatible Motherboard Buying Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>280</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>31</SectionID>
+		<SectionName>Learning Center 280</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=136</LinkURL>
+		<LinkTitle>Intel Compatible Desktop Chipset Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>280</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>31</SectionID>
+		<SectionName>Learning Center 280</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=132</LinkURL>
+		<LinkTitle>Motherboard Installation Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>280</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>31</SectionID>
+		<SectionName>Learning Center 280</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=131</LinkURL>
+		<LinkTitle>Motherboard Glossary</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>280</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>32</SectionID>
+		<SectionName>Learning Center 205</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=196</LinkURL>
+		<LinkTitle>Camcorder Buying Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>205</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>32</SectionID>
+		<SectionName>Learning Center 205</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=120</LinkURL>
+		<LinkTitle>Camcorder Usage Tips</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>205</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>33</SectionID>
+		<SectionName>Learning Center 10</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=197</LinkURL>
+		<LinkTitle>Desktop PC Buying Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>10</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>33</SectionID>
+		<SectionName>Learning Center 10</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=108</LinkURL>
+		<LinkTitle>Desktop PC Glossary</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>10</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>34</SectionID>
+		<SectionName>Learning Center 381</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=207</LinkURL>
+		<LinkTitle>Notebook Memory Buying Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>381</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>34</SectionID>
+		<SectionName>Learning Center 381</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=134</LinkURL>
+		<LinkTitle>Memory Glossary</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>381</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>35</SectionID>
+		<SectionName>Learning Center 23</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=243</LinkURL>
+		<LinkTitle>MP3 Player Buying Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>23</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>35</SectionID>
+		<SectionName>Learning Center 23</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=110</LinkURL>
+		<LinkTitle>MP3 Player Accessories Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>23</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>35</SectionID>
+		<SectionName>Learning Center 23</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=111</LinkURL>
+		<LinkTitle>MP3 Player Glossary</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>23</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>36</SectionID>
+		<SectionName>Learning Center 58</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=199</LinkURL>
+		<LinkTitle>Power Supply Buying Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>58</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>36</SectionID>
+		<SectionName>Learning Center 58</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=113</LinkURL>
+		<LinkTitle>Power Supply Installation Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>58</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>37</SectionID>
+		<SectionName>Learning Center 343</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=256</LinkURL>
+		<LinkTitle>CPU Buying Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>343</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>37</SectionID>
+		<SectionName>Learning Center 343</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=254</LinkURL>
+		<LinkTitle>Intel Desktop Processors Introduction</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>343</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>37</SectionID>
+		<SectionName>Learning Center 343</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=255</LinkURL>
+		<LinkTitle>AMD Desktop Processors Introduction</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>343</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>37</SectionID>
+		<SectionName>Learning Center 343</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=253</LinkURL>
+		<LinkTitle>CPU Installation Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>343</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>37</SectionID>
+		<SectionName>Learning Center 343</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=252</LinkURL>
+		<LinkTitle>Processor Glossary</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>343</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>38</SectionID>
+		<SectionName>Learning Center 44</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=217</LinkURL>
+		<LinkTitle>Scanner Buying Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>44</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>38</SectionID>
+		<SectionName>Learning Center 44</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=116</LinkURL>
+		<LinkTitle>Scanner Glossary</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>44</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>39</SectionID>
+		<SectionName>Learning Center 32</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=205</LinkURL>
+		<LinkTitle>Notebook Computer Buying Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>32</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>39</SectionID>
+		<SectionName>Learning Center 32</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=43</LinkURL>
+		<LinkTitle>Notebook Processor Tour</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>32</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>39</SectionID>
+		<SectionName>Learning Center 32</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=44</LinkURL>
+		<LinkTitle>Introduction to Notebook Computer Displays</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>32</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>39</SectionID>
+		<SectionName>Learning Center 32</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=45</LinkURL>
+		<LinkTitle>Notebook Battery Tips</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>32</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>39</SectionID>
+		<SectionName>Learning Center 32</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=46</LinkURL>
+		<LinkTitle>Notebook Glossary</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>32</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>40</SectionID>
+		<SectionName>Learning Center 5</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=48</LinkURL>
+		<LinkTitle>Optical Drive Installation Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>5</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>40</SectionID>
+		<SectionName>Learning Center 5</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=49</LinkURL>
+		<LinkTitle>CD / DVD Glossary</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>5</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>41</SectionID>
+		<SectionName>Learning Center 71</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=211</LinkURL>
+		<LinkTitle>Blank CD/DVD Recordable Media Buying Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>71</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>42</SectionID>
+		<SectionName>Learning Center 12</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=59</LinkURL>
+		<LinkTitle>Digital Camera Accessories</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>12</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>42</SectionID>
+		<SectionName>Learning Center 12</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=61</LinkURL>
+		<LinkTitle>Choosing the Right Digital Camera Memory Card</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>12</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>42</SectionID>
+		<SectionName>Learning Center 12</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=62</LinkURL>
+		<LinkTitle>Photography Tips</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>12</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>42</SectionID>
+		<SectionName>Learning Center 12</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=63</LinkURL>
+		<LinkTitle>Digital Camera Glossary</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>12</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>43</SectionID>
+		<SectionName>Learning Center 357</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=221</LinkURL>
+		<LinkTitle>GPS Receiver Buying Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>357</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>43</SectionID>
+		<SectionName>Learning Center 357</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=71</LinkURL>
+		<LinkTitle>GPS Receivers Glossary</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>357</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>44</SectionID>
+		<SectionName>Learning Center 42</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=213</LinkURL>
+		<LinkTitle>Projector Buying Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>42</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>44</SectionID>
+		<SectionName>Learning Center 42</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=77</LinkURL>
+		<LinkTitle>Projector Accessories Buying Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>42</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>44</SectionID>
+		<SectionName>Learning Center 42</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=78</LinkURL>
+		<LinkTitle>Projector Video Connector Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>42</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>44</SectionID>
+		<SectionName>Learning Center 42</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=79</LinkURL>
+		<LinkTitle>Projector Usage Tips</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>42</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>44</SectionID>
+		<SectionName>Learning Center 42</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=80</LinkURL>
+		<LinkTitle>Projector Glossary</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>42</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>45</SectionID>
+		<SectionName>Learning Center 31</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=224</LinkURL>
+		<LinkTitle>Wireless Adapters Buying Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>31</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>45</SectionID>
+		<SectionName>Learning Center 31</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=83</LinkURL>
+		<LinkTitle>Wireless Adapters Glossary</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>31</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>46</SectionID>
+		<SectionName>Learning Center 145</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=232</LinkURL>
+		<LinkTitle>Wireless Routers Buying Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>145</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>46</SectionID>
+		<SectionName>Learning Center 145</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=88</LinkURL>
+		<LinkTitle>Home Network Building Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>145</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>46</SectionID>
+		<SectionName>Learning Center 145</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=87</LinkURL>
+		<LinkTitle>How to Protect Your Wireless Network</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>145</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>46</SectionID>
+		<SectionName>Learning Center 145</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=89</LinkURL>
+		<LinkTitle>Wireless Routers Glossary</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>145</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>47</SectionID>
+		<SectionName>Learning Center 63</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=261</LinkURL>
+		<LinkTitle>Keyboard Glossary</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>63</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>48</SectionID>
+		<SectionName>Learning Center 65</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=225</LinkURL>
+		<LinkTitle>Mouse Buying Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>65</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>48</SectionID>
+		<SectionName>Learning Center 65</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=94</LinkURL>
+		<LinkTitle>Mouse Glossary</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>65</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>49</SectionID>
+		<SectionName>Learning Center 30</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=262</LinkURL>
+		<LinkTitle>Network Switch Buying Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>30</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>49</SectionID>
+		<SectionName>Learning Center 30</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=91</LinkURL>
+		<LinkTitle>Home Network Building Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>30</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>50</SectionID>
+		<SectionName>Learning Center 68</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=220</LinkURL>
+		<LinkTitle>Flash Memory Card Buying Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>68</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>50</SectionID>
+		<SectionName>Learning Center 68</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=67</LinkURL>
+		<LinkTitle>Choose a Capacity of Your Flash Memory</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>68</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>51</SectionID>
+		<SectionName>Learning Center 20</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=247</LinkURL>
+		<LinkTitle>LCD Monitor Buying Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>20</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>51</SectionID>
+		<SectionName>Learning Center 20</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=54</LinkURL>
+		<LinkTitle>Advantages of the Widescreen LCD Monitor</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>20</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>51</SectionID>
+		<SectionName>Learning Center 20</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=55</LinkURL>
+		<LinkTitle>Understanding the Dead Pixel</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>20</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>52</SectionID>
+		<SectionName>Learning Center 48</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=223</LinkURL>
+		<LinkTitle>Video Card Buying Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>48</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>52</SectionID>
+		<SectionName>Learning Center 48</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=184</LinkURL>
+		<LinkTitle>ATI Desktop GPU Tour</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>48</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>52</SectionID>
+		<SectionName>Learning Center 48</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=185</LinkURL>
+		<LinkTitle>NVIDIA Desktop GPU Tour</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>48</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>52</SectionID>
+		<SectionName>Learning Center 48</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=186</LinkURL>
+		<LinkTitle>Video Card I/O Ports and Interfaces</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>48</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>52</SectionID>
+		<SectionName>Learning Center 48</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=188</LinkURL>
+		<LinkTitle>Video Card Hardware Installation Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>48</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>52</SectionID>
+		<SectionName>Learning Center 48</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=189</LinkURL>
+		<LinkTitle>Video Card Glossary</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>48</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>53</SectionID>
+		<SectionName>Learning Center 14</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>12</LinkURL>
+		<LinkTitle>Internal Hard Drive Buying Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>14</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>53</SectionID>
+		<SectionName>Learning Center 14</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=95</LinkURL>
+		<LinkTitle>Internal Hard Drive Installation Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>14</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>53</SectionID>
+		<SectionName>Learning Center 14</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=96</LinkURL>
+		<LinkTitle>Hard Drive Glossary</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>14</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>54</SectionID>
+		<SectionName>Learning Center 414</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=200</LinkURL>
+		<LinkTitle>External Hard Drive Buying Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>414</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>54</SectionID>
+		<SectionName>Learning Center 414</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=98</LinkURL>
+		<LinkTitle>USB and IEEE 1394 Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>414</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>54</SectionID>
+		<SectionName>Learning Center 414</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=99</LinkURL>
+		<LinkTitle>Hard Drive Glossary</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>414</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>55</SectionID>
+		<SectionName>Learning Center 380</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=222</LinkURL>
+		<LinkTitle>Notebook Hard Drive Buying Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>380</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>55</SectionID>
+		<SectionName>Learning Center 380</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=140</LinkURL>
+		<LinkTitle>Hard Drive Glossary</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>380</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>56</SectionID>
+		<SectionName>Learning Center 3</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=201</LinkURL>
+		<LinkTitle>Barebone System Buying Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>3</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>56</SectionID>
+		<SectionName>Learning Center 3</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=142</LinkURL>
+		<LinkTitle>Barebone Glossary</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>3</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>57</SectionID>
+		<SectionName>Learning Center 38</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=210</LinkURL>
+		<LinkTitle>Printer Buying Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>38</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>57</SectionID>
+		<SectionName>Learning Center 38</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=84</LinkURL>
+		<LinkTitle>Inkjet Printer Maintenance Tips</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>38</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>57</SectionID>
+		<SectionName>Learning Center 38</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=86</LinkURL>
+		<LinkTitle>Printer Glossary</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>38</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>58</SectionID>
+		<SectionName>Learning Center 411</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=242</LinkURL>
+		<LinkTitle>LCD TV Buying Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>411</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>58</SectionID>
+		<SectionName>Learning Center 411</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=237</LinkURL>
+		<LinkTitle>LCD TV Video Connector Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>411</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>58</SectionID>
+		<SectionName>Learning Center 411</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=238</LinkURL>
+		<LinkTitle>Experiencing DTV on the LCD TV</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>411</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>58</SectionID>
+		<SectionName>Learning Center 411</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=239</LinkURL>
+		<LinkTitle>LCD TV Glossary</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>411</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>59</SectionID>
+		<SectionName>Learning Center 385</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=204</LinkURL>
+		<LinkTitle>Plasma TV Buying Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>385</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>59</SectionID>
+		<SectionName>Learning Center 385</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=72</LinkURL>
+		<LinkTitle>Plasma TV Video Connector Guide</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>385</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>59</SectionID>
+		<SectionName>Learning Center 385</SectionName>
+		<DisplayText>Learning Center</DisplayText>
+		<LinkURL>http://www.newegg.com/product/CategoryIntelligenceArticle.aspx?articleId=73</LinkURL>
+		<LinkTitle>Experiencing DTV on the Plasma TV</LinkTitle>
+		<StoreTypeID>2</StoreTypeID>
+		<StoreID>385</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+	<Table>
+		<SectionID>60</SectionID>
+		<SectionName>Learning Center 33</SectionName>
+		<DisplayText>Recertified Items</DisplayText>
+		<LinkURL>http://www.newegg.com/Product/ProductList.aspx?Submit=ENE&amp;Category=33&amp;N=2000330000%204016&amp;SpeTabStoreType=97</LinkURL>
+		<LinkTitle>Printers &amp; Scanners</LinkTitle>
+		<StoreTypeID>1</StoreTypeID>
+		<StoreID>33</StoreID>
+		<StoreIDVice>-999</StoreIDVice>
+	</Table>
+</NewDataSet>

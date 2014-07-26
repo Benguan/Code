@@ -1,0 +1,1 @@
+xsd /c /n:Newegg.Framework.DataAccess DataOperations.xsd

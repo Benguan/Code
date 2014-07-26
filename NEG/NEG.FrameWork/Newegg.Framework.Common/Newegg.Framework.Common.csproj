@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{733FE9EE-6137-4638-B8A9-C08ECF9CD593}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Newegg.Framework</RootNamespace>
+    <AssemblyName>Newegg.Framework.Common</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\DebugAssembly\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\DebugAssembly\Newegg.Framework.Common.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\ReleasedAssembly\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>..\..\ReleasedAssembly\Newegg.Framework.Common.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Caches\PathsChangeMonitor.cs" />
+    <Compile Include="Collection\CaseInsensitiveStringEqualityComparer.cs" />
+    <Compile Include="Collection\IKeyedObject.cs" />
+    <Compile Include="Collection\IKeyedObjectCollection.cs" />
+    <Compile Include="Collection\KeyedObjectCollection.cs" />
+    <Compile Include="Collection\Sorting\EntityComparer.cs" />
+    <Compile Include="Collection\Sorting\SortInfo.cs" />
+    <Compile Include="Collection\Sorting\SortOrder.cs" />
+    <Compile Include="Configuration\ConfigurationManagerBase.cs" />
+    <Compile Include="EnumerableExtensions.cs" />
+    <Compile Include="Globalization\NeweggResourceManager.cs" />
+    <Compile Include="Globalization\ResourceLoader.cs" />
+    <Compile Include="Globalization\ResourcePool.cs" />
+    <Compile Include="Globalization\ResourceProfile.cs" />
+    <Compile Include="Globalization\ResourceFileType.cs" />
+    <Compile Include="Implement\StaticNow.cs" />
+    <Compile Include="INow.cs" />
+    <Compile Include="IO\IDirectoryWatcher.cs" />
+    <Compile Include="IO\IDirectoryWatcherFactory.cs" />
+    <Compile Include="IO\Implement\DefaultPathUtility.cs" />
+    <Compile Include="IO\Implement\DirectoryWatcherFactory.cs" />
+    <Compile Include="IO\Implement\FileSystemWatcherDirectoryWatcher.cs" />
+    <Compile Include="IO\Implement\StaticDirectory.cs" />
+    <Compile Include="IO\Implement\StaticFile.cs" />
+    <Compile Include="IO\Implement\StaticPath.cs" />
+    <Compile Include="IO\IPathUtility.cs" />
+    <Compile Include="IO\IStaticDirectory.cs" />
+    <Compile Include="IO\IStaticFile.cs" />
+    <Compile Include="IO\IStaticPath.cs" />
+    <Compile Include="Threading\StringResource.cs" />
+    <Compile Include="Logging\EmptyLogger.cs" />
+    <Compile Include="Logging\ILogger.cs" />
+    <Compile Include="Logging\LoggerFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Threading\HttpContextStorage.cs" />
+    <Compile Include="Threading\HybridContextStorage.cs" />
+    <Compile Include="Threading\IThreadStorage.cs" />
+    <Compile Include="Threading\LogicalThreadContext.cs" />
+    <Compile Include="Threading\ThreadStaticStorage.cs" />
+    <Compile Include="Utility\AntiXssEncoder.cs" />
+    <Compile Include="Utility\ArrayUtils.cs" />
+    <Compile Include="Utility\AssertUtils.cs" />
+    <Compile Include="Utility\ConfigurationHelper.cs" />
+    <Compile Include="Utility\Converter.cs" />
+    <Compile Include="Utility\CustomStringJoiner.cs" />
+    <Compile Include="Utility\Data\DataTableHelper.cs" />
+    <Compile Include="Utility\Data\Validator.cs" />
+    <Compile Include="Utility\EnumHelper.cs" />
+    <Compile Include="Utility\FileSystemChangeEventHandler.cs" />
+    <Compile Include="Utility\IMoneyCalculator.cs" />
+    <Compile Include="Utility\ListHelper.cs" />
+    <Compile Include="Utility\ObjectSoapSerializer.cs" />
+    <Compile Include="Utility\ObjectXmlSerializer.cs" />
+    <Compile Include="Utility\Pagination\PaginationHelper.cs" />
+    <Compile Include="Utility\PerformanceTracer.cs" />
+    <Compile Include="Utility\StringHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

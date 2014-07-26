@@ -120,9 +120,23 @@ namespace NEG.Website.Controllers
 
         public ActionResult ModuleList()
         {
+
+            InitDB();
             return View();
         }
 
+        public void InitDB()
+        {
+            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<NEGWebsiteEntities>());
+            db.APICategories.Add(new APICategory("UTILITY", 2));
+            db.APICategories.Add(new APICategory("Base", 1));
+
+            db.ModuleCategories.Add(new ModuleCategory("THIRD PARTY", 1));
+            db.ModuleCategories.Add(new ModuleCategory("UTILITY", 2));
+            db.ModuleCategories.Add(new ModuleCategory("WIDGET", 3));
+
+            db.SaveChanges();
+        }
 
     }
 }

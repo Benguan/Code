@@ -8,5 +8,9 @@ namespace NEG.Website.Models
         public DbSet<APIDetailInfo> APIDetailInfos { get; set; }
         public DbSet<DemoDetailInfo> DemoDetailInfos { get; set; }
 
+        public DbSet<ModuleCategory> ModuleCategories { get; set; }
+        public DbSet<ModuleDetailInfo> ModuleDetailInfos { get; set; }
+
+
     }
 }

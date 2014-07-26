@@ -1,0 +1,1816 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Newegg.Framework.Common</name>
+    </assembly>
+    <members>
+        <member name="T:Newegg.Framework.Caches.PathsChangeMonitor">
+            <summary>
+            Paths change monitor.
+            </summary>
+        </member>
+        <member name="F:Newegg.Framework.Caches.PathsChangeMonitor.now">
+            <summary>
+            The now.
+            </summary>
+        </member>
+        <member name="F:Newegg.Framework.Caches.PathsChangeMonitor.staticPath">
+            <summary>
+            The static path.
+            </summary>
+        </member>
+        <member name="F:Newegg.Framework.Caches.PathsChangeMonitor.staticDirectory">
+            <summary>
+            The static directory.
+            </summary>
+        </member>
+        <member name="F:Newegg.Framework.Caches.PathsChangeMonitor.staticFile">
+            <summary>
+            Static file.
+            </summary>
+        </member>
+        <member name="F:Newegg.Framework.Caches.PathsChangeMonitor.utility">
+            <summary>
+            The utility.
+            </summary>
+        </member>
+        <member name="F:Newegg.Framework.Caches.PathsChangeMonitor.watcherFactory">
+            <summary>
+            The watcher factory.
+            </summary>
+        </member>
+        <member name="F:Newegg.Framework.Caches.PathsChangeMonitor.myGuid">
+            <summary>
+            My guid.
+            </summary>
+        </member>
+        <member name="F:Newegg.Framework.Caches.PathsChangeMonitor.watchers">
+            <summary>
+            Directory watchers.
+            </summary>
+        </member>
+        <member name="F:Newegg.Framework.Caches.PathsChangeMonitor.paths">
+            <summary>
+            Watched paths.
+            </summary>
+        </member>
+        <member name="F:Newegg.Framework.Caches.PathsChangeMonitor.myLastModifyTime">
+            <summary>
+            My last modify time.
+            </summary>
+        </member>
+        <member name="M:Newegg.Framework.Caches.PathsChangeMonitor.#ctor(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Initializes a new instance of the PathsChangeMonitor class.
+            </summary>
+            <param name="paths">Monitored paths.</param>
+            <exception cref="T:System.ArgumentException">Paths are null or empty.;paths</exception>
+        </member>
+        <member name="M:Newegg.Framework.Caches.PathsChangeMonitor.Dispose(System.Boolean)">
+            <summary>
+            Releases all managed and unmanaged resources and any references to the System.Runtime.Caching.ChangeMonitor instance. This overload must be implemented by derived change-monitor classes.
+            </summary>
+            <param name="disposing">True to release managed and unmanaged resources and any references to a System.Runtime.Caching.ChangeMonitor instance; false to release only unmanaged resources. When false is passed, the System.Runtime.Caching.ChangeMonitor.Dispose(System.Boolean) method is called by a finalizer thread and any external managed references are likely no longer valid because they have already been garbage collected.</param>
+        </member>
+        <member name="P:Newegg.Framework.Caches.PathsChangeMonitor.FilePaths">
+            <summary>
+            Gets a collection that contains the paths of files that are monitored for changes.
+            </summary>
+        </member>
+        <member name="P:Newegg.Framework.Caches.PathsChangeMonitor.LastModified">
+            <summary>
+            Gets a value that indicates the last time that a file that is being monitored was changed.
+            </summary>
+        </member>
+        <member name="P:Newegg.Framework.Caches.PathsChangeMonitor.UniqueId">
+            <summary>
+            Gets a value that represents the System.Runtime.Caching.ChangeMonitor class instance.
+            </summary>
+        </member>
+        <member name="T:Newegg.Framework.Collection.IKeyedObject`1">
+            <summary>
+            Represents an object that owns a key and can be uniquely identified by that key in a collection.
+            </summary>
+        </member>
+        <member name="P:Newegg.Framework.Collection.IKeyedObject`1.Key">
+            <summary>
+            Gets the key that can uniquely identify the object.
+            </summary>
+        </member>
+        <member name="T:Newegg.Framework.Collection.IKeyedObjectCollection`2">
+            <summary>
+            Represents a collection of IKeyedObject that can be accessed by index. 
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Newegg.Framework.Collection.IKeyedObjectCollection`2.GetItemByKey(`0)">
+            <summary>
+            Gets the item by key.
+            </summary>
+            <param name="key">The key.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Newegg.Framework.Collection.IKeyedObjectCollection`2.Contains(`0)">
+            <summary>
+            Indicates if the collection contains an object with the specified key value.
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Newegg.Framework.Collection.IKeyedObjectCollection`2.Item(System.Int32)">
+            <summary>
+            Gets or sets the element at the specified index.
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Newegg.Framework.Collection.IKeyedObjectCollection`2.Item(`0)">
+            <summary>
+            Gets or sets the element with the specified key value.
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Newegg.Framework.Collection.KeyedObjectCollection`2">
+            <summary>
+            Represents a collection of IKeyedObject objects.
+            </summary>
+            <remarks>
+            Note: the implementation of this class uses two classes, namely List and Dictionary, to allow
+            	both integer- and string- typed index access. This occupies more memory than usual collection class.
+            </remarks>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Newegg.Framework.Collection.KeyedObjectCollection`2.#ctor">
+            <summary>
+            <para>Initializes a new instance of the <see cref="!:T"/> class.</para>
+            </summary>
+        </member>
+        <member name="P:Newegg.Framework.Collection.KeyedObjectCollection`2.Item(`0)">
+            <summary>
+            Returns null if specified key does not exist in the collection.
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Newegg.Framework.Collection.Sorting.EntityComparer`1">
+            <summary>
+            generic comparer class that compares two objects against the give property name.
+            if the type of the object's property does not support comparison (i.e. the 
+            property's type does not implement IComparable), the two objects will be regarded as 
+            being equal.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Newegg.Framework.Collection.Sorting.SortInfo">
+            <summary>
+            sort information, including the property name and the sort order.
+            This class is immutable.
+            </summary>
+        </member>
+        <member name="T:Newegg.Framework.Collection.Sorting.SortOrder">
+            <summary>
+            sort order for search result.
+            </summary>
+        </member>
+        <member name="T:Newegg.Framework.Configuration.ConfigurationManagerBase">
+            <summary>
+            Deserialize the configuration file into a runtime object, and monitors the configuration file and 
+            reflects any change to the runtime object as well.
+            </summary>
+            <remarks>
+            Note to the extenders:
+            Future work:
+            	currently, configuration manager relies on System.Web.Caching.Cache to manage configuration objects.
+            	MS enterprise library caching component is not used because filedependecy checks file's date every time 
+            	an cache item is accessed and thus impose too much IO operations.
+            	System.Web.Caching.Cache supports many features and is therefore used here. This, however, restricts the
+            	future scalablity and usage scenarios of this component cause the consumer will have to be dependent on 
+            	System.Web.dll.
+            	Solution: implement a custome filedependy for MS enterprise library that uses FileSystemWatcher to 
+            	get notification of file changes rather than actively checking file dates and thus reduces IO operation.
+            </remarks>
+        </member>
+        <member name="M:Newegg.Framework.Configuration.ConfigurationManagerBase.LoadConfiguration``1(System.String,System.String,System.Boolean)">
+            <summary>
+            if serialization fails, an exception is thrown.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <param name="configFile"></param>
+            <param name="needLog"></param>
+            <returns></returns>
+            <exception cref="T:Newegg.Framework.Configuration.ConfigurationManagerBase.LoadFileException"> when configuration file fails to load</exception>
+        </member>
+        <member name="M:Newegg.Framework.Configuration.ConfigurationManagerBase.AddToCache(System.String,System.Object,System.String,System.Boolean)">
+            <summary>
+            Add configuration to cache
+            </summary>
+            <param name="key">section name defined in the web.config</param>
+            <param name="value">configuration object</param>
+            <param name="depedencyFile">config file</param>
+            <param name="depedencyFile">need Log</param>
+        </member>
+        <member name="M:Newegg.Framework.Configuration.ConfigurationManagerBase.GetFromCache``1(System.String,System.String,System.Boolean)">
+            <summary>
+            Get configuration object from cache. If the underlying file changes, the object will be reloaded.
+            </summary>
+            <typeparam name="T">Type of configuration object</typeparam>
+            <param name="key">file name of the configuration object</param>
+            <param name="depedencyFile">need Log</param>
+            <returns>configuration object</returns>
+            <exception cref="T:Newegg.Framework.Configuration.ConfigurationManagerBase.LoadFileException"> when configuration file fails to load</exception>
+        </member>
+        <member name="T:Newegg.Framework.EnumerableExtensions">
+            <summary>
+            Enumerable Extensions.
+            </summary>
+        </member>
+        <member name="M:Newegg.Framework.EnumerableExtensions.IsNullOrEmpty``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Check whether a collection is null or empty.
+            </summary>
+            <typeparam name="TSource">IEnumerable T Class.</typeparam>
+            <param name="source">IEnumerable Object.</param>
+            <returns>Return True or False.</returns>
+        </member>
+        <member name="M:Newegg.Framework.EnumerableExtensions.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})">
+            <summary>
+            Do action for each item.
+            </summary>
+            <typeparam name="TSource">T Class.</typeparam>
+            <param name="source">Current IEnumerable.</param>
+            <param name="action">Action for each item.</param>
+        </member>
+        <member name="M:Newegg.Framework.EnumerableExtensions.ToList``2(System.Collections.Generic.IEnumerable{``0},System.Func{System.Collections.Generic.IEnumerable{``1}})">
+            <summary>
+            Convert a collection To another collection.
+            </summary>
+            <typeparam name="TSource">Original Class.</typeparam>
+            <typeparam name="TResult">Result Class.</typeparam>
+            <param name="source">IEnumerable with TClass.</param>
+            <param name="func">Function for each item.</param>
+            <returns>Return IEnumerable ITResult  Or Null.</returns>
+        </member>
+        <member name="M:Newegg.Framework.EnumerableExtensions.ToList``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})">
+            <summary>
+            Convert a collection To another collection.
+            </summary>
+            <typeparam name="TSource">Original Class.</typeparam>
+            <typeparam name="TResult">Result Class.</typeparam>
+            <param name="source">IEnumerable with TClass.</param>
+            <param name="selector">Delegate selector.</param>
+            <returns>Return IEnumerable ITResult  Or Null.</returns>
+        </member>
+        <member name="F:Newegg.Framework.Globalization.ResourceFileType.resx">
+            <summary>
+            resx file
+            </summary>
+        </member>
+        <member name="F:Newegg.Framework.Globalization.ResourceFileType.html">
+            <summary>
+            html file
+            </summary>
+        </member>
+        <member name="F:Newegg.Framework.Globalization.ResourceFileType.aspx">
+            <summary>
+            aspx file
+            </summary>
+        </member>
+        <member name="F:Newegg.Framework.Globalization.ResourceFileType.txt">
+            <summary>
+            txt file
+            </summary>
+        </member>
+        <member name="T:Newegg.Framework.Implement.StaticNow">
+            <summary>
+            Static now.
+            </summary>
+        </member>
+        <member name="T:Newegg.Framework.INow">
+            <summary>
+            Now interface.
+            </summary>
+        </member>
+        <member name="P:Newegg.Framework.INow.DateTime">
+            <summary>
+            Gets date time now.
+            </summary>
+        </member>
+        <member name="P:Newegg.Framework.INow.DateTimeOffset">
+            <summary>
+            Gets date time off set now.
+            </summary>
+        </member>
+        <member name="P:Newegg.Framework.Implement.StaticNow.DateTime">
+            <summary>
+            Gets date time now.
+            </summary>
+        </member>
+        <member name="P:Newegg.Framework.Implement.StaticNow.DateTimeOffset">
+            <summary>
+            Gets date time off set now.
+            </summary>
+        </member>
+        <member name="T:Newegg.Framework.IO.IDirectoryWatcher">
+            <summary>
+            Directory watcher.
+            </summary>
+        </member>
+        <member name="M:Newegg.Framework.IO.IDirectoryWatcher.AddCreatedHandler(System.Action{System.Object,System.IO.FileSystemEventArgs})">
+            <summary>
+            Add created handler.
+            </summary>
+            <param name="createdHandler">Created handler.</param>
+        </member>
+        <member name="M:Newegg.Framework.IO.IDirectoryWatcher.AddChangedHandler(System.Action{System.Object,System.IO.FileSystemEventArgs})">
+            <summary>
+            Add changed handler.
+            </summary>
+            <param name="changedHandler">Changed handler.</param>
+        </member>
+        <member name="M:Newegg.Framework.IO.IDirectoryWatcher.AddDeletedHandler(System.Action{System.Object,System.IO.FileSystemEventArgs})">
+            <summary>
+            Add deleted handler.
+            </summary>
+            <param name="deletedHandler">Deleted handler.</param>
+        </member>
+        <member name="M:Newegg.Framework.IO.IDirectoryWatcher.AddRenamedHandler(System.Action{System.Object,System.IO.RenamedEventArgs})">
+            <summary>
+            Add renamed handler.
+            </summary>
+            <param name="renamedHandler">Renamed handler.</param>
+        </member>
+        <member name="P:Newegg.Framework.IO.IDirectoryWatcher.Path">
+            <summary>
+            Gets full directory path.
+            </summary>
+        </member>
+        <member name="T:Newegg.Framework.IO.IDirectoryWatcherFactory">
+            <summary>
+            Directory watcher factory.
+            </summary>
+        </member>
+        <member name="M:Newegg.Framework.IO.IDirectoryWatcherFactory.CreateWatcher(System.String)">
+            <summary>
+            Create directory watcher.
+            </summary>
+            <param name="path">Full path.</param>
+            <returns>Directory watcher.</returns>
+        </member>
+        <member name="T:Newegg.Framework.IO.Implement.DefaultPathUtility">
+            <summary>
+            Defualt path utility.
+            </summary>
+        </member>
+        <member name="T:Newegg.Framework.IO.IPathUtility">
+            <summary>
+            Path utility interface.
+            </summary>
+        </member>
+        <member name="M:Newegg.Framework.IO.IPathUtility.GetDirectory(System.String)">
+            <summary>
+            Get path directory.
+            </summary>
+            <param name="path">The path of a file or directory.</param>
+            <returns>If path is a file, return file directory full path. If path is a directory, return the directory. If path is not exist, return string.Empty.</returns>
+        </member>
+        <member name="M:Newegg.Framework.IO.IPathUtility.GetExistDirectoryOrParentDirectory(System.String)">
+            <summary>
+            Get the first exist directory or parent directory.
+            </summary>
+            <param name="path">The path of a file or directory.</param>
+            <returns>If path is a file, return the first exist directory or parent directory full path. If path is a directory, return it self or first exist parent directory. If all parent directies are not exist, return string.Empty.</returns>
+        </member>
+        <member name="F:Newegg.Framework.IO.Implement.DefaultPathUtility.staticPath">
+            <summary>
+            Static path.
+            </summary>
+        </member>
+        <member name="F:Newegg.Framework.IO.Implement.DefaultPathUtility.staticDirectory">
+            <summary>
+            Static directory.
+            </summary>
+        </member>
+        <member name="F:Newegg.Framework.IO.Implement.DefaultPathUtility.staticFile">
+            <summary>
+            Static file.
+            </summary>
+        </member>
+        <member name="M:Newegg.Framework.IO.Implement.DefaultPathUtility.#ctor(Newegg.Framework.IO.IStaticPath,Newegg.Framework.IO.IStaticDirectory,Newegg.Framework.IO.IStaticFile)">
+            <summary>
+            Initializes a new instance of the DefaultPathUtility class.
+            </summary>
+            <param name="staticPath">Static path.</param>
+            <param name="staticDirectory">Static directory.</param>
+            <param name="staticFile">Static file.</param>
+        </member>
+        <member name="M:Newegg.Framework.IO.Implement.DefaultPathUtility.GetDirectory(System.String)">
+            <summary>
+            Get path directory.
+            </summary>
+            <param name="path">The path of a file or directory.</param>
+            <returns>If path is a file, return file directory full path. If path is a directory, return the directory. If path is not exist, return string.Empty.</returns>
+        </member>
+        <member name="M:Newegg.Framework.IO.Implement.DefaultPathUtility.GetExistDirectoryOrParentDirectory(System.String)">
+            <summary>
+            Get the first exist directory or parent directory.
+            </summary>
+            <param name="path">The path of a file or directory.</param>
+            <returns>If path is a file, return the first exist directory or parent directory full path. If path is a directory, return it self or first exist parent directory. If all parent directies are not exist, return string.Empty.</returns>
+        </member>
+        <member name="T:Newegg.Framework.IO.Implement.DirectoryWatcherFactory">
+            <summary>
+            Dirctory watch factory.
+            </summary>
+        </member>
+        <member name="F:Newegg.Framework.IO.Implement.DirectoryWatcherFactory.utility">
+            <summary>
+            Path utility.
+            </summary>
+        </member>
+        <member name="M:Newegg.Framework.IO.Implement.DirectoryWatcherFactory.#ctor(Newegg.Framework.IO.IPathUtility)">
+            <summary>
+            Initializes a new instance of the DirectoryWatcherFactory class.
+            </summary>
+            <param name="utility">Path utility.</param>
+        </member>
+        <member name="M:Newegg.Framework.IO.Implement.DirectoryWatcherFactory.CreateWatcher(System.String)">
+            <summary>
+            Create directory watcher.
+            </summary>
+            <param name="path">Full path.</param>
+            <returns>Directory watcher.</returns>
+        </member>
+        <member name="T:Newegg.Framework.IO.Implement.FileSystemWatcherDirectoryWatcher">
+            <summary>
+            File system watcher directory watcher.
+            </summary>
+        </member>
+        <member name="F:Newegg.Framework.IO.Implement.FileSystemWatcherDirectoryWatcher.watcher">
+            <summary>
+            My watcher.
+            </summary>
+        </member>
+        <member name="F:Newegg.Framework.IO.Implement.FileSystemWatcherDirectoryWatcher.createdHandlers">
+            <summary>
+            Created handler.
+            </summary>
+        </member>
+        <member name="F:Newegg.Framework.IO.Implement.FileSystemWatcherDirectoryWatcher.changedHandlers">
+            <summary>
+            Changed handler.
+            </summary>
+        </member>
+        <member name="F:Newegg.Framework.IO.Implement.FileSystemWatcherDirectoryWatcher.deleltedHandlers">
+            <summary>
+            Deleted handler.
+            </summary>
+        </member>
+        <member name="F:Newegg.Framework.IO.Implement.FileSystemWatcherDirectoryWatcher.renamedHandlers">
+            <summary>
+            Renamed handler.
+            </summary>
+        </member>
+        <member name="M:Newegg.Framework.IO.Implement.FileSystemWatcherDirectoryWatcher.#ctor(System.String,Newegg.Framework.IO.IPathUtility)">
+            <summary>
+            Initializes a new instance of the FileSystemWatcherDirectoryWatcher class.
+            </summary>
+            <param name="path">Full requested path.</param>
+            <param name="utility">Path utility.</param>
+        </member>
+        <member name="M:Newegg.Framework.IO.Implement.FileSystemWatcherDirectoryWatcher.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:Newegg.Framework.IO.Implement.FileSystemWatcherDirectoryWatcher.AddCreatedHandler(System.Action{System.Object,System.IO.FileSystemEventArgs})">
+            <summary>
+            Add created handler.
+            </summary>
+            <param name="createdHandler">Created handler.</param>
+        </member>
+        <member name="M:Newegg.Framework.IO.Implement.FileSystemWatcherDirectoryWatcher.AddChangedHandler(System.Action{System.Object,System.IO.FileSystemEventArgs})">
+            <summary>
+            Add changed handler.
+            </summary>
+            <param name="changedHandler">Changed handler.</param>
+        </member>
+        <member name="M:Newegg.Framework.IO.Implement.FileSystemWatcherDirectoryWatcher.AddDeletedHandler(System.Action{System.Object,System.IO.FileSystemEventArgs})">
+            <summary>
+            Add deleted handler.
+            </summary>
+            <param name="deletedHandler">Deleted handler.</param>
+        </member>
+        <member name="M:Newegg.Framework.IO.Implement.FileSystemWatcherDirectoryWatcher.AddRenamedHandler(System.Action{System.Object,System.IO.RenamedEventArgs})">
+            <summary>
+            Add renamed handler.
+            </summary>
+            <param name="renamedHandler">Renamed handler.</param>
+        </member>
+        <member name="M:Newegg.Framework.IO.Implement.FileSystemWatcherDirectoryWatcher.OnCreated(System.Object,System.IO.FileSystemEventArgs)">
+            <summary>
+            On path changed event.
+            </summary>
+            <param name="source">Changed source.</param>
+            <param name="e">Path change event args.</param>
+        </member>
+        <member name="M:Newegg.Framework.IO.Implement.FileSystemWatcherDirectoryWatcher.OnDeleted(System.Object,System.IO.FileSystemEventArgs)">
+            <summary>
+            On path changed event.
+            </summary>
+            <param name="source">Changed source.</param>
+            <param name="e">Path change event args.</param>
+        </member>
+        <member name="M:Newegg.Framework.IO.Implement.FileSystemWatcherDirectoryWatcher.OnChanged(System.Object,System.IO.FileSystemEventArgs)">
+            <summary>
+            On path changed event.
+            </summary>
+            <param name="source">Changed source.</param>
+            <param name="e">Path change event args.</param>
+        </member>
+        <member name="M:Newegg.Framework.IO.Implement.FileSystemWatcherDirectoryWatcher.OnRenamed(System.Object,System.IO.RenamedEventArgs)">
+            <summary>
+            On path rename event.
+            </summary>
+            <param name="source">Rename source.</param>
+            <param name="e">Path rename args.</param>
+        </member>
+        <member name="P:Newegg.Framework.IO.Implement.FileSystemWatcherDirectoryWatcher.Path">
+            <summary>
+            Gets full directory path.
+            </summary>
+        </member>
+        <member name="T:Newegg.Framework.IO.Implement.StaticDirectory">
+            <summary>
+            Dotnet static directory functions wrap.
+            </summary>
+        </member>
+        <member name="T:Newegg.Framework.IO.IStaticDirectory">
+            <summary>
+            Dotnet static directory functions.
+            </summary>
+        </member>
+        <member name="M:Newegg.Framework.IO.IStaticDirectory.GetCurrentDirectory">
+            <summary>
+            Gets the current working directory of the application.
+            </summary>
+            <returns>A string that contains the path of the current working directory, and does not end with a backslash (\).</returns>
+            <exception cref="T:System.UnauthorizedAccessException">The caller does not have the required permission.</exception>
+            <exception cref="T:System.NotSupportedException">The operating system is Windows CE, which does not have current directory functionality.This method is available in the .NET Compact Framework, but is not currently supported.</exception>
+        </member>
+        <member name="M:Newegg.Framework.IO.IStaticDirectory.Exists(System.String)">
+            <summary>
+            Determines whether the given path refers to an existing directory on disk.
+            </summary>
+            <param name="path">The path to test.</param>
+            <returns>True if path refers to an existing directory; otherwise, false.</returns>
+        </member>
+        <member name="M:Newegg.Framework.IO.IStaticDirectory.GetDirectories(System.String)">
+            <summary>
+            Gets the names of subdirectories (including their paths) in the specified directory.
+            </summary>
+            <param name="path">The path for which an array of subdirectory names is returned.</param>
+            <returns>An array of the full names (including paths) of subdirectories in the specified path.</returns>
+            <exception cref="T:System.UnauthorizedAccessException">The caller does not have the required permission.</exception>
+            <exception cref="T:System.ArgumentException">Path is a zero-length string, contains only white space, or contains one or more invalid characters as defined by System.IO.Path.InvalidPathChars.</exception>
+            <exception cref="T:System.ArgumentNullException">Path is null.</exception>
+            <exception cref="T:System.IO.PathTooLongException">The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.</exception>
+            <exception cref="T:System.IO.IOException">Path is a file name.</exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException">The specified path is invalid (for example, it is on an unmapped drive).</exception>
+        </member>
+        <member name="M:Newegg.Framework.IO.IStaticDirectory.GetDirectories(System.String,System.String)">
+            <summary>
+            Gets the names of subdirectories (including their paths) that match the specified search pattern in the current directory.
+            </summary>
+            <param name="path">The path to search.</param>
+            <param name="searchPattern">The search string to match against the names of files in path. The parameter cannot end in two periods ("..") or contain two periods ("..") followed by System.IO.Path.DirectorySeparatorChar or System.IO.Path.AltDirectorySeparatorChar, nor can it contain any of the characters in System.IO.Path.InvalidPathChars.</param>
+            <returns>An array of the full names (including paths) of the subdirectories that match the search pattern.</returns>
+            <exception cref="T:System.UnauthorizedAccessException">The caller does not have the required permission.</exception>
+            <exception cref="T:System.ArgumentException">Path is a zero-length string, contains only white space, or contains one or more invalid characters as defined by System.IO.Path.InvalidPathChars.</exception>
+            <exception cref="T:System.ArgumentNullException">Path or searchPattern is null.</exception>
+            <exception cref="T:System.IO.PathTooLongException">The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.</exception>
+            <exception cref="T:System.IO.IOException">Path is a file name.</exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException">The specified path is invalid (for example, it is on an unmapped drive).</exception>
+        </member>
+        <member name="M:Newegg.Framework.IO.IStaticDirectory.GetDirectories(System.String,System.String,System.IO.SearchOption)">
+            <summary>
+            Gets the names of the subdirectories (including their paths) that match the specified search pattern in the current directory, and optionally searches subdirectories.
+            </summary>
+            <param name="path">The path to search.</param>
+            <param name="searchPattern">The search string to match against the names of files in path. The parameter cannot end in two periods ("..") or contain two periods ("..") followed by System.IO.Path.DirectorySeparatorChar or System.IO.Path.AltDirectorySeparatorChar, nor can it contain any of the characters in System.IO.Path.InvalidPathChars.</param>
+            <param name="searchOption">One of the enumeration values that specifies whether the search operation should include all subdirectories or only the current directory.</param>
+            <returns>An array of the full names (including paths) of the subdirectories that match the search pattern.</returns>
+            <exception cref="T:System.UnauthorizedAccessException">The caller does not have the required permission.</exception>
+            <exception cref="T:System.ArgumentException">Path is a zero-length string, contains only white space, or contains one or more invalid characters as defined by System.IO.Path.InvalidPathChars.</exception>
+            <exception cref="T:System.ArgumentNullException">Path or searchPattern is null.</exception>
+            <exception cref="T:System.IO.PathTooLongException">The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.</exception>
+            <exception cref="T:System.IO.IOException">Path is a file name.</exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException">The specified path is invalid (for example, it is on an unmapped drive).</exception>
+        </member>
+        <member name="M:Newegg.Framework.IO.IStaticDirectory.GetDirectoryRoot(System.String)">
+            <summary>
+            Returns the volume information, root information, or both for the specified path.
+            </summary>
+            <param name="path">The path of a file or directory.</param>
+            <returns>A string that contains the volume information, root information, or both for the specified path.</returns>
+            <exception cref="T:System.UnauthorizedAccessException">The caller does not have the required permission.</exception>
+            <exception cref="T:System.ArgumentException">Path is a zero-length string, contains only white space, or contains one or more invalid characters as defined by System.IO.Path.InvalidPathChars.</exception>
+            <exception cref="T:System.ArgumentNullException">Path is null.</exception>
+            <exception cref="T:System.IO.PathTooLongException">The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.</exception>
+        </member>
+        <member name="M:Newegg.Framework.IO.IStaticDirectory.GetFiles(System.String)">
+            <summary>
+            Returns the names of files (including their paths) in the specified directory.
+            </summary>
+            <param name="path">The directory from which to retrieve the files.</param>
+            <returns>An array of the full names (including paths) for the files in the specified directory.</returns>
+            <exception cref="T:System.IO.IOException">Path is a file name.-or-A network error has occurred.</exception>
+            <exception cref="T:System.UnauthorizedAccessException">The caller does not have the required permission.</exception>
+            <exception cref="T:System.ArgumentException">Path is a zero-length string, contains only white space, or contains one or more invalid characters as defined by System.IO.Path.InvalidPathChars.</exception>
+            <exception cref="T:System.ArgumentNullException">Path is null.</exception>
+            <exception cref="T:System.IO.PathTooLongException">The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.</exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException">The specified path is invalid (for example, it is on an unmapped drive).</exception>
+        </member>
+        <member name="M:Newegg.Framework.IO.IStaticDirectory.GetFiles(System.String,System.String)">
+            <summary>
+            Returns the names of files (including their paths) that match the specified search pattern in the specified directory.
+            </summary>
+            <param name="path">The directory to search.</param>
+            <param name="searchPattern">The search string to match against the names of files in path. The parameter cannot end in two periods ("..") or contain two periods ("..") followed by System.IO.Path.DirectorySeparatorChar or System.IO.Path.AltDirectorySeparatorChar, nor can it contain any of the characters in System.IO.Path.InvalidPathChars.</param>
+            <returns>An array of the full names (including paths) for the files in the specified directory that match the specified search pattern.</returns>
+            <exception cref="T:System.IO.IOException">Path is a file name.-or-A network error has occurred.</exception>
+            <exception cref="T:System.UnauthorizedAccessException">The caller does not have the required permission.</exception>
+            <exception cref="T:System.ArgumentException">Path is a zero-length string, contains only white space, or contains one or more invalid characters as defined by System.IO.Path.InvalidPathChars.</exception>
+            <exception cref="T:System.ArgumentNullException">Path or searchPattern is null.</exception>
+            <exception cref="T:System.IO.PathTooLongException">The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.</exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException">The specified path is invalid (for example, it is on an unmapped drive).</exception>
+        </member>
+        <member name="M:Newegg.Framework.IO.IStaticDirectory.GetFiles(System.String,System.String,System.IO.SearchOption)">
+            <summary>
+            Returns the names of files (including their paths) that match the specified search pattern in the specified directory, using a value to determine whether to search subdirectories.
+            </summary>
+            <param name="path">The directory to search.</param>
+            <param name="searchPattern">The search string to match against the names of files in path. The parameter cannot end in two periods ("..") or contain two periods ("..") followed by System.IO.Path.DirectorySeparatorChar or System.IO.Path.AltDirectorySeparatorChar, nor can it contain any of the characters in System.IO.Path.InvalidPathChars.</param>
+            <param name="searchOption">One of the enumeration values that specifies whether the search operation should include all subdirectories or only the current directory.</param>
+            <returns>An array of the full names (including paths) for the files in the specified directory that match the specified search pattern and option.</returns>
+            <exception cref="T:System.IO.IOException">Path is a file name.-or-A network error has occurred.</exception>
+            <exception cref="T:System.UnauthorizedAccessException">The caller does not have the required permission.</exception>
+            <exception cref="T:System.ArgumentException">Path is a zero-length string, contains only white space, or contains one or more invalid characters as defined by System.IO.Path.InvalidPathChars.</exception>
+            <exception cref="T:System.ArgumentNullException">Path or searchPattern is null.</exception>
+            <exception cref="T:System.IO.PathTooLongException">The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.</exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException">The specified path is invalid (for example, it is on an unmapped drive).</exception>
+        </member>
+        <member name="M:Newegg.Framework.IO.IStaticDirectory.GetFileSystemEntries(System.String)">
+            <summary>
+            Returns the names of all files and subdirectories in the specified directory.
+            </summary>
+            <param name="path">The directory for which file and subdirectory names are returned.</param>
+            <returns>An array of the names of files and subdirectories in the specified directory.</returns>
+            <exception cref="T:System.UnauthorizedAccessException">The caller does not have the required permission.</exception>
+            <exception cref="T:System.ArgumentException">Path is a zero-length string, contains only white space, or contains one or more invalid characters as defined by System.IO.Path.InvalidPathChars.</exception>
+            <exception cref="T:System.ArgumentNullException">Path is null.</exception>
+            <exception cref="T:System.IO.PathTooLongException">The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.</exception>
+            <exception cref="T:System.IO.IOException">Path is a file name.</exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException">The specified path is invalid (for example, it is on an unmapped drive).</exception>
+        </member>
+        <member name="M:Newegg.Framework.IO.IStaticDirectory.GetFileSystemEntries(System.String,System.String)">
+            <summary>
+            Returns an array of file system entries that match the specified search criteria.
+            </summary>
+            <param name="path">The path to be searched.</param>
+            <param name="searchPattern">The search string to match against the names of files in path. The searchPattern parameter cannot end in two periods ("..") or contain two periods ("..") followed by System.IO.Path.DirectorySeparatorChar or System.IO.Path.AltDirectorySeparatorChar, nor can it contain any of the characters in System.IO.Path.InvalidPathChars.</param>
+            <returns>An array of file system entries that match the specified search criteria.</returns>
+            <exception cref="T:System.UnauthorizedAccessException">The caller does not have the required permission.</exception>
+            <exception cref="T:System.ArgumentException">Path is a zero-length string, contains only white space, or contains one or more invalid characters as defined by System.IO.Path.InvalidPathChars.</exception>
+            <exception cref="T:System.ArgumentNullException">Path or searchPattern is null.</exception>
+            <exception cref="T:System.IO.PathTooLongException">The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.</exception>
+            <exception cref="T:System.IO.IOException">Path is a file name.</exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException">The specified path is invalid (for example, it is on an unmapped drive).</exception>
+        </member>
+        <member name="M:Newegg.Framework.IO.IStaticDirectory.GetFileSystemEntries(System.String,System.String,System.IO.SearchOption)">
+            <summary>
+            Gets an array of all the file names and directory names that match a search pattern in a specified path, and optionally searches subdirectories.
+            </summary>
+            <param name="path">The directory to search.</param>
+            <param name="searchPattern">The string used to search for all files or directories that match its search pattern. The default pattern is for all files and directories: "*".</param>
+            <param name="searchOption">One of the enumeration values that specifies whether the search operation should include only the current directory or should include all subdirectories.The default value is System.IO.SearchOption.TopDirectoryOnly.</param>
+            <returns>An array of file system entries that match the specified search criteria.</returns>
+            <exception cref="T:System.UnauthorizedAccessException">The caller does not have the required permission.</exception>
+            <exception cref="T:System.ArgumentException">Path is a zero-length string, contains only white space, or contains one or more invalid characters as defined by System.IO.Path.InvalidPathChars.</exception>
+            <exception cref="T:System.ArgumentNullException">Path or searchPattern is null.</exception>
+            <exception cref="T:System.IO.PathTooLongException">The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.</exception>
+            <exception cref="T:System.IO.IOException">Path is a file name.</exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException">The specified path is invalid (for example, it is on an unmapped drive).</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">SearchOption is not a valid System.IO.SearchOption value.</exception>
+            <exception cref="T:System.Security.SecurityException">The caller does not have the required permission.</exception>
+        </member>
+        <member name="M:Newegg.Framework.IO.Implement.StaticDirectory.GetCurrentDirectory">
+            <summary>
+            Gets the current working directory of the application.
+            </summary>
+            <returns>A string that contains the path of the current working directory, and does not end with a backslash (\).</returns>
+            <exception cref="T:System.UnauthorizedAccessException">The caller does not have the required permission.</exception>
+            <exception cref="T:System.NotSupportedException">The operating system is Windows CE, which does not have current directory functionality.This method is available in the .NET Compact Framework, but is not currently supported.</exception>
+        </member>
+        <member name="M:Newegg.Framework.IO.Implement.StaticDirectory.Exists(System.String)">
+            <summary>
+            Determines whether the given path refers to an existing directory on disk.
+            </summary>
+            <param name="path">The path to test.</param>
+            <returns>True if path refers to an existing directory; otherwise, false.</returns>
+        </member>
+        <member name="M:Newegg.Framework.IO.Implement.StaticDirectory.GetDirectories(System.String)">
+            <summary>
+            Gets the names of subdirectories (including their paths) in the specified directory.
+            </summary>
+            <param name="path">The path for which an array of subdirectory names is returned.</param>
+            <returns>An array of the full names (including paths) of subdirectories in the specified path.</returns>
+            <exception cref="T:System.UnauthorizedAccessException">The caller does not have the required permission.</exception>
+            <exception cref="T:System.ArgumentException">Path is a zero-length string, contains only white space, or contains one or more invalid characters as defined by System.IO.Path.InvalidPathChars.</exception>
+            <exception cref="T:System.ArgumentNullException">Path is null.</exception>
+            <exception cref="T:System.IO.PathTooLongException">The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.</exception>
+            <exception cref="T:System.IO.IOException">Path is a file name.</exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException">The specified path is invalid (for example, it is on an unmapped drive).</exception>
+        </member>
+        <member name="M:Newegg.Framework.IO.Implement.StaticDirectory.GetDirectories(System.String,System.String)">
+            <summary>
+            Gets the names of subdirectories (including their paths) that match the specified search pattern in the current directory.
+            </summary>
+            <param name="path">The path to search.</param>
+            <param name="searchPattern">The search string to match against the names of files in path. The parameter cannot end in two periods ("..") or contain two periods ("..") followed by System.IO.Path.DirectorySeparatorChar or System.IO.Path.AltDirectorySeparatorChar, nor can it contain any of the characters in System.IO.Path.InvalidPathChars.</param>
+            <returns>An array of the full names (including paths) of the subdirectories that match the search pattern.</returns>
+            <exception cref="T:System.UnauthorizedAccessException">The caller does not have the required permission.</exception>
+            <exception cref="T:System.ArgumentException">Path is a zero-length string, contains only white space, or contains one or more invalid characters as defined by System.IO.Path.InvalidPathChars.</exception>
+            <exception cref="T:System.ArgumentNullException">Path or searchPattern is null.</exception>
+            <exception cref="T:System.IO.PathTooLongException">The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.</exception>
+            <exception cref="T:System.IO.IOException">Path is a file name.</exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException">The specified path is invalid (for example, it is on an unmapped drive).</exception>
+        </member>
+        <member name="M:Newegg.Framework.IO.Implement.StaticDirectory.GetDirectories(System.String,System.String,System.IO.SearchOption)">
+            <summary>
+            Gets the names of the subdirectories (including their paths) that match the specified search pattern in the current directory, and optionally searches subdirectories.
+            </summary>
+            <param name="path">The path to search.</param>
+            <param name="searchPattern">The search string to match against the names of files in path. The parameter cannot end in two periods ("..") or contain two periods ("..") followed by System.IO.Path.DirectorySeparatorChar or System.IO.Path.AltDirectorySeparatorChar, nor can it contain any of the characters in System.IO.Path.InvalidPathChars.</param>
+            <param name="searchOption">One of the enumeration values that specifies whether the search operation should include all subdirectories or only the current directory.</param>
+            <returns>An array of the full names (including paths) of the subdirectories that match the search pattern.</returns>
+            <exception cref="T:System.UnauthorizedAccessException">The caller does not have the required permission.</exception>
+            <exception cref="T:System.ArgumentException">Path is a zero-length string, contains only white space, or contains one or more invalid characters as defined by System.IO.Path.InvalidPathChars.</exception>
+            <exception cref="T:System.ArgumentNullException">Path or searchPattern is null.</exception>
+            <exception cref="T:System.IO.PathTooLongException">The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.</exception>
+            <exception cref="T:System.IO.IOException">Path is a file name.</exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException">The specified path is invalid (for example, it is on an unmapped drive).</exception>
+        </member>
+        <member name="M:Newegg.Framework.IO.Implement.StaticDirectory.GetDirectoryRoot(System.String)">
+            <summary>
+            Returns the volume information, root information, or both for the specified path.
+            </summary>
+            <param name="path">The path of a file or directory.</param>
+            <returns>A string that contains the volume information, root information, or both for the specified path.</returns>
+            <exception cref="T:System.UnauthorizedAccessException">The caller does not have the required permission.</exception>
+            <exception cref="T:System.ArgumentException">Path is a zero-length string, contains only white space, or contains one or more invalid characters as defined by System.IO.Path.InvalidPathChars.</exception>
+            <exception cref="T:System.ArgumentNullException">Path is null.</exception>
+            <exception cref="T:System.IO.PathTooLongException">The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.</exception>
+        </member>
+        <member name="M:Newegg.Framework.IO.Implement.StaticDirectory.GetFiles(System.String)">
+            <summary>
+            Returns the names of files (including their paths) in the specified directory.
+            </summary>
+            <param name="path">The directory from which to retrieve the files.</param>
+            <returns>An array of the full names (including paths) for the files in the specified directory.</returns>
+            <exception cref="T:System.IO.IOException">Path is a file name.-or-A network error has occurred.</exception>
+            <exception cref="T:System.UnauthorizedAccessException">The caller does not have the required permission.</exception>
+            <exception cref="T:System.ArgumentException">Path is a zero-length string, contains only white space, or contains one or more invalid characters as defined by System.IO.Path.InvalidPathChars.</exception>
+            <exception cref="T:System.ArgumentNullException">Path is null.</exception>
+            <exception cref="T:System.IO.PathTooLongException">The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.</exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException">The specified path is invalid (for example, it is on an unmapped drive).</exception>
+        </member>
+        <member name="M:Newegg.Framework.IO.Implement.StaticDirectory.GetFiles(System.String,System.String)">
+            <summary>
+            Returns the names of files (including their paths) that match the specified search pattern in the specified directory.
+            </summary>
+            <param name="path">The directory to search.</param>
+            <param name="searchPattern">The search string to match against the names of files in path. The parameter cannot end in two periods ("..") or contain two periods ("..") followed by System.IO.Path.DirectorySeparatorChar or System.IO.Path.AltDirectorySeparatorChar, nor can it contain any of the characters in System.IO.Path.InvalidPathChars.</param>
+            <returns>An array of the full names (including paths) for the files in the specified directory that match the specified search pattern.</returns>
+            <exception cref="T:System.IO.IOException">Path is a file name.-or-A network error has occurred.</exception>
+            <exception cref="T:System.UnauthorizedAccessException">The caller does not have the required permission.</exception>
+            <exception cref="T:System.ArgumentException">Path is a zero-length string, contains only white space, or contains one or more invalid characters as defined by System.IO.Path.InvalidPathChars.</exception>
+            <exception cref="T:System.ArgumentNullException">Path or searchPattern is null.</exception>
+            <exception cref="T:System.IO.PathTooLongException">The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.</exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException">The specified path is invalid (for example, it is on an unmapped drive).</exception>
+        </member>
+        <member name="M:Newegg.Framework.IO.Implement.StaticDirectory.GetFiles(System.String,System.String,System.IO.SearchOption)">
+            <summary>
+            Returns the names of files (including their paths) that match the specified search pattern in the specified directory, using a value to determine whether to search subdirectories.
+            </summary>
+            <param name="path">The directory to search.</param>
+            <param name="searchPattern">The search string to match against the names of files in path. The parameter cannot end in two periods ("..") or contain two periods ("..") followed by System.IO.Path.DirectorySeparatorChar or System.IO.Path.AltDirectorySeparatorChar, nor can it contain any of the characters in System.IO.Path.InvalidPathChars.</param>
+            <param name="searchOption">One of the enumeration values that specifies whether the search operation should include all subdirectories or only the current directory.</param>
+            <returns>An array of the full names (including paths) for the files in the specified directory that match the specified search pattern and option.</returns>
+            <exception cref="T:System.IO.IOException">Path is a file name.-or-A network error has occurred.</exception>
+            <exception cref="T:System.UnauthorizedAccessException">The caller does not have the required permission.</exception>
+            <exception cref="T:System.ArgumentException">Path is a zero-length string, contains only white space, or contains one or more invalid characters as defined by System.IO.Path.InvalidPathChars.</exception>
+            <exception cref="T:System.ArgumentNullException">Path or searchPattern is null.</exception>
+            <exception cref="T:System.IO.PathTooLongException">The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.</exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException">The specified path is invalid (for example, it is on an unmapped drive).</exception>
+        </member>
+        <member name="M:Newegg.Framework.IO.Implement.StaticDirectory.GetFileSystemEntries(System.String)">
+            <summary>
+            Returns the names of all files and subdirectories in the specified directory.
+            </summary>
+            <param name="path">The directory for which file and subdirectory names are returned.</param>
+            <returns>An array of the names of files and subdirectories in the specified directory.</returns>
+            <exception cref="T:System.UnauthorizedAccessException">The caller does not have the required permission.</exception>
+            <exception cref="T:System.ArgumentException">Path is a zero-length string, contains only white space, or contains one or more invalid characters as defined by System.IO.Path.InvalidPathChars.</exception>
+            <exception cref="T:System.ArgumentNullException">Path is null.</exception>
+            <exception cref="T:System.IO.PathTooLongException">The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.</exception>
+            <exception cref="T:System.IO.IOException">Path is a file name.</exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException">The specified path is invalid (for example, it is on an unmapped drive).</exception>
+        </member>
+        <member name="M:Newegg.Framework.IO.Implement.StaticDirectory.GetFileSystemEntries(System.String,System.String)">
+            <summary>
+            Returns an array of file system entries that match the specified search criteria.
+            </summary>
+            <param name="path">The path to be searched.</param>
+            <param name="searchPattern">The search string to match against the names of files in path. The searchPattern parameter cannot end in two periods ("..") or contain two periods ("..") followed by System.IO.Path.DirectorySeparatorChar or System.IO.Path.AltDirectorySeparatorChar, nor can it contain any of the characters in System.IO.Path.InvalidPathChars.</param>
+            <returns>An array of file system entries that match the specified search criteria.</returns>
+            <exception cref="T:System.UnauthorizedAccessException">The caller does not have the required permission.</exception>
+            <exception cref="T:System.ArgumentException">Path is a zero-length string, contains only white space, or contains one or more invalid characters as defined by System.IO.Path.InvalidPathChars.</exception>
+            <exception cref="T:System.ArgumentNullException">Path or searchPattern is null.</exception>
+            <exception cref="T:System.IO.PathTooLongException">The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.</exception>
+            <exception cref="T:System.IO.IOException">Path is a file name.</exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException">The specified path is invalid (for example, it is on an unmapped drive).</exception>
+        </member>
+        <member name="M:Newegg.Framework.IO.Implement.StaticDirectory.GetFileSystemEntries(System.String,System.String,System.IO.SearchOption)">
+            <summary>
+            Gets an array of all the file names and directory names that match a search pattern in a specified path, and optionally searches subdirectories.
+            </summary>
+            <param name="path">The directory to search.</param>
+            <param name="searchPattern">The string used to search for all files or directories that match its search pattern. The default pattern is for all files and directories: "*".</param>
+            <param name="searchOption">One of the enumeration values that specifies whether the search operation should include only the current directory or should include all subdirectories.The default value is System.IO.SearchOption.TopDirectoryOnly.</param>
+            <returns>An array of file system entries that match the specified search criteria.</returns>
+            <exception cref="T:System.UnauthorizedAccessException">The caller does not have the required permission.</exception>
+            <exception cref="T:System.ArgumentException">Path is a zero-length string, contains only white space, or contains one or more invalid characters as defined by System.IO.Path.InvalidPathChars.</exception>
+            <exception cref="T:System.ArgumentNullException">Path or searchPattern is null.</exception>
+            <exception cref="T:System.IO.PathTooLongException">The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters and file names must be less than 260 characters.</exception>
+            <exception cref="T:System.IO.IOException">Path is a file name.</exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException">The specified path is invalid (for example, it is on an unmapped drive).</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">SearchOption is not a valid System.IO.SearchOption value.</exception>
+            <exception cref="T:System.Security.SecurityException">The caller does not have the required permission.</exception>
+        </member>
+        <member name="T:Newegg.Framework.IO.Implement.StaticFile">
+            <summary>
+            Static file.
+            </summary>
+        </member>
+        <member name="T:Newegg.Framework.IO.IStaticFile">
+            <summary>
+            Dotnet static file functions.
+            </summary>
+        </member>
+        <member name="M:Newegg.Framework.IO.IStaticFile.Exists(System.String)">
+            <summary>
+            Determines whether the specified file exists.
+            </summary>
+            <param name="path">The file to check.</param>
+            <returns>true if the caller has the required permissions and path contains the name of an existing file; otherwise, false. This method also returns false if path is null, an invalid path, or a zero-length string. If the caller does not have sufficient permissions to read the specified file, no exception is thrown and the method returns false regardless of the existence of path.</returns>
+        </member>
+        <member name="M:Newegg.Framework.IO.IStaticFile.ReadAllText(System.String)">
+            <summary>
+            Opens a text file, reads all lines of the file, and then closes the file.
+            </summary>
+            <param name="path">The file to open for reading.</param>
+            <returns>A string containing all lines of the file.</returns>
+            <exception cref="T:System.ArgumentException">Path is a zero-length string, contains only white space, or contains one or more invalid characters as defined by System.IO.Path.InvalidPathChars. </exception>
+            <exception cref="T:System.ArgumentNullException">Path is null.</exception>
+            <exception cref="T:System.IO.PathTooLongException">The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters, and file names must be less than 260 characters.</exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException">The specified path is invalid (for example, it is on an unmapped drive).</exception>
+            <exception cref="T:System.IO.IOException">An I/O error occurred while opening the file.</exception>
+            <exception cref="T:System.ArgumentException">Path specified a file that is read-only.-or- This operation is not supported on the current platform.-or- path specified a directory.-or- The caller does not have the required permission.</exception>
+            <exception cref="T:System.UnauthorizedAccessException">An I/O error occurred while opening the file.</exception>
+            <exception cref="T:System.IO.FileNotFoundException">The file specified in path was not found.</exception>
+            <exception cref="T:System.NotSupportedException">Path is in an invalid format.</exception>
+            <exception cref="T:System.Security.SecurityException">The caller does not have the required permission.</exception>
+        </member>
+        <member name="M:Newegg.Framework.IO.IStaticFile.WriteAllText(System.String,System.String)">
+            <summary>
+            Creates a new file, writes the specified string to the file, and then closes the file. If the target file already exists, it is overwritten.
+            </summary>
+            <param name="path">The file to write to.</param>
+            <param name="contents">The string to write to the file.</param>
+            <exception cref="T:System.ArgumentException">Path is a zero-length string, contains only white space, or contains one or more invalid characters as defined by System.IO.Path.InvalidPathChars. </exception>
+            <exception cref="T:System.ArgumentNullException">Path is null or contents is empty.</exception>
+            <exception cref="T:System.IO.PathTooLongException">The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters, and file names must be less than 260 characters.</exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException">The specified path is invalid (for example, it is on an unmapped drive).</exception>
+            <exception cref="T:System.IO.IOException">An I/O error occurred while opening the file.</exception>
+            <exception cref="T:System.UnauthorizedAccessException">An I/O error occurred while opening the file.</exception>
+            <exception cref="T:System.NotSupportedException">Path is in an invalid format.</exception>
+            <exception cref="T:System.Security.SecurityException">The caller does not have the required permission.</exception>
+        </member>
+        <member name="M:Newegg.Framework.IO.Implement.StaticFile.Exists(System.String)">
+            <summary>
+            Determines whether the specified file exists.
+            </summary>
+            <param name="path">The file to check.</param>
+            <returns>true if the caller has the required permissions and path contains the name of an existing file; otherwise, false. This method also returns false if path is null, an invalid path, or a zero-length string. If the caller does not have sufficient permissions to read the specified file, no exception is thrown and the method returns false regardless of the existence of path.</returns>
+        </member>
+        <member name="M:Newegg.Framework.IO.Implement.StaticFile.ReadAllText(System.String)">
+            <summary>
+            Opens a text file, reads all lines of the file, and then closes the file.
+            </summary>
+            <param name="path">The file to open for reading.</param>
+            <returns>A string containing all lines of the file.</returns>
+            <exception cref="T:System.ArgumentException">Path is a zero-length string, contains only white space, or contains one or more invalid characters as defined by System.IO.Path.InvalidPathChars. </exception>
+            <exception cref="T:System.ArgumentNullException">Path is null.</exception>
+            <exception cref="T:System.IO.PathTooLongException">The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters, and file names must be less than 260 characters.</exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException">The specified path is invalid (for example, it is on an unmapped drive).</exception>
+            <exception cref="T:System.IO.IOException">An I/O error occurred while opening the file.</exception>
+            <exception cref="T:System.ArgumentException">Path specified a file that is read-only.-or- This operation is not supported on the current platform.-or- path specified a directory.-or- The caller does not have the required permission.</exception>
+            <exception cref="T:System.UnauthorizedAccessException">An I/O error occurred while opening the file.</exception>
+            <exception cref="T:System.IO.FileNotFoundException">The file specified in path was not found.</exception>
+            <exception cref="T:System.NotSupportedException">Path is in an invalid format.</exception>
+            <exception cref="T:System.Security.SecurityException">The caller does not have the required permission.</exception>
+        </member>
+        <member name="M:Newegg.Framework.IO.Implement.StaticFile.WriteAllText(System.String,System.String)">
+            <summary>
+            Creates a new file, writes the specified string to the file, and then closes the file. If the target file already exists, it is overwritten.
+            </summary>
+            <param name="path">The file to write to.</param>
+            <param name="contents">The string to write to the file.</param>
+            <exception cref="T:System.ArgumentException">Path is a zero-length string, contains only white space, or contains one or more invalid characters as defined by System.IO.Path.InvalidPathChars. </exception>
+            <exception cref="T:System.ArgumentNullException">Path is null or contents is empty.</exception>
+            <exception cref="T:System.IO.PathTooLongException">The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters, and file names must be less than 260 characters.</exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException">The specified path is invalid (for example, it is on an unmapped drive).</exception>
+            <exception cref="T:System.IO.IOException">An I/O error occurred while opening the file.</exception>
+            <exception cref="T:System.UnauthorizedAccessException">An I/O error occurred while opening the file.</exception>
+            <exception cref="T:System.NotSupportedException">Path is in an invalid format.</exception>
+            <exception cref="T:System.Security.SecurityException">The caller does not have the required permission.</exception>
+        </member>
+        <member name="T:Newegg.Framework.IO.Implement.StaticPath">
+            <summary>
+            Static path.
+            </summary>
+        </member>
+        <member name="T:Newegg.Framework.IO.IStaticPath">
+            <summary>
+            Dotnet static path functions.
+            </summary>
+        </member>
+        <member name="M:Newegg.Framework.IO.IStaticPath.Combine(System.String[])">
+            <summary>
+            Combines an array of strings into a path.
+            </summary>
+            <param name="paths">An array of parts of the path.</param>
+            <returns>The combined paths.</returns>
+            <exception cref="T:System.ArgumentException">One of the strings in the array contains one or more of the invalid characters defined in System.IO.Path.GetInvalidPathChars().</exception>
+            <exception cref="T:System.ArgumentNullException">One of the strings in the array is null.</exception>
+        </member>
+        <member name="M:Newegg.Framework.IO.IStaticPath.GetDirectoryName(System.String)">
+            <summary>
+            Returns the directory information for the specified path string.
+            </summary>
+            <param name="path">The path of a file or directory.</param>
+            <returns>Directory information for path, or null if path denotes a root directory or is null. Returns System.String.Empty if path does not contain directory information.</returns>
+            <exception cref="T:System.ArgumentException">The path parameter contains invalid characters, is empty, or contains only white spaces.</exception>
+            <exception cref="T:System.IO.PathTooLongException">The path parameter is longer than the system-defined maximum length.</exception>
+        </member>
+        <member name="M:Newegg.Framework.IO.IStaticPath.GetExtension(System.String)">
+            <summary>
+            Returns the extension of the specified path string.
+            </summary>
+            <param name="path">The path string from which to get the extension.</param>
+            <returns>The extension of the specified path (including the period "."), or null, or System.String.Empty. If path is null, System.IO.Path.GetExtension(System.String) returns null. If path does not have extension information, System.IO.Path.GetExtension(System.String) returns System.String.Empty.</returns>
+            <exception cref="T:System.ArgumentException">Path contains one or more of the invalid characters defined in System.IO.Path.GetInvalidPathChars().</exception>
+        </member>
+        <member name="M:Newegg.Framework.IO.IStaticPath.GetFileName(System.String)">
+            <summary>
+            Returns the file name and extension of the specified path string.
+            </summary>
+            <param name="path">The path string from which to obtain the file name and extension.</param>
+            <returns>The characters after the last directory character in path. If the last character of path is a directory or volume separator character, this method returns System.String.Empty. If path is null, this method returns null.</returns>
+            <exception cref="T:System.ArgumentException">Path contains one or more of the invalid characters defined in System.IO.Path.GetInvalidPathChars().</exception>
+        </member>
+        <member name="M:Newegg.Framework.IO.IStaticPath.GetFileNameWithoutExtension(System.String)">
+            <summary>
+            Returns the file name of the specified path string without the extension.
+            </summary>
+            <param name="path">The path of the file.</param>
+            <returns>The string returned by System.IO.Path.GetFileName(System.String), minus the last period (.) and all characters following it.</returns>
+            <exception cref="T:System.ArgumentException">Path contains one or more of the invalid characters defined in System.IO.Path.GetInvalidPathChars().</exception>
+        </member>
+        <member name="M:Newegg.Framework.IO.IStaticPath.GetFullPath(System.String)">
+            <summary>
+            Returns the absolute path for the specified path string.
+            </summary>
+            <param name="path">The file or directory for which to obtain absolute path information.</param>
+            <returns>The fully qualified location of path, such as "C:\MyFile.txt".</returns>
+            <exception cref="T:System.ArgumentException">Path is a zero-length string, contains only white space, or contains one or more of the invalid characters defined in System.IO.Path.GetInvalidPathChars().-or- The system could not retrieve the absolute path.</exception>
+            <exception cref="T:System.Security.SecurityException">The caller does not have the required permissions.</exception>
+            <exception cref="T:System.ArgumentNullException">Path is null.</exception>
+            <exception cref="T:System.NotSupportedException">Path contains a colon (":") that is not part of a volume identifier (for example, "c:\").</exception>
+            <exception cref="T:System.IO.PathTooLongException">The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters, and file names must be less than 260 characters.</exception>
+        </member>
+        <member name="M:Newegg.Framework.IO.IStaticPath.HasExtension(System.String)">
+            <summary>
+            Determines whether a path includes a file name extension.
+            </summary>
+            <param name="path">The path to search for an extension.</param>
+            <returns>True if the characters that follow the last directory separator (\\ or /) or volume separator (:) in the path include a period (.) followed by one or more characters; otherwise, false.</returns>
+            <exception cref="T:System.ArgumentException">Path contains one or more of the invalid characters defined in System.IO.Path.GetInvalidPathChars().</exception>
+        </member>
+        <member name="M:Newegg.Framework.IO.IStaticPath.IsPathRooted(System.String)">
+            <summary>
+            Gets a value indicating whether the specified path string contains a root.
+            </summary>
+            <param name="path">The path to test.</param>
+            <returns>True if path contains a root; otherwise, false.</returns>
+            <exception cref="T:System.ArgumentException">Path contains one or more of the invalid characters defined in System.IO.Path.GetInvalidPathChars().</exception>
+        </member>
+        <member name="M:Newegg.Framework.IO.Implement.StaticPath.Combine(System.String[])">
+            <summary>
+            Combines an array of strings into a path.
+            </summary>
+            <param name="paths">An array of parts of the path.</param>
+            <returns>The combined paths.</returns>
+            <exception cref="T:System.ArgumentException">One of the strings in the array contains one or more of the invalid characters defined in System.IO.Path.GetInvalidPathChars().</exception>
+            <exception cref="T:System.ArgumentNullException">One of the strings in the array is null.</exception>
+        </member>
+        <member name="M:Newegg.Framework.IO.Implement.StaticPath.GetDirectoryName(System.String)">
+            <summary>
+            Returns the directory information for the specified path string.
+            </summary>
+            <param name="path">The path of a file or directory.</param>
+            <returns>Directory information for path, or null if path denotes a root directory or is null. Returns System.String.Empty if path does not contain directory information.</returns>
+            <exception cref="T:System.ArgumentException">The path parameter contains invalid characters, is empty, or contains only white spaces.</exception>
+            <exception cref="T:System.IO.PathTooLongException">The path parameter is longer than the system-defined maximum length.</exception>
+        </member>
+        <member name="M:Newegg.Framework.IO.Implement.StaticPath.GetExtension(System.String)">
+            <summary>
+            Returns the extension of the specified path string.
+            </summary>
+            <param name="path">The path string from which to get the extension.</param>
+            <returns>The extension of the specified path (including the period "."), or null, or System.String.Empty. If path is null, System.IO.Path.GetExtension(System.String) returns null. If path does not have extension information, System.IO.Path.GetExtension(System.String) returns System.String.Empty.</returns>
+            <exception cref="T:System.ArgumentException">Path contains one or more of the invalid characters defined in System.IO.Path.GetInvalidPathChars().</exception>
+        </member>
+        <member name="M:Newegg.Framework.IO.Implement.StaticPath.GetFileName(System.String)">
+            <summary>
+            Returns the file name and extension of the specified path string.
+            </summary>
+            <param name="path">The path string from which to obtain the file name and extension.</param>
+            <returns>The characters after the last directory character in path. If the last character of path is a directory or volume separator character, this method returns System.String.Empty. If path is null, this method returns null.</returns>
+            <exception cref="T:System.ArgumentException">Path contains one or more of the invalid characters defined in System.IO.Path.GetInvalidPathChars().</exception>
+        </member>
+        <member name="M:Newegg.Framework.IO.Implement.StaticPath.GetFileNameWithoutExtension(System.String)">
+            <summary>
+            Returns the file name of the specified path string without the extension.
+            </summary>
+            <param name="path">The path of the file.</param>
+            <returns>The string returned by System.IO.Path.GetFileName(System.String), minus the last period (.) and all characters following it.</returns>
+            <exception cref="T:System.ArgumentException">Path contains one or more of the invalid characters defined in System.IO.Path.GetInvalidPathChars().</exception>
+        </member>
+        <member name="M:Newegg.Framework.IO.Implement.StaticPath.GetFullPath(System.String)">
+            <summary>
+            Returns the absolute path for the specified path string.
+            </summary>
+            <param name="path">The file or directory for which to obtain absolute path information.</param>
+            <returns>The fully qualified location of path, such as "C:\MyFile.txt".</returns>
+            <exception cref="T:System.ArgumentException">Path is a zero-length string, contains only white space, or contains one or more of the invalid characters defined in System.IO.Path.GetInvalidPathChars().-or- The system could not retrieve the absolute path.</exception>
+            <exception cref="T:System.Security.SecurityException">The caller does not have the required permissions.</exception>
+            <exception cref="T:System.ArgumentNullException">Path is null.</exception>
+            <exception cref="T:System.NotSupportedException">Path contains a colon (":") that is not part of a volume identifier (for example, "c:\").</exception>
+            <exception cref="T:System.IO.PathTooLongException">The specified path, file name, or both exceed the system-defined maximum length. For example, on Windows-based platforms, paths must be less than 248 characters, and file names must be less than 260 characters.</exception>
+        </member>
+        <member name="M:Newegg.Framework.IO.Implement.StaticPath.HasExtension(System.String)">
+            <summary>
+            Determines whether a path includes a file name extension.
+            </summary>
+            <param name="path">The path to search for an extension.</param>
+            <returns>True if the characters that follow the last directory separator (\\ or /) or volume separator (:) in the path include a period (.) followed by one or more characters; otherwise, false.</returns>
+            <exception cref="T:System.ArgumentException">Path contains one or more of the invalid characters defined in System.IO.Path.GetInvalidPathChars().</exception>
+        </member>
+        <member name="M:Newegg.Framework.IO.Implement.StaticPath.IsPathRooted(System.String)">
+            <summary>
+            Gets a value indicating whether the specified path string contains a root.
+            </summary>
+            <param name="path">The path to test.</param>
+            <returns>True if path contains a root; otherwise, false.</returns>
+            <exception cref="T:System.ArgumentException">Path contains one or more of the invalid characters defined in System.IO.Path.GetInvalidPathChars().</exception>
+        </member>
+        <member name="T:Newegg.Framework.Logging.ILogger">
+            <summary>
+            Log
+            </summary>
+        </member>
+        <member name="T:Newegg.Framework.Threading.HttpContextStorage">
+            <summary>
+            Implements <see cref="T:Newegg.Framework.Threading.IThreadStorage"/> by using <see cref="T:System.Web.HttpContext"/>
+            </summary>
+        </member>
+        <member name="T:Newegg.Framework.Threading.IThreadStorage">
+            <summary>
+            Specifies the contract a strategy must be implement to store and 
+            retrieve data that is specific to the executing thread.
+            </summary>
+            <remarks>
+            All implementations of this interface must treat keys case-sensitive.
+            </remarks>
+        </member>
+        <member name="M:Newegg.Framework.Threading.IThreadStorage.GetData(System.String)">
+            <summary>
+            Retrieves an object with the specified <paramref name="name"/>.
+            </summary>
+            <param name="name">The name of the item.</param>
+            <returns>
+            The object in the current thread's context associated with the 
+            specified <paramref name="name"/> or null if no object has been stored previously
+            </returns>
+        </member>
+        <member name="M:Newegg.Framework.Threading.IThreadStorage.SetData(System.String,System.Object)">
+            <summary>
+            Stores a given object and associates it with the specified <paramref name="name"/>.
+            </summary>
+            <param name="name">The name with which to associate the new item.</param>
+            <param name="value">The object to store in the current thread's context.</param>
+        </member>
+        <member name="M:Newegg.Framework.Threading.IThreadStorage.FreeNamedDataSlot(System.String)">
+            <summary>
+            Empties a data slot with the specified name.
+            </summary>
+            <remarks>
+            If the object with the specified <paramref name="name"/> is not found, the method does nothing.
+            </remarks>
+            <param name="name">The name of the object to remove.</param>
+        </member>
+        <member name="M:Newegg.Framework.Threading.HttpContextStorage.GetData(System.String)">
+            <summary>
+            Retrieves an object with the specified name.
+            </summary>
+            <param name="name">The name of the item</param>
+            <returns>The object in the context associated with the specified name or null if no object has been stored previously</returns>
+        </member>
+        <member name="M:Newegg.Framework.Threading.HttpContextStorage.SetData(System.String,System.Object)">
+            <summary>
+            Stores a given object and associates it with the specified name.
+            </summary>
+            <param name="name">The object with which to associate the new item.</param>
+            <param name="value">The object to store in the call context.</param>
+        </member>
+        <member name="M:Newegg.Framework.Threading.HttpContextStorage.FreeNamedDataSlot(System.String)">
+            <summary>
+            Empties a data solt with the specified name.
+            </summary>
+            <param name="name">The name of the data slot to empty.</param>
+        </member>
+        <member name="T:Newegg.Framework.Threading.HybridContextStorage">
+            <summary>
+            Implements <see cref="T:Newegg.Framework.Threading.IThreadStorage"/> by using both <see cref="T:System.Web.HttpContext"/> and <see cref="T:System.Runtime.Remoting.Messaging.CallContext"/> and choosing dynamically between them.
+            </summary>
+            <remarks>
+            In web applications a single Request may be executed on different threads. In this case HttpContext.Current is the only invariant.<br/>
+            This implementation dynamically chooses between <see cref="T:System.Runtime.Remoting.Messaging.CallContext">System.Runtime.Remoting.Messaging.CallContext</see> 
+            and <see cref="T:System.Web.HttpContext">System.Web.HttpContext</see> to store data.
+            </remarks>
+        </member>
+        <member name="M:Newegg.Framework.Threading.HybridContextStorage.GetData(System.String)">
+            <summary>
+            Retrieves an object with the specified name.
+            </summary>
+            <param name="name">The name of the item.</param>
+            <returns>The object in the context associated with the specified name or null if no object has been stored previously</returns>
+        </member>
+        <member name="M:Newegg.Framework.Threading.HybridContextStorage.SetData(System.String,System.Object)">
+            <summary>
+            Stores a given object and associates it with the specified name.
+            </summary>
+            <param name="name">The name with which to associate the new item.</param>
+            <param name="value">The object to store in the call context.</param>
+        </member>
+        <member name="M:Newegg.Framework.Threading.HybridContextStorage.FreeNamedDataSlot(System.String)">
+            <summary>
+            Empties a data slot with the specified name.
+            </summary>
+            <param name="name">The name of the data slot to empty.</param>
+        </member>
+        <member name="T:Newegg.Framework.Threading.LogicalThreadContext">
+            <summary>
+            An abstraction to safely store "ThreadStatic" data.
+            </summary>
+            <remarks>
+            By default, <see cref="!:CallContext"/> is used to store thread-specific data. 
+            You may switch the storage strategy by calling <see cref="M:Newegg.Framework.Threading.LogicalThreadContext.SetStorage(Newegg.Framework.Threading.IThreadStorage)"/>.<p/>
+            <b>NOTE:</b> Access to the underlying storage is not synchronized for performance reasons. 
+            You should call <see cref="M:Newegg.Framework.Threading.LogicalThreadContext.SetStorage(Newegg.Framework.Threading.IThreadStorage)"/> only once at application startup!
+            </remarks>
+        </member>
+        <member name="F:Newegg.Framework.Threading.LogicalThreadContext.threadStorage">
+            <summary>
+            Holds the current <see cref="T:Newegg.Framework.Threading.IThreadStorage"/> strategy.
+            </summary>
+            <remarks>
+            Access to this variable is not synchronized on purpose for performance reasons. 
+            Setting a different <see cref="T:Newegg.Framework.Threading.IThreadStorage"/> strategy should happen only once
+            at application startup.
+            </remarks>
+        </member>
+        <member name="M:Newegg.Framework.Threading.LogicalThreadContext.SetStorage(Newegg.Framework.Threading.IThreadStorage)">
+            <summary>
+            Set the new <see cref="T:Newegg.Framework.Threading.IThreadStorage"/> strategy.
+            </summary>
+        </member>
+        <member name="M:Newegg.Framework.Threading.LogicalThreadContext.GetData(System.String)">
+            <summary>
+            Retrieves an object with the specified name.
+            </summary>
+            <param name="name">The name of the item.</param>
+            <returns>The object in the context associated with the specified name or null if no object has been stored previously</returns>
+        </member>
+        <member name="M:Newegg.Framework.Threading.LogicalThreadContext.SetData(System.String,System.Object)">
+            <summary>
+            Stores a given object and associates it with the specified name.
+            </summary>
+            <param name="name">The name with which to associate the new item.</param>
+            <param name="value">The object to store in the current thread's context.</param>
+        </member>
+        <member name="M:Newegg.Framework.Threading.LogicalThreadContext.FreeNamedDataSlot(System.String)">
+            <summary>
+            Empties a data slot with the specified name.
+            </summary>
+            <param name="name">The name of the data slot to empty.</param>
+        </member>
+        <member name="T:Newegg.Framework.Threading.ThreadStaticStorage">
+            <summary>
+            Implements <see cref="T:Newegg.Framework.Threading.IThreadStorage"/> by using a <see cref="T:System.ThreadStaticAttribute"/> hashtable.
+            </summary>
+        </member>
+        <member name="M:Newegg.Framework.Threading.ThreadStaticStorage.GetData(System.String)">
+            <summary>
+            Retrieves an object with the specified name.
+            </summary>
+            <param name="name">The name of the item.</param>
+            <returns>The object in the call context associated with the specified name or null if no object has been stored previously</returns>
+        </member>
+        <member name="M:Newegg.Framework.Threading.ThreadStaticStorage.SetData(System.String,System.Object)">
+            <summary>
+            Stores a given object and associates it with the specified name.
+            </summary>
+            <param name="name">The name with which to associate the new item.</param>
+            <param name="value">The object to store in the call context.</param>
+        </member>
+        <member name="M:Newegg.Framework.Threading.ThreadStaticStorage.FreeNamedDataSlot(System.String)">
+            <summary>
+            Empties a data slot with the specified name.
+            </summary>
+            <param name="name">The name of the data slot to empty.</param>
+        </member>
+        <member name="T:Newegg.Framework.Utility.AntiXssEncoder">
+            <summary>
+            <c>AntiXssEncoder</c> can be used to provide additional protection to ASP.NET Web-based applications against Cross-Site Scripting (XSS) attacks.
+            <remarks>
+            <para>
+            To provide this protection, the library first defines a set of valid characters such as a-z and 
+            A-Z and automatically encodes any characters not defined in that valid set (invalid characters or potential attack characters).
+            This technique is commonly referred to as the principle of inclusions and can provide advantages over other techniques.
+            Cross-site scripting (XSS) attacks exploit vulnerabilities in Web-based applications that fail to properly validate and/or encode input that is embedded in response data.  
+            Malicious users can then inject client-side script into response data causing the unsuspecting user's browser to execute the script code.  
+            The script code will appear to have originated from a trusted-site and may be able to bypass browser protection mechanisms such as security zones.
+            These attacks are platform and browser independent, and can allow malicious users to perform malicious actions such as gaining unauthorized access 
+            to client data like cookies or hijacking sessions entirely.
+            <para />
+            Simple steps that developers can take to prevent XSS attacks in their ASP.NET applications include 
+            (see How To: Prevent Cross-Site Scripting in ASP.NET in the Patterns &amp; Practices series for more detail):
+            <list type="bullet">
+            	<item>Validating and constraining input</item>
+            	<item>Encoding output</item>
+            </list>
+            </para>
+            <para />
+            <para>
+            To properly use the Microsoft Anti-Cross Site Scripting Library to protect their ASP.NET Web-applications, developers need to:
+            <list type="bullet">
+            	<item>Step 1: Review ASP.NET code that generates output</item>
+            	<item>Step 2: Determine whether output includes un-trusted input parameters</item>
+            	<item>Step 3: Determine the context which the un-trusted input is used as output</item>
+            	<item>Step 4: Encode output</item>
+            </list>
+            </para>
+            <para>
+            <b>Step 1: Review ASP.NET Code that Generates Output</b>
+            XSS attacks are dependent on the ability of un-trusted input to be embedded as output, and so code that generates output must first be identified.  
+            Some common vectors include calls to Response.Write and ASP &lt;% = calls.
+            </para>
+            <para>
+            <b>Step 2: Determine if Output Could Contain Un-Trusted Input</b>
+            Once the sections of code that generate output have been identified, they should be analysed to determined if the output may contain un-trusted input such as input from users or from some other un-trusted source.  If the output does contain un-trusted input then that un-trusted input will require encoding.  Some common sources of un-trusted input include:
+            <list type="bullet">
+            	<item>Application variables</item>
+            	<item>Cookies</item>
+            	<item>Databases</item>
+            	<item>Form fields</item>
+            	<item>Query string variables</item>
+            	<item>Session variables</item>
+            </list>
+            If it is uncertain that the output may contain un-trusted input, then it is best to err on the side of caution and encode the output anyways.
+            </para>
+            <para>
+            <b>Step 3: Determine Encoding Method to Use</b>
+            <list type="table">
+                <listheader>
+                    <term>Encoding Method</term>
+                    <term>Description</term>
+                </listheader>
+                <item>
+                    <description>HtmlEncode</description>
+                    <description>Encodes input strings for use in HTML</description>
+                </item>
+                <item>
+                    <description>HtmlAttributeEncode</description>
+                    <description>Encodes input strings for use in HTML attributes</description>
+                </item>
+                <item>
+                    <description>JavaScriptEncode</description>
+                    <description>Encodes input strings for use in JavaScript</description>
+                </item>
+                <item>
+                    <description>UrlEncode</description>
+                    <description>Encodes input strings for use in Universal Resource Locators (URLs)</description>
+                </item>
+                <item>
+                    <description>XmlEncode</description>
+                    <description>Encodes input strings for use in XML</description>
+                </item>
+                <item>
+                    <description>XmlAttributeEncode</description>
+                    <description>Encodes input strings for use in XML attributes</description>
+                </item>
+            </list>
+            </para>
+            <para>
+            <b>Step 4: Encode Output</b>
+            </para>
+            </remarks>
+            </summary>
+        </member>
+        <member name="T:Newegg.Framework.Utility.ArrayUtils">
+            <summary>
+            Various utility methods relating to the manipulation of arrays.
+            </summary>
+        </member>
+        <member name="M:Newegg.Framework.Utility.ArrayUtils.HasLength(System.Collections.ICollection)">
+            <summary>
+            Checks if the given array or collection is null or has no elements.
+            </summary>
+            <param name="collection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Newegg.Framework.Utility.ArrayUtils.AreEqual(System.Array,System.Array)">
+            <summary>
+            Tests equality of two single-dimensional arrays by checking each element
+            for equality.
+            </summary>
+            <param name="a">The first array to be checked.</param>
+            <param name="b">The second array to be checked.</param>
+            <returns>True if arrays are the same, false otherwise.</returns>
+        </member>
+        <member name="M:Newegg.Framework.Utility.ArrayUtils.GetHashCode(System.Array)">
+            <summary>
+            Returns hash code for an array that is generated based on the elements.
+            </summary>
+            <remarks>
+            Hash code returned by this method is guaranteed to be the same for
+            arrays with equal elements.
+            </remarks>
+            <param name="array">
+            Array to calculate hash code for.
+            </param>
+            <returns>
+            A hash code for the specified array.
+            </returns>
+        </member>
+        <member name="M:Newegg.Framework.Utility.ArrayUtils.ToString(System.Array)">
+            <summary>
+            Returns string representation of an array.
+            </summary>
+            <param name="array">
+            Array to return as a string.
+            </param>
+            <returns>
+            String representation of the specified <paramref name="array"/>.
+            </returns>
+        </member>
+        <member name="T:Newegg.Framework.Utility.AssertUtils">
+            <summary>
+            Assertion utility methods that simplify things such as argument checks.
+            </summary>
+            <remarks>
+            <p>
+            Not intended to be used directly by applications.
+            </p>
+            </remarks>
+            <author>Aleksandar Seovic</author>
+            <version>$Id: AssertUtils.cs,v 1.13 2008/03/14 10:45:08 bbaia Exp $</version>
+        </member>
+        <member name="M:Newegg.Framework.Utility.AssertUtils.ArgumentNotNull(System.Object,System.String)">
+            <summary>
+            Checks the value of the supplied <paramref name="argument"/> and throws an
+            <see cref="T:System.ArgumentNullException"/> if it is <see langword="null"/>.
+            </summary>
+            <param name="argument">The object to check.</param>
+            <param name="name">The argument name.</param>
+            <exception cref="T:System.ArgumentNullException">
+            If the supplied <paramref name="argument"/> is <see langword="null"/>.
+            </exception>
+        </member>
+        <member name="M:Newegg.Framework.Utility.AssertUtils.ArgumentNotNull(System.Object,System.String,System.String)">
+            <summary>
+            Checks the value of the supplied <paramref name="argument"/> and throws an
+            <see cref="T:System.ArgumentNullException"/> if it is <see langword="null"/>.
+            </summary>
+            <param name="argument">The object to check.</param>
+            <param name="name">The argument name.</param>
+            <param name="message">
+            An arbitrary message that will be passed to any thrown
+            <see cref="T:System.ArgumentNullException"/>.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            If the supplied <paramref name="argument"/> is <see langword="null"/>.
+            </exception>
+        </member>
+        <member name="M:Newegg.Framework.Utility.AssertUtils.ArgumentHasText(System.String,System.String)">
+            <summary>
+            Checks the value of the supplied string <paramref name="argument"/> and throws an
+            <see cref="T:System.ArgumentNullException"/> if it is <see langword="null"/> or
+            contains only whitespace character(s).
+            </summary>
+            <param name="argument">The string to check.</param>
+            <param name="name">The argument name.</param>
+            <exception cref="T:System.ArgumentNullException">
+            If the supplied <paramref name="argument"/> is <see langword="null"/> or
+            contains only whitespace character(s).
+            </exception>
+        </member>
+        <member name="M:Newegg.Framework.Utility.AssertUtils.ArgumentHasText(System.String,System.String,System.String)">
+            <summary>
+            Checks the value of the supplied string <paramref name="argument"/> and throws an
+            <see cref="T:System.ArgumentNullException"/> if it is <see langword="null"/> or
+            contains only whitespace character(s).
+            </summary>
+            <param name="argument">The string to check.</param>
+            <param name="name">The argument name.</param>
+            <param name="message">
+            An arbitrary message that will be passed to any thrown
+            <see cref="T:System.ArgumentNullException"/>.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            If the supplied <paramref name="argument"/> is <see langword="null"/> or
+            contains only whitespace character(s).
+            </exception>
+        </member>
+        <member name="M:Newegg.Framework.Utility.AssertUtils.ArgumentHasLength(System.Collections.ICollection,System.String)">
+            <summary>
+            Checks the value of the supplied <see cref="T:System.Collections.ICollection"/> <paramref name="argument"/> and throws
+            an <see cref="T:System.ArgumentNullException"/> if it is <see langword="null"/> or contains no elements.
+            </summary>
+            <param name="argument">The array or collection to check.</param>
+            <param name="name">The argument name.</param>
+            <exception cref="T:System.ArgumentNullException">
+            If the supplied <paramref name="argument"/> is <see langword="null"/> or
+            contains no elements.
+            </exception>
+        </member>
+        <member name="M:Newegg.Framework.Utility.AssertUtils.ArgumentHasLength(System.Collections.ICollection,System.String,System.String)">
+            <summary>
+            Checks the value of the supplied <see cref="T:System.Collections.ICollection"/> <paramref name="argument"/> and throws
+            an <see cref="T:System.ArgumentNullException"/> if it is <see langword="null"/> or contains no elements.
+            </summary>
+            <param name="argument">The array or collection to check.</param>
+            <param name="name">The argument name.</param>
+            <param name="message">An arbitrary message that will be passed to any thrown <see cref="T:System.ArgumentNullException"/>.</param>
+            <exception cref="T:System.ArgumentNullException">
+            If the supplied <paramref name="argument"/> is <see langword="null"/> or
+            contains no elements.
+            </exception>
+        </member>
+        <member name="M:Newegg.Framework.Utility.AssertUtils.AssertArgumentType(System.Object,System.String,System.Type,System.String)">
+            <summary>
+            Checks whether the specified <paramref name="argument"/> can be cast 
+            into the <paramref name="requiredType"/>.
+            </summary>
+            <param name="argument">
+            The argument to check.
+            </param>
+            <param name="argumentName">
+            The name of the argument to check.
+            </param>
+            <param name="requiredType">
+            The required type for the argument.
+            </param>
+            <param name="message">
+            An arbitrary message that will be passed to any thrown
+            <see cref="T:System.ArgumentException"/>.
+            </param>
+        </member>
+        <member name="M:Newegg.Framework.Utility.Converter.ToInt32(System.Object,System.Int32)">
+            <summary>
+            Converts the input value to an int32.
+            If the input is null or cannot be converted to the target type, defaultValue is returned.
+            </summary>
+            <param name="input">The input.</param>
+            <param name="defaultValue">The default value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Newegg.Framework.Utility.CustomStringJoiner.JoinString``1(System.Collections.Generic.IEnumerable{``0},System.String)">
+            <summary>
+            Joins the string.
+            </summary>
+            <param name="collection">The collection.</param>
+            <param name="delimiter">The delimiter.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Newegg.Framework.Utility.Data.DataTableHelper.GetUniquedTableColumnsByColumnName``1(``0,System.String)">
+            <summary>
+            Gets the name of the uniqued table columns by column.
+            </summary>
+            <param name="dataRowCollection">The data row collection.</param>
+            <param name="columnName">Name of the column.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Newegg.Framework.Utility.Data.DataTableHelper.GetUniquedTableColumnsCountByColumnName``1(``0,System.String)">
+            <summary>
+            Gets the name of the uniqued table columns count by column.
+            </summary>
+            <param name="dataRowCollection">The data row collection.</param>
+            <param name="columnName">Name of the column.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Newegg.Framework.Utility.Data.DataTableHelper.GetTableFromDataRowArray(System.Data.DataRow[])">
+            <summary>
+            Gets the table from data row array.
+            </summary>
+            <param name="rows">The rows.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Newegg.Framework.Utility.Data.DataTableHelper.HasRowsInDataTable(System.Data.DataTable)">
+            <summary>
+            Determines whether [has rows in data table] [the specified table].
+            </summary>
+            <param name="table">The table.</param>
+            <returns>
+            	<c>true</c> if [has rows in data table] [the specified table]; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Newegg.Framework.Utility.Data.DataTableHelper.HasRowsInDataTable(System.Data.DataTable,System.String,System.String)">
+            <summary>
+            Determines whether [has rows in data table] [the specified table].
+            </summary>
+            <param name="table">The table.</param>
+            <param name="columnName">Name of the column.</param>
+            <param name="columnValue">The column value.</param>
+            <returns>
+            	<c>true</c> if [has rows in data table] [the specified table]; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Newegg.Framework.Utility.Data.DataTableHelper.GetSelectdRowsFromTable(System.Data.DataTable,System.String)">
+            <summary>
+            Gets the selectd rows from table.
+            </summary>
+            <param name="orginalTable">The orginal table.</param>
+            <param name="selectedCondition">The selected condition.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Newegg.Framework.Utility.Data.DataTableHelper.GetScalarByColumnName(System.Data.DataTable,System.String,System.String)">
+            <summary>
+            Gets the scalar by column name from table.
+            </summary>
+            <param name="sourceTable">The source table.</param>
+            <param name="filter">The filter.</param>
+            <param name="columnName">Name of the column.</param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:Newegg.Framework.Utility.EnumHelper" -->
+        <member name="M:Newegg.Framework.Utility.EnumHelper.GetEnumItems(System.Type)">
+            <summary>
+            get the enum's all list
+            </summary>
+            <param name="enumType">枚举的类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Newegg.Framework.Utility.EnumHelper.GetEnumItemsWithAll(System.Type)">
+            <summary>
+            获得枚举类型所包含的全部项的列表，包含"All"。
+            </summary>
+            <param name="enumType">the type of the enum</param>
+            <returns></returns>
+        </member>
+        <member name="M:Newegg.Framework.Utility.EnumHelper.GetEnumItems(System.Type,System.Boolean)">
+            <summary>
+            get the enum's all list
+            </summary>
+            <param name="enumType">the type of the enum</param>
+            <param name="withAll">identicate whether the returned list should contain the all item</param>
+            <returns></returns>
+        </member>
+        <member name="M:Newegg.Framework.Utility.EnumHelper.GetEnumValueDescription``1(``0)">
+            <summary>
+            the the enum value's descrption attribute information
+            </summary>
+            <param name="enumType">the type of the enum</param>
+            <param name="value">the enum value</param>
+            <returns></returns>
+        </member>
+        <member name="M:Newegg.Framework.Utility.EnumHelper.GetEnumValueByDescription``1(System.String)">
+            <summary>
+            get the enum value's int mode value
+            </summary>
+            <param name="enumType">the type of the enum</param>
+            <param name="value">the enum value's descrption</param>
+            <returns></returns>
+        </member>
+        <member name="M:Newegg.Framework.Utility.EnumHelper.GetEnumByDescription``1(System.String)">
+            <summary>
+            get the Enum value according to the its decription
+            </summary>
+            <param name="enumType">the type of the enum</param>
+            <param name="value">the description of the EnumValue</param>
+            <returns></returns>
+        </member>
+        <member name="M:Newegg.Framework.Utility.EnumHelper.GetEnumByName``1(System.String)">
+            <summary>
+            get the description attribute of a Enum value
+            </summary>
+            <param name="enumType">the type of the enum</param>
+            <param name="value">enum value name</param>
+            <returns></returns>
+        </member>
+        <member name="M:Newegg.Framework.Utility.FileSystemChangeEventHandler.#ctor(System.Int32,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Newegg.Framework.Utility.FileSystemChangeEventHandler"/> class.
+            </summary>
+            <param name="timeout">The timeout.</param>
+            <param name="isFolderChange">if set to <c>true</c> [if the Watcher is to folder change].</param>
+        </member>
+        <member name="T:Newegg.Framework.Utility.ObjectSoapSerializer">
+            <summary>
+            serializer using SoapFormatter
+            </summary>
+        </member>
+        <member name="M:Newegg.Framework.Utility.ObjectSoapSerializer.Serialize(System.Object)">
+            <summary>
+            Serializes the specified o.
+            </summary>
+            <param name="o">The o.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Newegg.Framework.Utility.ObjectSoapSerializer.Deserialize``1(System.String)">
+            <summary>
+            Deserializes the specified MSG.
+            returns null if failed.
+            </summary>
+            <param name="msg">The MSG.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Newegg.Framework.Utility.ObjectXmlSerializer.LoadFromXml``1(System.String)">
+            <summary>
+            deserialize an object from a file.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="m_FileNamePattern"></param>
+            <returns>
+            Null is returned if any error occurs.
+            </returns>
+        </member>
+        <member name="M:Newegg.Framework.Utility.ObjectXmlSerializer.LoadFromXml``1(System.String,System.Boolean)">
+            <summary>
+            deserialize an object from a file.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="fileName"></param>
+            <param name="needLog"></param>
+            <returns>
+             Null is returned if any error occurs.
+            </returns>
+        </member>
+        <member name="M:Newegg.Framework.Utility.ObjectXmlSerializer.ToXML``1(``0)">
+            <summary>
+            serialize an object to a file.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="message"></param>
+            <returns>
+            Null is returned if any error occurs.
+            </returns>
+        </member>
+        <member name="T:Newegg.Framework.Utility.PerformanceTracer">
+            <summary>
+            trace performance by key
+            </summary>
+        </member>
+        <member name="M:Newegg.Framework.Utility.PerformanceTracer.#ctor">
+            <summary>
+            Structure
+            </summary>
+        </member>
+        <member name="M:Newegg.Framework.Utility.PerformanceTracer.#ctor(System.Int32)">
+            <summary>
+            Structure
+            </summary>
+            <param name="minMilliseconds">Only time-consuming than minMilliseconds event will be recorded</param>
+        </member>
+        <member name="F:Newegg.Framework.Utility.PerformanceTracer.m_minMilliseconds">
+            <summary>
+            Only time-consuming than minMilliseconds event will be recorded
+            </summary>
+        </member>
+        <member name="F:Newegg.Framework.Utility.PerformanceTracer.m_TraceMessageBuilder">
+            <summary>
+            Trace message builder
+            </summary>
+        </member>
+        <member name="F:Newegg.Framework.Utility.PerformanceTracer.m_Start">
+            <summary>
+            Start time dictionary
+            </summary>
+        </member>
+        <member name="F:Newegg.Framework.Utility.PerformanceTracer.m_level">
+            <summary>
+            trace level
+            </summary>
+        </member>
+        <member name="M:Newegg.Framework.Utility.PerformanceTracer.TraceBegin(System.String)">
+            <summary>
+            Add trace
+            </summary>
+            <param name="key">trace key</param>
+        </member>
+        <member name="M:Newegg.Framework.Utility.PerformanceTracer.TraceEnd(System.String)">
+            <summary>
+            close trace and record message
+            </summary>
+            <param name="key"></param>
+        </member>
+        <member name="M:Newegg.Framework.Utility.PerformanceTracer.TraceEnd(System.String,System.Int32)">
+            <summary>
+            close trace and record message
+            </summary>
+            <param name="key">key</param>
+            <param name="minMilliseconds">Only time-consuming than minMilliseconds event will be recorded</param>
+        </member>
+        <member name="P:Newegg.Framework.Utility.PerformanceTracer.TraceMessage">
+            <summary>
+            Trace message
+            </summary>
+        </member>
+        <member name="M:Newegg.Framework.Utility.StringHelper.GetLeftString(System.String,System.Int32)">
+            <summary>
+            Gets the left string.
+            </summary>
+            <param name="description">The description.</param>
+            <param name="leftLength">Length of the left.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Newegg.Framework.Utility.StringHelper.GetRightString(System.String,System.Int32)">
+            <summary>
+            Gets the right string.
+            </summary>
+            <param name="description">The description.</param>
+            <param name="leftLength">Length of the left.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Newegg.Framework.Utility.StringHelper.Trim(System.Object)">
+            <summary>
+            Trims the specified value.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>return trim value,if value can convert to string;otherwise,return null.</returns>
+        </member>
+        <member name="M:Newegg.Framework.Utility.StringHelper.FilterBlankControlString(System.String)">
+            <summary>
+            Filters the blank control string.
+            </summary>
+            <param name="val">The val.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Newegg.Framework.Utility.StringHelper.GetSeparationStringByComma(System.Collections.ICollection)">
+            <summary>
+            Gets the separation string by comma.
+            </summary>
+            <param name="values">The values.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Newegg.Framework.Utility.StringHelper.GetSeparationStringByCommaAndSingleQuotes(System.Collections.ICollection)">
+            <summary>
+            Gets the separation string by comma and single quotes.
+            </summary>
+            <param name="values">The values.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Newegg.Framework.Utility.StringHelper.MultiLangFormatString(System.String,System.String)">
+            <summary>
+            get the string by the current language code
+            </summary>
+            <param name="defaultString">the default string.not include {Lang} tab.</param>
+            <param name="multiLangString">the multilang format string,include {Lang} tab.</param>
+            <returns>the formated string</returns>
+        </member>
+    </members>
+</doc>

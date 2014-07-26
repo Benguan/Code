@@ -13,5 +13,16 @@ namespace NEG.Website.Models
         public string CategoryName { get; set; }
 
         public int? Priority { get; set; }
+
+        public APICategory()
+        {
+
+        }
+
+        public APICategory(string categoryName, int priority)
+        {
+            this.CategoryName = categoryName;
+            this.Priority = priority;
+        }
     }
 }
