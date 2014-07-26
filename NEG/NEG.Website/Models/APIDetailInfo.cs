@@ -31,5 +31,7 @@ namespace NEG.Website.Models
 
         [StringLength(1000)]
         public string ReturnValue { get; set; }
+
+        public int? CategoryID { get; set; }
     }
 }

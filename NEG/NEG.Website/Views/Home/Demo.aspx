@@ -3,6 +3,7 @@
 <%@ Import Namespace="NEG.Website.Controls.Common" %>
 <%@ Import Namespace="NEG.Website.Models" %>
 
+
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
     NEG.JS
 </asp:Content>
@@ -23,6 +24,19 @@
             %>
         </div>
     </div>
+    
+    
+    <div class="font02">Demo Show</div>
+        <%= ((DemoDetailInfo)ViewData["DemoDetailInfo"]).DemoShowParts %>
+    
+        <div class="space"></div>
+        
+        <div class="font02">NEG.JS Code</div>
+        <%= ((DemoDetailInfo)ViewData["DemoDetailInfo"]).DemoCode %>
+        
+        <div class="space"></div>
+        <div class="font02">HTML Code</div>
+        <%= ((DemoDetailInfo)ViewData["DemoDetailInfo"]).HtmlCode %>
 
 </asp:Content>
 

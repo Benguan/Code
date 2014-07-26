@@ -128,6 +128,7 @@ namespace NEG.Website.Controllers
         public void InitDB()
         {
             Database.SetInitializer(new DropCreateDatabaseIfModelChanges<NEGWebsiteEntities>());
+
             db.APICategories.Add(new APICategory("UTILITY", 2));
             db.APICategories.Add(new APICategory("Base", 1));
 
@@ -135,6 +136,34 @@ namespace NEG.Website.Controllers
             db.ModuleCategories.Add(new ModuleCategory("UTILITY", 2));
             db.ModuleCategories.Add(new ModuleCategory("WIDGET", 3));
 
+
+            APIDetailInfo ad = new APIDetailInfo();
+            ad.APIName = "bentest API Name";
+            ad.DemoID = 1;
+            ad.EventInfo = "event info ";
+            ad.Example = "example";
+            ad.ParameterInfo = "parameter";
+            ad.ReturnValue = "returnValue";
+            ad.Summary = "summar";
+            ad.Syntax = "syntax";
+            ad.CategoryID = 1;
+
+            db.APIDetailInfos.Add(ad);
+
+            ModuleDetailInfo md = new ModuleDetailInfo();
+            md.DemoID = 1;
+            md.EventInfo = "EventInfo";
+            md.Example = "example";
+            md.ParameterInfo = "parameter";
+            md.ReturnValue = "returnValue";
+            md.Summary = "summar";
+            md.Syntax = "syntax";
+            md.ModuleName = "ModuleName";
+            md.CategoryID = 1;
+
+            db.ModuleDetailInfos.Add(md);
+            
+            
             db.SaveChanges();
         }
 

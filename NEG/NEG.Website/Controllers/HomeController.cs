@@ -7,7 +7,7 @@ using System.Web.Mvc;
 using NEG.Website.Controls.Common;
 using NEG.Website.Models;
 
-namespace MVCTest.Controllers
+namespace NEG.Website.Controllers
 {
     public class HomeController : Controller
     {
@@ -44,5 +44,7 @@ namespace MVCTest.Controllers
         {
             return View();
         }
+
+
     }
 }

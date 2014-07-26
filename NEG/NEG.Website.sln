@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{6BC2F3A0-9BB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Newegg.Framework.EntityAttribute", "NEG.FrameWork\Newegg.Framework.EntityAttribute\Newegg.Framework.EntityAttribute.csproj", "{95BF17F9-ED7B-4C65-93DA-E749A1035C6F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MicroSoft", "MicroSoft", "{0F148B71-1692-4682-870E-81180639459A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

@@ -133,10 +133,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="Controllers\APIController.cs" />
+    <Compile Include="Controllers\ApiController.cs" />
     <Compile Include="Controllers\DemoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManagerController.cs" />
+    <Compile Include="Controllers\ModuleController.cs" />
     <Compile Include="Controls\Common\Helper.cs" />
     <Compile Include="Controls\Common\LocalizationHelpers.cs" />
     <Compile Include="Global.asax.cs">
@@ -228,7 +229,7 @@
     <Content Include="Scripts\Widget\Module2.js" />
     <Content Include="Scripts\Widget\Popup.js" />
     <Content Include="Scripts\Widget\Switch.js" />
-    <Content Include="Views\API\APIDetail.aspx" />
+    <Content Include="Views\Api\Detail.aspx" />
     <Content Include="Views\Demo\DemoDetail.aspx" />
     <Content Include="Views\Home\About.aspx" />
     <Content Include="Views\Home\API.aspx" />
@@ -240,6 +241,7 @@
     <Content Include="Views\Manager\APIList.aspx" />
     <Content Include="Views\Manager\Demo.aspx" />
     <Content Include="Views\Manager\DemoList.aspx" />
+    <Content Include="Views\Module\Detail.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

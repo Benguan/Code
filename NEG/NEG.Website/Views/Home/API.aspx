@@ -22,38 +22,29 @@
             <ul>
                 <li><%:Html.Span(category.CategoryName) %></li>
 
-                <% 
-                foreach (APIDetailInfo info in apiDetailInfos)
-                {
-                %>
+                <%
 
-                <li><%:Html.ActionLink(info.APIName, "APIDetail","API") %></li>
+                    foreach (APIDetailInfo info in apiDetailInfos)
+                    {
+                        if (category.CategoryID == info.CategoryID)
+                        {
+                %>        
+                  
+                
+
+                <li><%: Html.ActionLink(info.APIName, "APIDetail", "API") %></li>
 
                 <%
-                } 
-                   
+                        }
+                    }
+
                 %>
             </ul>
         </div>
         <%
             } 
         %>
-        <%--     <div class="menu_02_01">
-            <ul>
-                <li><span>BASE<span> </span></span></li>
-                <li><a href="API/BaseAPI/NEG.merge.html">NEG.merge </a></li>
-                <li><a href="API/BaseAPI/NEG.blend.html">NEG.blend </a></li>
-                <li><a href="API/BaseAPI/NEG.run.html">NEG.run </a></li>
-                <li><a href="API/BaseAPI/NEG.iRun.html">NEG.iRun </a></li>
-                <li><a href="API/BaseAPI/NEG.Module.html">NEG.Module </a></li>
-                <li><a href="API/BaseAPI/NEG.NS.html">NEG.NS </a></li>
-                <li><a href="API/BaseAPI/NEG.on.html">NEG.on </a></li>
-                <li><a href="API/BaseAPI/NEG.off.html">NEG.off </a></li>
-                <li><a href="API/BaseAPI/NEG.setCDNTimestamp.html">NEG.setCDNTimestamp </a></li>
-                <li><a href="API/BaseAPI/NEG.setVersion.html">NEG.setVersion </a></li>
-                <li><a href="API/BaseAPI/NEG.trigger.html">NEG.trigger </a></li>
-            </ul>
-        </div>--%>
+      
     </div>
 </asp:Content>
 
