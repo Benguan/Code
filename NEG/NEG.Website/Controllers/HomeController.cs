@@ -28,7 +28,7 @@ namespace NEG.Website.Controllers
         public ActionResult API()
         {
 
-            ViewData["apiCategories"] = db.APICategories.ToList();
+            ViewData["apiCategories"] = db.APICategories.FirstOrDefault(m => m.CategoryID == 1);
             ViewData["apiDetailInfos"] = db.APIDetailInfos.ToList();
 
             return View();
