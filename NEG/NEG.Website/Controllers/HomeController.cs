@@ -13,10 +13,16 @@ namespace NEG.Website.Controllers
     {
         private NEGWebsiteEntities db = new NEGWebsiteEntities();
 
-        public ActionResult Tutorial()
+        public ActionResult Index()
         {
 
             return View();
+        }
+
+        public ActionResult Tutorial()
+        {
+
+            return View("Index");
         }
 
         public ActionResult About()
@@ -28,7 +34,7 @@ namespace NEG.Website.Controllers
         public ActionResult API()
         {
 
-            ViewData["apiCategories"] = db.APICategories.FirstOrDefault(m => m.CategoryID == 1);
+            ViewData["apiCategories"] = db.APICategories.ToList();
             ViewData["apiDetailInfos"] = db.APIDetailInfos.ToList();
 
             return View();

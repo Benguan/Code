@@ -121,7 +121,7 @@ namespace NEG.Website.Controllers
         public ActionResult ModuleList()
         {
 
-            InitDB();
+            //InitDB();
             return View();
         }
 

@@ -11,7 +11,7 @@ namespace NEG.Website
         {
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
+                routeTemplate: "DefaultAPi/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
         }

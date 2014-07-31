@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Newegg.Framework.EntityAttr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microsoft", "Microsoft", "{4C091119-7811-4F7C-9303-E1495450B234}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "System.Web.Mvc", "MicroSoft\System.Web.Mvc\System.Web.Mvc.csproj", "{3D3FFD8A-624D-4E9B-954B-E1C105507975}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "System.Web.Mvc", "..\..\ASPNE\src\System.Web.Mvc\System.Web.Mvc.csproj", "{3D3FFD8A-624D-4E9B-954B-E1C105507975}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,10 +77,10 @@ Global
 		{95BF17F9-ED7B-4C65-93DA-E749A1035C6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95BF17F9-ED7B-4C65-93DA-E749A1035C6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95BF17F9-ED7B-4C65-93DA-E749A1035C6F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3D3FFD8A-624D-4E9B-954B-E1C105507975}.CodeAnalysis|Any CPU.ActiveCfg = CodeCoverage|Any CPU
-		{3D3FFD8A-624D-4E9B-954B-E1C105507975}.CodeAnalysis|Any CPU.Build.0 = CodeCoverage|Any CPU
-		{3D3FFD8A-624D-4E9B-954B-E1C105507975}.CodeCoverage|Any CPU.ActiveCfg = CodeCoverage|Any CPU
-		{3D3FFD8A-624D-4E9B-954B-E1C105507975}.CodeCoverage|Any CPU.Build.0 = CodeCoverage|Any CPU
+		{3D3FFD8A-624D-4E9B-954B-E1C105507975}.CodeAnalysis|Any CPU.ActiveCfg = CodeAnalysis|Any CPU
+		{3D3FFD8A-624D-4E9B-954B-E1C105507975}.CodeAnalysis|Any CPU.Build.0 = CodeAnalysis|Any CPU
+		{3D3FFD8A-624D-4E9B-954B-E1C105507975}.CodeCoverage|Any CPU.ActiveCfg = CodeAnalysis|Any CPU
+		{3D3FFD8A-624D-4E9B-954B-E1C105507975}.CodeCoverage|Any CPU.Build.0 = CodeAnalysis|Any CPU
 		{3D3FFD8A-624D-4E9B-954B-E1C105507975}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3D3FFD8A-624D-4E9B-954B-E1C105507975}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D3FFD8A-624D-4E9B-954B-E1C105507975}.Release|Any CPU.ActiveCfg = Release|Any CPU

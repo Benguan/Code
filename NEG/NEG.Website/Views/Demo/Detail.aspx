@@ -11,9 +11,8 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    
         <div class="font02">Demo Show</div>
-        <%= ((DemoDetailInfo)ViewData["DemoDetailInfo"]).DemoShowParts %>
+        <%=  ((DemoDetailInfo)ViewData["DemoDetailInfo"]).DemoShowParts %>
     
         <div class="space"></div>
         
@@ -23,4 +22,6 @@
         <div class="space"></div>
         <div class="font02">HTML Code</div>
         <%= ((DemoDetailInfo)ViewData["DemoDetailInfo"]).HtmlCode %>
+
+       
 </asp:Content>

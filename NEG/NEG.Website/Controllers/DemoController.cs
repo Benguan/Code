@@ -9,7 +9,7 @@ namespace NEG.Website.Controllers
     {
         private NEGWebsiteEntities db = new NEGWebsiteEntities();
 
-        public ActionResult DemoDetail()
+        public ActionResult Detail()
         {
             string demoName = Convert.ToString(RouteData.Values["id"]);
 

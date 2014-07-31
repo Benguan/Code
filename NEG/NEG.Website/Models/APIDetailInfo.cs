@@ -33,5 +33,8 @@ namespace NEG.Website.Models
         public string ReturnValue { get; set; }
 
         public int? CategoryID { get; set; }
+
+        [StringLength(20)]
+        public string APIKey { get; set; }
     }
 }

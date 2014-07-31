@@ -229,12 +229,12 @@
     <Content Include="Scripts\Widget\Popup.js" />
     <Content Include="Scripts\Widget\Switch.js" />
     <Content Include="Views\Api\Detail.aspx" />
-    <Content Include="Views\Demo\DemoDetail.aspx" />
+    <Content Include="Views\Demo\Detail.aspx" />
     <Content Include="Views\Home\About.aspx" />
     <Content Include="Views\Home\API.aspx" />
     <Content Include="Views\Home\Module.aspx" />
     <Content Include="Views\Home\Demo.aspx" />
-    <Content Include="Views\Home\Tutorial.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
     <Content Include="Views\Manager\API.aspx" />
     <Content Include="Views\Manager\ModuleList.aspx" />
     <Content Include="Views\Manager\APIList.aspx" />
