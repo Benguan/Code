@@ -48,6 +48,8 @@ namespace NEG.Website.Controllers
 
         public ActionResult Module()
         {
+            ViewData["moduleCategories"] = db.ModuleCategories.ToList();
+            ViewData["moduleDetailInfos"] = db.ModuleDetailInfos.ToList();
             return View();
         }
 

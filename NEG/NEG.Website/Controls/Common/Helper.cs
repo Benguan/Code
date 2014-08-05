@@ -1,10 +1,45 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Collections.Generic;
+using System.Web.Mvc;
 using System.Web.Mvc.Html;
+using System.Web.Routing;
 
 namespace NEG.Website.Controls.Common
 {
     public static class Helper
     {
+        public static MvcHtmlString ActionLinkWithTag(this HtmlHelper html, string tagName, string text,
+                                                      string actionName, string controllerName, RouteValueDictionary routeValue = null,
+                                                      IDictionary<string, Object> tagHtmlAttributes = null,
+                                                      IDictionary<string, Object> htmlAttributes = null)
+        {
+            var urlHelper = new UrlHelper(html.ViewContext.RequestContext);
+
+
+            TagBuilder tagBuilder = new TagBuilder(tagName);
+            tagBuilder.SetInnerText(text);
+
+
+            if (tagHtmlAttributes != null)
+            {
+                tagBuilder.MergeAttributes(tagHtmlAttributes);
+            }
+
+            TagBuilder aBuilder = new TagBuilder("a")
+                {
+                    InnerHtml = tagBuilder.ToString(TagRenderMode.Normal)
+                };
+
+            if (routeValue != null)
+            {
+                string url = urlHelper.Action(actionName, controllerName, routeValue);
+                aBuilder.MergeAttribute("href", url);
+            }
+
+
+            return new MvcHtmlString(aBuilder.ToString(TagRenderMode.Normal));
+        }
+
         public static MvcHtmlString ActionLinkWithImage(this HtmlHelper html, string imgSrc, string actionName)
         {
             var urlHelper = new UrlHelper(html.ViewContext.RequestContext);

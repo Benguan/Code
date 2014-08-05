@@ -1,56 +1,96 @@
-﻿<%@ Page Language="C#" Inherits="System.Web.Mvc.ViewPage<dynamic>" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Manager.Master" Inherits="System.Web.Mvc.ViewPage<dynamic>" %>
 <%@ Import Namespace="NEG.Website.Models" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
+    Module
+</asp:Content>
 
-<html>
-<head id="Head1" runat="server">
-    <meta name="viewport" content="width=device-width" />
-    <title>API</title>
-    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <style>
-        textarea{ height: 200px;width: 600px;}
-    </style>
-</head>
-<body>
-   
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="body">
-        <% using (Html.BeginForm(Convert.ToBoolean(ViewData["IsUpdate"]) ? "APIUpdate" : "APIAdd", "Manager", FormMethod.Post))
-           { %>
-         <%
-               var detail = (APIDetailInfo)ViewData["APIDetailInfo"];
+        <% 
+            using (Html.BeginForm(Convert.ToBoolean(ViewData["IsUpdate"]) ? "APIUpdate" : "APIAdd", "Manager", FormMethod.Post, new { @class = "form-horizontal" }))
+            { 
         %>
-        <input type="hidden" name="status" value="true"/>
-        <input type="hidden" name="demoID" value="<%:detail == null ? 0 : detail.DemoID %>"/>
-        <table>
-            <tr>
-                <td>Demo名</td>
-                <td><input id="demoName" name="demoName" value="<%:detail == null ? string.Empty : detail.DemoName %>"/></td>
-            </tr>
-            <tr>
-                <td>Demo Show</td>
-                <td>
-                    <textarea id="demoShowParts" name="demoShowParts"><%:detail == null ? string.Empty : detail.DemoShowParts  %></textarea>
-                </td>
-            </tr>
-            <tr>
-                <td>Demo Code</td>
-                <td><textarea id="demoCode" name="demoCode"><%:detail == null ? string.Empty : detail.DemoCode %></textarea></td>
-            </tr>
-            <tr>
-                <td>HTML Code</td>
-                <td><textarea id="htmlCode" name="htmlCode"><%:detail == null ? string.Empty : detail.HtmlCode %></textarea></td>
-            </tr>
-            <tr>
-                <td>Image Url</td>
-                <td><input id="showImage" name="showImage" value="<%:detail == null ? string.Empty : detail.ShowImage %>" /></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><input id="buttom" type="submit" value="<%:Convert.ToBoolean(ViewData["IsUpdate"])?"更新":"添加" %>"/></td>
-            </tr>
-        </table>
-         <% } %>
+        <%
+                var detail = (APIDetailInfo)ViewData["apiDetailInfo"];
+        %>
+        <input type="hidden" name="status" value="true" />
+        <input type="hidden" name="apiID" value="<%:detail == null ? 0 : detail.APIID %>" />
+
+        <div class="form-group">
+            <label class="col-xs-2 control-label" for="formGroupInputSmall">API Key</label>
+            <div class="col-sm-5">
+                <input id="apiKey" name="apiKey" class="form-control " value="<%:detail == null ? string.Empty : detail.APIKey %>" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-xs-2 control-label" for="formGroupInputSmall">API Name</label>
+            <div class="col-sm-5">
+                <input id="apiName" name="apiName" class="form-control " value="<%:detail == null ? string.Empty : detail.APIName %>" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-xs-2 control-label" for="formGroupInputSmall">Summary</label>
+            <div class="col-sm-5">
+                <input id="Summary" name="Summary" class="form-control " value="<%:detail == null ? string.Empty : detail.Summary %>" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-xs-2 control-label" for="formGroupInputSmall">Syntax</label>
+            <div class="col-sm-5">
+                <input id="Syntax" name="syntax" class="form-control " value="<%:detail == null ? string.Empty : detail.Syntax %>" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-xs-2 control-label" for="formGroupInputSmall">Parameter</label>
+            <div class="col-sm-5">
+                <textarea id="parameterInfo" class="form-control " rows="10" name="parameterInfo"><%:detail == null ? string.Empty : detail.ParameterInfo  %></textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-xs-2 control-label" for="formGroupInputSmall">Return</label>
+            <div class="col-sm-5">
+                <textarea id="ReturnValue" class="form-control " rows="10" name="ReturnValue"><%:detail == null ? string.Empty : detail.ReturnValue %></textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-xs-2 control-label" for="formGroupInputSmall">Example</label>
+            <div class="col-sm-5">
+                <textarea id="example" class="form-control " rows="10" name="example"><%:detail == null ? string.Empty : detail.Example %></textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-xs-2 control-label" for="formGroupInputSmall">DemoKey</label>
+            <div class="col-sm-2">
+                <input id="DemoKey" name="DemoKey" class="form-control " value="<%:detail == null ? string.Empty : detail.DemoKey %>" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-xs-2 control-label" for="formGroupInputSmall">CategoryID</label>
+            <div class="col-sm-2">
+                <input id="CategoryID" name="CategoryID" class="form-control " value="<%:detail == null ? string.Empty : detail.CategoryID.ToString() %>" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-xs-2 control-label" for="formGroupInputSmall"></label>
+            <div class="col-sm-5">
+                <input id="buttom" type="submit" class="btn btn-primary " value="<%:Convert.ToBoolean(ViewData["IsUpdate"])?"更新":"添加" %>" />
+            </div>
+        </div>
+
+        <% } %>
     </div>
-</body>
-</html>
+</asp:Content>
+
+
+
+    

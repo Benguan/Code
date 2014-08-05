@@ -14,11 +14,11 @@ namespace NEG.Website.Controllers
 
         public ActionResult Detail()
         {
-            var apiId = -1;
+            string apiID = RouteData.Values["id"].ToString();
 
-            if (int.TryParse(RouteData.Values["id"].ToString(), out apiId))
+            if (!string.IsNullOrWhiteSpace(apiID))
             {
-                ViewData["apiDetailInfo"] = db.APIDetailInfos.FirstOrDefault(m => m.APIID == apiId);
+                ViewData["apiDetailInfo"] = db.APIDetailInfos.FirstOrDefault(m => m.APIKey == apiID);
             }
 
             return View();

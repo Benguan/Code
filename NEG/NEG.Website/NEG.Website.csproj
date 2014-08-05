@@ -146,6 +146,14 @@
     <Compile Include="Migrations\201408010529188_Update_V1.Designer.cs">
       <DependentUpon>201408010529188_Update_V1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201408050219533_Add-Migration update_demo_Key.cs" />
+    <Compile Include="Migrations\201408050219533_Add-Migration update_demo_Key.Designer.cs">
+      <DependentUpon>201408050219533_Add-Migration update_demo_Key.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201408050534269_update-add-status.cs" />
+    <Compile Include="Migrations\201408050534269_update-add-status.Designer.cs">
+      <DependentUpon>201408050534269_update-add-status.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\APICategory.cs" />
     <Compile Include="Models\APIDetailInfo.cs" />
@@ -241,6 +249,7 @@
     <Content Include="Views\Home\Demo.aspx" />
     <Content Include="Views\Home\Index.aspx" />
     <Content Include="Views\Manager\API.aspx" />
+    <Content Include="Views\Manager\Module.aspx" />
     <Content Include="Views\Manager\ModuleList.aspx" />
     <Content Include="Views\Manager\APIList.aspx" />
     <Content Include="Views\Manager\Demo.aspx" />
@@ -269,6 +278,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201408010529188_Update_V1.resx">
       <DependentUpon>201408010529188_Update_V1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201408050219533_Add-Migration update_demo_Key.resx">
+      <DependentUpon>201408050219533_Add-Migration update_demo_Key.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201408050534269_update-add-status.resx">
+      <DependentUpon>201408050534269_update-add-status.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resource\en-US.resx">
       <Generator>ResXFileCodeGenerator</Generator>

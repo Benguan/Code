@@ -19,6 +19,7 @@ namespace NEG.Website.Controllers
         }
 
         #region Demo相关，list，add，update
+
         public ActionResult DemoList()
         {
             ViewData["DemoDetailInfos"] = db.DemoDetailInfos.ToList() as List<DemoDetailInfo>;
@@ -100,6 +101,7 @@ namespace NEG.Website.Controllers
 
             return RedirectToAction("DemoList", "Manager");
         }
+
         #endregion
 
 
@@ -115,16 +117,171 @@ namespace NEG.Website.Controllers
 
         public ActionResult API()
         {
+            int id = 0;
+
+            if (!int.TryParse(Convert.ToString(RouteData.Values["id"]), out id))
+            {
+                return View();
+            }
+
+            ViewData["IsUpdate"] = id > 0;
+
+            APIDetailInfo detailInfo = db.APIDetailInfos.First(m => m.APIID == id);
+
+            if (detailInfo == null)
+            {
+                RedirectToAction("APIList", "Manager");
+            }
+
+            ViewData["apiDetailInfo"] = detailInfo;
+
             return View();
+        }
+
+
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult APIAdd(APIDetailInfo api)
+        {
+            try
+            {
+                db.APIDetailInfos.Add(api);
+                db.SaveChanges();
+            }
+            catch (DbEntityValidationException ex)
+            {
+                throw ex;
+            }
+
+            return RedirectToAction("APIList", "Manager");
+        }
+
+
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult APIUpdate(APIDetailInfo api)
+        {
+            //Database.SetInitializer(new DropCreateDatabaseIfModelChanges<NEGWebsiteEntities>());
+
+            if (api == null || api.APIID <= 0)
+            {
+                return RedirectToAction("APIList", "Manager");
+            }
+
+            try
+            {
+                DbEntityEntry<APIDetailInfo> entry = db.Entry<APIDetailInfo>(api);
+
+                entry.State = EntityState.Unchanged;
+
+                entry.Property(m => m.APIKey).IsModified = true;
+                entry.Property(m => m.APIName).IsModified = true;
+                entry.Property(m => m.CategoryID).IsModified = true;
+                entry.Property(m => m.DemoKey).IsModified = true;
+                entry.Property(m => m.EventInfo).IsModified = true;
+                entry.Property(m => m.Example).IsModified = true;
+                entry.Property(m => m.ParameterInfo).IsModified = true;
+                entry.Property(m => m.ReturnValue).IsModified = true;
+                entry.Property(m => m.Summary).IsModified = true;
+                entry.Property(m => m.Syntax).IsModified = true;
+
+                db.SaveChanges();
+            }
+            catch (DbEntityValidationException ex)
+            {
+                throw ex;
+            }
+
+            return RedirectToAction("APIList", "Manager");
         }
 
         #endregion
 
 
+        #region Module相关,list ,add ,update
+
         public ActionResult ModuleList()
         {
+            ViewData["moduleCategories"] = db.ModuleCategories.ToList();
+            ViewData["moduleDetailInfos"] = db.ModuleDetailInfos.ToList();
             return View();
         }
+
+        public ActionResult Module()
+        {
+            int id = 0;
+
+            if (!int.TryParse(Convert.ToString(RouteData.Values["id"]), out id))
+            {
+                return View();
+            }
+
+            ViewData["IsUpdate"] = id > 0;
+
+            ModuleDetailInfo detailInfo = db.ModuleDetailInfos.First(m => m.ModuleID == id);
+
+            if (detailInfo == null)
+            {
+                RedirectToAction("ModuleList", "Manager");
+            }
+
+            ViewData["moduleDetailInfo"] = detailInfo;
+
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult ModuleAdd(ModuleDetailInfo module)
+        {
+            try
+            {
+                db.ModuleDetailInfos.Add(module);
+                db.SaveChanges();
+            }
+            catch (DbEntityValidationException ex)
+            {
+                throw ex;
+            }
+
+            return RedirectToAction("ModuleList", "Manager");
+        }
+
+        public ActionResult ModuleUpdate(ModuleDetailInfo module)
+        {
+            if (module == null || module.ModuleID <= 0)
+            {
+                return RedirectToAction("ModuleList", "Manager");
+            }
+
+            try
+            {
+                DbEntityEntry<ModuleDetailInfo> entry = db.Entry<ModuleDetailInfo>(module);
+
+                entry.State = EntityState.Unchanged;
+
+                entry.Property(m => m.ModuleKey).IsModified = true;
+                entry.Property(m => m.ModuleName).IsModified = true;
+                entry.Property(m => m.CategoryID).IsModified = true;
+                entry.Property(m => m.Demokey).IsModified = true;
+                entry.Property(m => m.EventInfo).IsModified = true;
+                entry.Property(m => m.Example).IsModified = true;
+                entry.Property(m => m.ParameterInfo).IsModified = true;
+                entry.Property(m => m.ReturnValue).IsModified = true;
+                entry.Property(m => m.Summary).IsModified = true;
+                entry.Property(m => m.Syntax).IsModified = true;
+
+                db.SaveChanges();
+            }
+            catch (DbEntityValidationException ex)
+            {
+                throw ex;
+            }
+
+            return RedirectToAction("ModuleList", "Manager");
+        }
+
+        #endregion
 
 
     }

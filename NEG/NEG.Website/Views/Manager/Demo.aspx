@@ -1,23 +1,12 @@
-﻿<%@ Page Language="C#" Inherits="System.Web.Mvc.ViewPage<dynamic>" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Manager.Master" Inherits="System.Web.Mvc.ViewPage<dynamic>" %>
 <%@ Import Namespace="NEG.Website.Models" %>
 
-<!DOCTYPE html>
-<html>
-<head runat="server">
-    <meta name="viewport" content="width=device-width" />
-    <title>Demo</title>
-    <style>
-        textarea {
-            height: 200px;
-            width: 600px;
-        }
-    </style>
-    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css">
-</head>
-<body>
+<asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
+    Module
+</asp:Content>
 
-    <div class="body">
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+        <div class="body">
         <% using (Html.BeginForm(Convert.ToBoolean(ViewData["IsUpdate"]) ? "DemoUpdate" : "DemoAdd", "Manager", FormMethod.Post, new { @class = "form-horizontal" }))
            { 
         %>
@@ -72,5 +61,8 @@
 
         <% } %>
     </div>
-</body>
-</html>
+
+
+</asp:Content>
+
+

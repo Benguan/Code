@@ -1,37 +1,57 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/info.Master" Inherits="System.Web.Mvc.ViewPage<dynamic>" %>
+
 <%@ Import Namespace="NEG.Website.Models" %>
+<%@ Import Namespace="NEG.Website.Controls.Common" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-   
-  API - <%= ((APIDetailInfo) ViewData["apiDetailInfo"]).APIName %>
-
+    API - <%= ((APIDetailInfo) ViewData["apiDetailInfo"]).APIName %>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <% var detailInfo = (APIDetailInfo) ViewData["apiDetailInfo"]; %>
+    <% var detailInfo = (APIDetailInfo)ViewData["apiDetailInfo"]; %>
     <div class="into_01">
         <div class="page">
             <%=detailInfo.APIName  %>
         </div>
     </div>
-    
-    
+
+
     <section class="page">
+
         <%
-            if (detailInfo.Syntax != null)
+            /*Summary Begin*/
+            if (!string.IsNullOrWhiteSpace(detailInfo.Summary))
+            {
+        %>
+        <div class="font02">
+            Summary
+        </div>
+        <div class="font01">
+            <%= detailInfo.Summary %>
+        </div>
+        <%
+            /*Summary End*/
+            }
+        %>
+        
+        
+        <%
+            /*Syntax Begin*/
+            if (!string.IsNullOrWhiteSpace(detailInfo.Syntax))
             {
         %>
         <div class="font02">
             Syntax
         </div>
-        <pre class="prettyprint lang-js prettyprinted" style="">
-            <%= detailInfo.Syntax %>
-        </pre>
+        <pre class="prettyprint lang-js prettyprinted" style=""><%= detailInfo.Syntax %></pre>
         <%
+            /*Syntax End*/
             }
         %>
+
         <%
-            if (detailInfo.ParameterInfo != null)
+            /*Parameter Begin*/
+            if (!string.IsNullOrWhiteSpace(detailInfo.ParameterInfo))
             {
         %>
         <div class="font02">
@@ -41,53 +61,44 @@
             <%= detailInfo.ParameterInfo %>
         </div>
         <%
+            /*Parameter Begin*/
             }
         %>
-        <div class="clear02"></div>
-        <div class="border_01">
-            options {stripeSelector, contentSelector, buttonGoSelector, processData, go}
-            <div class="border_02"></div>
-            <div class="clear02"></div>
-            <table border="0" cellspacing="1" cellpadding="0" style="width: 100%" class="table_01">
-                <tbody><tr class="table_tr01">
-                    <td>Parameter Name</td>
-                    <td>Type</td>
-                    <td>Description</td>
-                </tr>
-                <tr class="table_tr02">
-                    <td>stripeSelector</td>
-                    <td>String</td>
-                    <td>stripe selector <span class="default_data">[*]</span></td>
-                </tr>
-               <tr class="table_tr03">
-                    <td>contentSelector</td>
-                    <td>String</td>
-                    <td>content selector <span class="default_data">[*]</span></td>
-                </tr>
-                <tr class="table_tr02">
-                    <td>buttonGoSelector</td>
-                    <td>String</td>
-                    <td>button-Go Selector <span class="default_data">[*]</span></td>
-                </tr>
-                <tr class="table_tr03">
-                    <td>strileDisableClass</td>
-                    <td>String</td>
-                    <td>stripe disable class<span class="default_data">[*]</span></td>
-                </tr>
-               <tr class="table_tr02">
-                    <td>processData</td>
-                    <td>Function</td>
-                    <td>recommended to fill the data here </td>
-                </tr>
-                <tr class="table_tr03">
-                    <td>go</td>
-                    <td>Function</td>
-                    <td>will be triggered when selecte completed</td>
-                </tr>
-            </tbody></table>
-        </div>
-    </section>
 
+        
+        <%
+            /*Example Begin*/
+            if (!string.IsNullOrWhiteSpace(detailInfo.Example))
+            {
+        %>
+        <div class="example">
+            <%
+                if (detailInfo != null && detailInfo.DemoKey != null)
+                {
+
+                    var routeValues = new RouteValueDictionary();
+                    routeValues.Add("id", detailInfo.DemoKey);
+
+                    var attributes = new Dictionary<string, object>();
+                    attributes.Add("class", "viewDemo");
+                
+            %>
+            <%= Html.ActionLinkWithTag("span","[VIEW DEMO]","Detail","Demo",routeValues,attributes,null) %>
+            <%
+                }
+            %>
+<pre class="prettyprint lang-js prettyprinted" style="">
+<%= detailInfo.Example %>
+</pre>
+        </div>
+        
+        <%
+            }
+        %>
+
+
+        
+    </section>
 
 </asp:Content>
 

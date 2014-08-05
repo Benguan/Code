@@ -12,7 +12,7 @@ namespace NEG.Website.Models
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int DemoID { get; set; }
 
-        [StringLength(150)]
+        [StringLength(20)]
         public string DemoName { get; set; }
 
         public string DemoShowParts { get; set; }

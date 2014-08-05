@@ -15,7 +15,7 @@
 
             if (apiCategories != null)
             {
-                foreach (var category in apiCategories) 
+                foreach (var category in apiCategories)
                 {
         %>
         <div class="menu_02_01">
@@ -31,7 +31,7 @@
                             if (category.CategoryID == info.CategoryID)
                             {
                 %>
-                <li><%: Html.ActionLink(info.APIName, "Detail", "API", new {id= info.APIID},null) %></li>
+                <li><%: Html.ActionLink(info.APIName, "Detail", "API", new {id= info.APIKey},null) %></li>
                 <%
                             }
                         }
