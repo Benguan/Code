@@ -142,6 +142,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201408010529188_Update_V1.cs" />
+    <Compile Include="Migrations\201408010529188_Update_V1.Designer.cs">
+      <DependentUpon>201408010529188_Update_V1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\APICategory.cs" />
     <Compile Include="Models\APIDetailInfo.cs" />
     <Compile Include="Models\ModuleDetailInfo.cs" />
@@ -262,6 +267,9 @@
     <Content Include="Views\Shared\Site.Master" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Migrations\201408010529188_Update_V1.resx">
+      <DependentUpon>201408010529188_Update_V1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resource\en-US.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>en-US.Designer.cs</LastGenOutput>

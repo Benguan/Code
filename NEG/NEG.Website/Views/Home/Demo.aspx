@@ -19,7 +19,7 @@
                 {
                     foreach (var data in (List<DemoDetailInfo>) (ViewData["DemoDetailInfos"]))
                     {
-                        detailInfo.Append(Html.ActionHover(data.ShowImage, "DemoDetail", "Demo", "hover", null, data.DemoName));
+                        detailInfo.Append(Html.ActionHover(data.ShowImage, "Detail", "Demo", "hover", null, data.DemoName));
                     }
                 }
                 this.Response.Write(detailInfo.ToString());
