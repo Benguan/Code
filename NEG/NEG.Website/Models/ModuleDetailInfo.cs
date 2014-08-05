@@ -38,6 +38,6 @@ namespace NEG.Website.Models
         [StringLength(20)]
         public string ModuleKey { get; set; }
 
-        public int Status { get; set; }
+        public bool Status { get; set; }
     }
 }

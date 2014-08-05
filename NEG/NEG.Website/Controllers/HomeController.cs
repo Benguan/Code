@@ -34,22 +34,22 @@ namespace NEG.Website.Controllers
         public ActionResult API()
         {
 
-            ViewData["apiCategories"] = db.APICategories.ToList();
-            ViewData["apiDetailInfos"] = db.APIDetailInfos.ToList();
+            ViewData["apiCategories"] = db.APICategories.OrderBy(m => m.Priority).ToList();
+            ViewData["apiDetailInfos"] = db.APIDetailInfos.Where(m => m.Status).ToList();
 
             return View();
         }
 
         public ActionResult Demo()
         {
-            ViewData["DemoDetailInfos"] = db.DemoDetailInfos.ToList();
+            ViewData["DemoDetailInfos"] = db.DemoDetailInfos.Where(m => m.Status).ToList();
             return View();
         }
 
         public ActionResult Module()
         {
             ViewData["moduleCategories"] = db.ModuleCategories.ToList();
-            ViewData["moduleDetailInfos"] = db.ModuleDetailInfos.ToList();
+            ViewData["moduleDetailInfos"] = db.ModuleDetailInfos.Where(m => m.Status).ToList();
             return View();
         }
 

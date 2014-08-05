@@ -72,6 +72,9 @@
             if (!string.IsNullOrWhiteSpace(detailInfo.Example))
             {
         %>
+        <div class="font02">
+            Example
+        </div>
         <div class="example">
             <%
                 if (detailInfo != null && detailInfo.Demokey != null)
@@ -84,7 +87,7 @@
                     attributes.Add("class", "viewDemo");
                 
             %>
-            <%= Html.ActionLinkWithTag("span","[VIEW DEMO]","Detail","Demo",routeValues,attributes,null) %>
+            <%= Html.ActionLinkWithTag("span", "[VIEW DEMO]", "Detail", "Demo", routeValues, attributes, null) %>
             <%
                 }
             %>

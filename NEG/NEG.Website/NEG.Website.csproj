@@ -154,6 +154,10 @@
     <Compile Include="Migrations\201408050534269_update-add-status.Designer.cs">
       <DependentUpon>201408050534269_update-add-status.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201408050542411_update-add-status-V2.cs" />
+    <Compile Include="Migrations\201408050542411_update-add-status-V2.Designer.cs">
+      <DependentUpon>201408050542411_update-add-status-V2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\APICategory.cs" />
     <Compile Include="Models\APIDetailInfo.cs" />
@@ -284,6 +288,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201408050534269_update-add-status.resx">
       <DependentUpon>201408050534269_update-add-status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201408050542411_update-add-status-V2.resx">
+      <DependentUpon>201408050542411_update-add-status-V2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resource\en-US.resx">
       <Generator>ResXFileCodeGenerator</Generator>

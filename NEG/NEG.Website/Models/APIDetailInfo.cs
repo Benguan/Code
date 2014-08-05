@@ -38,6 +38,6 @@ namespace NEG.Website.Models
         [StringLength(20)]
         public string APIKey { get; set; }
 
-        public int Status { get; set; }
+        public bool Status { get; set; }
     }
 }

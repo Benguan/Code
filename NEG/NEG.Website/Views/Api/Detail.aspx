@@ -61,16 +61,35 @@
             <%= detailInfo.ParameterInfo %>
         </div>
         <%
-            /*Parameter Begin*/
+            /*Parameter End*/
             }
         %>
-
+        
+        <%
+            /*Return Begin*/
+            if (!string.IsNullOrWhiteSpace(detailInfo.ReturnValue))
+            {
+                
+        %>
+        
+        <div class="font02">
+            Return
+        </div>
+        <div class="font03"><%= detailInfo.ReturnValue %></div>
+        <%
+            /*Return End*/
+            }
+            
+        %>
         
         <%
             /*Example Begin*/
             if (!string.IsNullOrWhiteSpace(detailInfo.Example))
             {
         %>
+         <div class="font02">
+            Example
+        </div>
         <div class="example">
             <%
                 if (detailInfo != null && detailInfo.DemoKey != null)

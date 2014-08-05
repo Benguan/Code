@@ -27,6 +27,6 @@ namespace NEG.Website.Models
 
         [StringLength(100)]
         public string ShowImage { get; set; }
-        
+
     }
 }
