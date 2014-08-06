@@ -5,7 +5,7 @@ using System.Web.Mvc;
 
 namespace NEG.Website.Controllers
 {
-    public class ApiController : Controller
+    public class ApiController : BaseController
     {
         //
         // GET: /API/

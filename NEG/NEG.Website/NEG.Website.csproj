@@ -133,12 +133,14 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="Controllers\ApiController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\DemoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManagerController.cs" />
     <Compile Include="Controllers\ModuleController.cs" />
     <Compile Include="Controls\Common\Helper.cs" />
     <Compile Include="Controls\Common\LocalizationHelpers.cs" />
+    <Compile Include="Controls\Helper.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -157,6 +159,22 @@
     <Compile Include="Migrations\201408050542411_update-add-status-V2.cs" />
     <Compile Include="Migrations\201408050542411_update-add-status-V2.Designer.cs">
       <DependentUpon>201408050542411_update-add-status-V2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201408060150561_update-summary-length.cs" />
+    <Compile Include="Migrations\201408060150561_update-summary-length.Designer.cs">
+      <DependentUpon>201408060150561_update-summary-length.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201408060305297_add-lang.cs" />
+    <Compile Include="Migrations\201408060305297_add-lang.Designer.cs">
+      <DependentUpon>201408060305297_add-lang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201408060337310_update-lang.cs" />
+    <Compile Include="Migrations\201408060337310_update-lang.Designer.cs">
+      <DependentUpon>201408060337310_update-lang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201408060552448_update1.cs" />
+    <Compile Include="Migrations\201408060552448_update1.Designer.cs">
+      <DependentUpon>201408060552448_update1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\APICategory.cs" />
@@ -291,6 +309,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201408050542411_update-add-status-V2.resx">
       <DependentUpon>201408050542411_update-add-status-V2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201408060150561_update-summary-length.resx">
+      <DependentUpon>201408060150561_update-summary-length.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201408060305297_add-lang.resx">
+      <DependentUpon>201408060305297_add-lang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201408060337310_update-lang.resx">
+      <DependentUpon>201408060337310_update-lang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201408060552448_update1.resx">
+      <DependentUpon>201408060552448_update1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resource\en-US.resx">
       <Generator>ResXFileCodeGenerator</Generator>

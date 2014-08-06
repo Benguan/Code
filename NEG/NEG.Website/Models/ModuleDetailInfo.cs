@@ -39,5 +39,10 @@ namespace NEG.Website.Models
         public string ModuleKey { get; set; }
 
         public bool Status { get; set; }
+
+        [StringLength(5)]
+        public string LANG { get; set; }
+
+        public int Priority { get; set; }
     }
 }

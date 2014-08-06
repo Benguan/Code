@@ -16,6 +16,7 @@
         %>
         <input type="hidden" name="status" value="true" />
         <input type="hidden" name="apiID" value="<%:detail == null ? 0 : detail.APIID %>" />
+        <input type="hidden" id="langInput" name="lang" value="<%:detail==null?"en-US":detail.LANG %>"/>
 
         <div class="form-group">
             <label class="col-xs-2 control-label" for="formGroupInputSmall">API Key</label>
@@ -79,6 +80,23 @@
                 <input id="CategoryID" name="CategoryID" class="form-control " value="<%:detail == null ? string.Empty : detail.CategoryID.ToString() %>" />
             </div>
         </div>
+        
+        <div class="form-group">
+            <label class="col-xs-2 control-label" for="formGroupInputSmall">Lang</label>
+            <div class="col-sm-2">
+                <select class="form-control" id="langSelect">
+                    <option value="en-US" <%=detail.LANG=="en-US"?"selected=true":"" %>>English</option>
+                    <option value="zh-CN" <%=detail.LANG=="zh-CN"?"selected=true":"" %>>中文</option>
+                </select>
+            </div>
+        </div>
+                
+        <div class="form-group">
+            <label class="col-xs-2 control-label" for="formGroupInputSmall">Priority</label>
+            <div class="col-sm-2">
+                <input id="Priority" name="Priority" class="form-control " value="<%:detail == null ? string.Empty : detail.Priority.ToString() %>" />
+            </div>
+        </div>
 
         <div class="form-group">
             <label class="col-xs-2 control-label" for="formGroupInputSmall"></label>
@@ -86,7 +104,16 @@
                 <input id="buttom" type="submit" class="btn btn-primary " value="<%:Convert.ToBoolean(ViewData["IsUpdate"])?"更新":"添加" %>" />
             </div>
         </div>
+        
+        <script>
+            NEG.run(function (require) {
+                var target = document.getElementById("langSelect");
+                NEG(target).on("change", function () {
+                    document.getElementById("langInput").value = this.value;
+                })
+            });
 
+        </script>
         <% } %>
     </div>
 </asp:Content>

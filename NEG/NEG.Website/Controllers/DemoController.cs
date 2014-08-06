@@ -5,7 +5,7 @@ using System.Web.Mvc;
 
 namespace NEG.Website.Controllers
 {
-    public class DemoController : Controller
+    public class DemoController : BaseController
     {
         private NEGWebsiteEntities db = new NEGWebsiteEntities();
 

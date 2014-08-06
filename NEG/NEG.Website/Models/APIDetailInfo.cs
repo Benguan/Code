@@ -12,7 +12,7 @@ namespace NEG.Website.Models
         [StringLength(150)]
         public string APIName { get; set; }
 
-        [StringLength(300)]
+        [StringLength(1000)]
         public string Summary { get; set; }
 
         [StringLength(300)]
@@ -39,5 +39,11 @@ namespace NEG.Website.Models
         public string APIKey { get; set; }
 
         public bool Status { get; set; }
+
+        [StringLength(5)]
+        
+        public string LANG { get; set; }
+
+        public int Priority { get; set; }
     }
 }

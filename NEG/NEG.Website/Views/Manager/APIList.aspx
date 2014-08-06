@@ -29,8 +29,12 @@
                         {
                             if (category.CategoryID == info.CategoryID)
                             {
+                                //+ "(" + info.LANG + ")"
+                                bool langTag = info.LANG != ResourceManager.LANG_EN_US;
+                                string langText = langTag ? "(" + info.LANG + ")" : "";
+                                
                 %>
-                <li><%: Html.ActionLink(info.APIName, "API", "Manager", new {id= info.APIID},null) %></li>
+                <li><%: Html.ActionLink(info.APIName + langText, "API", "Manager", new { id = info.APIID }, null) %></li>
                 <%
                             }
                         }
@@ -43,5 +47,7 @@
                 }
             }
         %>
+        
+        <div class="clear01"></div>
     </div>
 </asp:Content>

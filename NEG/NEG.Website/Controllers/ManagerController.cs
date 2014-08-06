@@ -9,7 +9,7 @@ using System.Web.Mvc;
 
 namespace NEG.Website.Controllers
 {
-    public class ManagerController : Controller
+    public class ManagerController : BaseController
     {
         private NEGWebsiteEntities db;
 
@@ -184,6 +184,8 @@ namespace NEG.Website.Controllers
                 entry.Property(m => m.ReturnValue).IsModified = true;
                 entry.Property(m => m.Summary).IsModified = true;
                 entry.Property(m => m.Syntax).IsModified = true;
+                entry.Property(m => m.LANG).IsModified = true;
+                entry.Property(m => m.Priority).IsModified = true;
 
                 db.SaveChanges();
             }
@@ -270,6 +272,8 @@ namespace NEG.Website.Controllers
                 entry.Property(m => m.ReturnValue).IsModified = true;
                 entry.Property(m => m.Summary).IsModified = true;
                 entry.Property(m => m.Syntax).IsModified = true;
+                entry.Property(m => m.LANG).IsModified = true;
+                entry.Property(m => m.Priority).IsModified = true;
 
                 db.SaveChanges();
             }

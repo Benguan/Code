@@ -9,7 +9,7 @@ using NEG.Website.Models;
 
 namespace NEG.Website.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         private NEGWebsiteEntities db = new NEGWebsiteEntities();
 
@@ -33,7 +33,6 @@ namespace NEG.Website.Controllers
 
         public ActionResult API()
         {
-
             ViewData["apiCategories"] = db.APICategories.OrderBy(m => m.Priority).ToList();
             ViewData["apiDetailInfos"] = db.APIDetailInfos.Where(m => m.Status).ToList();
 

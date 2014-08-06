@@ -7,7 +7,7 @@ using NEG.Website.Models;
 
 namespace NEG.Website.Controllers
 {
-    public class ModuleController : Controller
+    public class ModuleController : BaseController
     {
         //
         // GET: /Module/

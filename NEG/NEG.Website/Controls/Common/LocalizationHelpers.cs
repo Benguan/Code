@@ -62,6 +62,9 @@ namespace NEG.Website.Controls.Common
 
     public static class LangResourceFileProvider
     {
+
+        public const string DEFAULT_LANG = "en-US.resx";
+
         private static IDictionary<string, string> dataCollection = new Dictionary<string, string>();
 
         public static string GetLangString(string Key, LangType langtype, string FilePath)
@@ -82,7 +85,7 @@ namespace NEG.Website.Controls.Common
                     filename = "en-US.resx";
                     break;
                 default:
-                    filename = "en-US.resx";
+                    filename = DEFAULT_LANG;
                     break;
             }
 

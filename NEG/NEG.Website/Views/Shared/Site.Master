@@ -13,6 +13,11 @@
 <body>
      <header  class="header">
         <div class="content">
+            <div class="global">
+                <a href="#" value="1"><span>中文</span></a>
+                <span class="separator">|</span>
+                <a href="#" value="0"><span>English</span></a>
+            </div>
             <div class="logo">
                 <%:Html.ActionLinkWithImage(Url.Content("~/Images/02.png"),"Tutorial","Home") %>
             </div>
@@ -39,7 +44,22 @@
         </div>
     </footer>
     
-    <script>if (prettyPrint) { prettyPrint(); }</script>
+    <script>
+        if (prettyPrint) { prettyPrint(); }
+
+        NEG.run(function (require) {
+            var $ = require("NEG.ThirdParty.JQuery");
+            var cookie = require("Utility.Cookie");
+            $(".global a").click(function () {
+
+                var lang = $(this).attr("value");
+
+                cookie.set("NEGLang", lang);
+
+                window.location.reload();
+            });
+        });
+    </script>
     <asp:ContentPlaceHolder ID="ScriptsSection" runat="server" />
 </body>
 </html>

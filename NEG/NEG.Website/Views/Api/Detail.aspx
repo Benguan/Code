@@ -17,7 +17,6 @@
 
 
     <section class="page">
-
         <%
             /*Summary Begin*/
             if (!string.IsNullOrWhiteSpace(detailInfo.Summary))
@@ -30,11 +29,11 @@
             <%= detailInfo.Summary %>
         </div>
         <%
-            /*Summary End*/
+                /*Summary End*/
             }
         %>
-        
-        
+
+
         <%
             /*Syntax Begin*/
             if (!string.IsNullOrWhiteSpace(detailInfo.Syntax))
@@ -43,9 +42,9 @@
         <div class="font02">
             Syntax
         </div>
-        <pre class="prettyprint lang-js prettyprinted" style=""><%= detailInfo.Syntax %></pre>
+        <pre class="prettyprint lang-js" style=""><%= detailInfo.Syntax %></pre>
         <%
-            /*Syntax End*/
+                /*Syntax End*/
             }
         %>
 
@@ -61,33 +60,33 @@
             <%= detailInfo.ParameterInfo %>
         </div>
         <%
-            /*Parameter End*/
+                /*Parameter End*/
             }
         %>
-        
+
         <%
             /*Return Begin*/
             if (!string.IsNullOrWhiteSpace(detailInfo.ReturnValue))
             {
                 
         %>
-        
+
         <div class="font02">
             Return
         </div>
         <div class="font03"><%= detailInfo.ReturnValue %></div>
         <%
-            /*Return End*/
+                /*Return End*/
             }
             
         %>
-        
+
         <%
             /*Example Begin*/
             if (!string.IsNullOrWhiteSpace(detailInfo.Example))
             {
         %>
-         <div class="font02">
+        <div class="font02">
             Example
         </div>
         <div class="example">
@@ -106,17 +105,14 @@
             <%
                 }
             %>
-<pre class="prettyprint lang-js prettyprinted" style="">
+            <pre class="prettyprint lang-js" style="">
 <%= detailInfo.Example %>
 </pre>
         </div>
-        
+
         <%
             }
         %>
-
-
-        
     </section>
 
 </asp:Content>

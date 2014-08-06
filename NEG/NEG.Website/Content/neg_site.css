@@ -111,7 +111,7 @@ a {
         color: #179f7a;
     }
 
- .viewDemo {
+.viewDemo {
     float: right;
     color: #FFF;
     font-size: 12px;
@@ -178,7 +178,6 @@ a {
     border-left: 1px solid #e2d9c6;
     float: left;
     width: 200px;
-    height: 300px;
     padding: 0px 20px 0px 8px;
 }
 
@@ -474,18 +473,18 @@ menu_04 {
     overflow: hidden;
 }
 
-    .article .content .center {
-        padding-left: 220px;
-        padding-top: 30px;
-    }
+.article .content .center {
+    padding-left: 220px;
+    padding-top: 30px;
+}
 
-    .article .content .hover {
-        border-radius: 5px;
-    }
+.article .content .hover {
+    border-radius: 5px;
+}
 
-    .article .content a:hover .hover {
-        background: #e2d9c8;
-    }
+.article .content a:hover .hover {
+    background: #e2d9c8;
+}
 
 .default_data {
     color: #89A41C;
@@ -512,11 +511,11 @@ div #learmore {
     width: 1000px;
 }
 
-    .section.review #post-count h4, section.review #post-count h4 {
-        font-size: 24px;
-        padding: 20px 0 5px;
-        color: #179F7A;
-    }
+.section.review #post-count h4, section.review #post-count h4 {
+    font-size: 24px;
+    padding: 20px 0 5px;
+    color: #179F7A;
+}
 
 .intl_table {
     border: 1px solid black;
@@ -529,11 +528,26 @@ div #learmore {
 }
 
 
-.none-list {font-size:14px;}
-.none-list li{display: inherit; font-weight: bold}
-.none-list li .number{color:#CC0000;}
-.aboutNEG .none-list li:first-child{padding-top:0px; }
-.aboutNEG .b{text-indent: 1.5em;}
+.none-list {
+    font-size: 14px;
+}
+
+    .none-list li {
+        display: inherit;
+        font-weight: bold;
+    }
+
+        .none-list li .number {
+            color: #CC0000;
+        }
+
+.aboutNEG .none-list li:first-child {
+    padding-top: 0px;
+}
+
+.aboutNEG .b {
+    text-indent: 1.5em;
+}
 
 
 .menu_manager {
@@ -548,15 +562,34 @@ div #learmore {
         line-height: 35px;
     }
 
-        .menu_manager li a:hover {
-            width: 200px;
-            padding: 5px 30px 5px 5px;
-            background: #e2d9c6;
-        }
+.menu_manager li a:hover {
+    width: 200px;
+    padding: 5px 30px 5px 5px;
+    background: #e2d9c6;
+}
 
-    .menu_manager li span {
-        font-size: 22px;
-        color: #6d5e47;
-        padding-left: 5px;
-        height: 45px;
-    }
+.menu_manager li span {
+font-size: 22px;
+color: #6d5e47;
+padding-left: 5px;
+height: 45px;
+}
+
+.global a span {
+    color: #ebe8da;
+    font-family: '微软雅黑', Simsun;
+}
+
+.global {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+}
+
+.separator {
+    color: #d2c6b0;
+}
+
+.global a:hover span {
+    color: #ffffff;
+}
