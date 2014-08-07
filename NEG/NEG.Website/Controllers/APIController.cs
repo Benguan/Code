@@ -18,7 +18,9 @@ namespace NEG.Website.Controllers
 
             if (!string.IsNullOrWhiteSpace(apiID))
             {
-                ViewData["apiDetailInfo"] = db.APIDetailInfos.FirstOrDefault(m => m.APIKey == apiID);
+                ViewData["apiDetailInfo"] = db.APIDetailInfos.FirstOrDefault(
+                    m => m.APIKey == apiID && m.LANG == CurrentLang
+                    );
             }
 
             return View();

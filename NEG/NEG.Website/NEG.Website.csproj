@@ -140,7 +140,8 @@
     <Compile Include="Controllers\ModuleController.cs" />
     <Compile Include="Controls\Common\Helper.cs" />
     <Compile Include="Controls\Common\LocalizationHelpers.cs" />
-    <Compile Include="Controls\Helper.cs" />
+    <Compile Include="Controls\MVCContext.cs" />
+    <Compile Include="Controls\ResourceManager.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -175,6 +176,14 @@
     <Compile Include="Migrations\201408060552448_update1.cs" />
     <Compile Include="Migrations\201408060552448_update1.Designer.cs">
       <DependentUpon>201408060552448_update1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201408060644371_update2.cs" />
+    <Compile Include="Migrations\201408060644371_update2.Designer.cs">
+      <DependentUpon>201408060644371_update2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201408060645287_update3.cs" />
+    <Compile Include="Migrations\201408060645287_update3.Designer.cs">
+      <DependentUpon>201408060645287_update3.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\APICategory.cs" />
@@ -321,6 +330,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201408060552448_update1.resx">
       <DependentUpon>201408060552448_update1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201408060644371_update2.resx">
+      <DependentUpon>201408060644371_update2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201408060645287_update3.resx">
+      <DependentUpon>201408060645287_update3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resource\en-US.resx">
       <Generator>ResXFileCodeGenerator</Generator>

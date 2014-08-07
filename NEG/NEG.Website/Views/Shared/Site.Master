@@ -54,7 +54,10 @@
 
                 var lang = $(this).attr("value");
 
-                cookie.set("NEGLang", lang);
+                cookie.set("NEGLang", lang, {
+                    exp: "2020-10-01",
+                    path: "/"
+                });
 
                 window.location.reload();
             });

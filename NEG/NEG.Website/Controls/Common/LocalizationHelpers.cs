@@ -11,8 +11,6 @@ namespace NEG.Website.Controls.Common
 {
     public static class LocalizationHelpers
     {
-        
-
         /// <summary>
         /// 在外边的 Html 中直接使用
         /// </summary>
@@ -52,10 +50,13 @@ namespace NEG.Website.Controls.Common
         {
             LangType langtype = LangType.en;
 
-            if (httpContext.Session["Lang"] != null)
+            string currentLang = MVCContext.GetCurrentLang();
+
+            if (currentLang == ResourceManager.LANG_ZH_CN)
             {
-                langtype = (LangType)httpContext.Session["Lang"];
+                langtype = LangType.cn;
             }
+
             return LangResourceFileProvider.GetLangString(key, langtype, FilePath);
         }
     }
@@ -69,9 +70,11 @@ namespace NEG.Website.Controls.Common
 
         public static string GetLangString(string Key, LangType langtype, string FilePath)
         {
-            if (dataCollection.ContainsKey(Key))
+            var assembleKey = AssmbleKey(Key, langtype);
+
+            if (dataCollection.ContainsKey(assembleKey))
             {
-                return dataCollection[Key] as string;
+                return dataCollection[assembleKey] as string;
             }
 
 
@@ -97,7 +100,7 @@ namespace NEG.Website.Controls.Common
             {
                 foreach (DictionaryEntry d in reader)
                 {
-                    dataCollection.Add(new KeyValuePair<string, string>(d.Key.ToString(), d.Value.ToString()));
+                    dataCollection.Add(new KeyValuePair<string, string>(AssmbleKey(d.Key.ToString(), langtype), d.Value.ToString()));
                 }
             }
             catch (Exception ex)
@@ -109,12 +112,17 @@ namespace NEG.Website.Controls.Common
                 reader.Close();
             }
 
-            if (dataCollection.ContainsKey(Key))
+            if (dataCollection.ContainsKey(assembleKey))
             {
-                return dataCollection[Key] as string;
+                return dataCollection[assembleKey] as string;
             }
 
             return string.Empty;
+        }
+
+        public static string AssmbleKey(string key, LangType langtype)
+        {
+            return key + "-" + langtype.ToString();
         }
     }
 

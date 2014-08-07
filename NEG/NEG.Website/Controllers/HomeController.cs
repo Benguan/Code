@@ -34,7 +34,8 @@ namespace NEG.Website.Controllers
         public ActionResult API()
         {
             ViewData["apiCategories"] = db.APICategories.OrderBy(m => m.Priority).ToList();
-            ViewData["apiDetailInfos"] = db.APIDetailInfos.Where(m => m.Status).ToList();
+            ViewData["apiDetailInfos"] = db.APIDetailInfos.Where(m =>
+                                                                 m.Status && m.LANG == ResourceManager.LANG_DEFAULT).ToList();
 
             return View();
         }

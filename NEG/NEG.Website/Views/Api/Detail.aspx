@@ -23,7 +23,7 @@
             {
         %>
         <div class="font02">
-            Summary
+            <%= Html.Lang("Summary") %>
         </div>
         <div class="font01">
             <%= detailInfo.Summary %>
@@ -40,7 +40,7 @@
             {
         %>
         <div class="font02">
-            Syntax
+            <%= Html.Lang("Syntax") %>
         </div>
         <pre class="prettyprint lang-js" style=""><%= detailInfo.Syntax %></pre>
         <%
@@ -54,7 +54,8 @@
             {
         %>
         <div class="font02">
-            Parameter
+            
+            <%= Html.Lang("Parameter") %>
         </div>
         <div class="font03">
             <%= detailInfo.ParameterInfo %>
@@ -72,7 +73,7 @@
         %>
 
         <div class="font02">
-            Return
+            <%= Html.Lang("Return") %>
         </div>
         <div class="font03"><%= detailInfo.ReturnValue %></div>
         <%
@@ -87,7 +88,7 @@
             {
         %>
         <div class="font02">
-            Example
+            <%= Html.Lang("Example") %>
         </div>
         <div class="example">
             <%

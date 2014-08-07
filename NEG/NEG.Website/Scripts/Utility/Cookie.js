@@ -16,7 +16,7 @@ NEG.Module('Utility.Cookie',function(require){
     };
 
     var cookie = {
-        set : function(name,value,option) {
+        set: function (name, value, option) {
             option = option || {};
             //var cookieString = encodeURIComponent(name) + "=" + helper.encode(value);
             var cookieString = helper.encode(name) + "=" + helper.encode(value);

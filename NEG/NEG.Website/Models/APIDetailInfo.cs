@@ -18,13 +18,13 @@ namespace NEG.Website.Models
         [StringLength(300)]
         public string Syntax { get; set; }
 
-        [Column(TypeName = "Text")]
+        [MaxLength]
         public string ParameterInfo { get; set; }
 
-        [Column(TypeName = "Text")]
+        [MaxLength]
         public string EventInfo { get; set; }
 
-        [Column(TypeName = "Text")]
+        [MaxLength]
         public string Example { get; set; }
 
         [StringLength(20)]

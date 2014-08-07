@@ -85,8 +85,8 @@
             <label class="col-xs-2 control-label" for="formGroupInputSmall">Lang</label>
             <div class="col-sm-2">
                 <select class="form-control" id="langSelect">
-                    <option value="en-US" <%=detail.LANG=="en-US"?"selected=true":"" %>>English</option>
-                    <option value="zh-CN" <%=detail.LANG=="zh-CN"?"selected=true":"" %>>中文</option>
+                    <option value="en-US" <%=detail!=null && detail.LANG=="en-US"?"selected=true":"" %>>English</option>
+                    <option value="zh-CN" <%=detail!=null && detail.LANG=="zh-CN"?"selected=true":"" %>>中文</option>
                 </select>
             </div>
         </div>
