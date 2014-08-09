@@ -2,25 +2,23 @@
 using System;
 using System.Linq;
 using System.Web.Mvc;
+using NEG.Website.Models.DataAccess;
 
 namespace NEG.Website.Controllers
 {
     public class DemoController : BaseController
     {
-        private NEGWebsiteEntities db = new NEGWebsiteEntities();
-
         public ActionResult Detail()
         {
             string demoName = Convert.ToString(RouteData.Values["id"]);
 
             if (!string.IsNullOrWhiteSpace(demoName))
             {
-                ViewData["DemoDetailInfo"] = db.DemoDetailInfos.FirstOrDefault(m => m.DemoName == demoName);
+                ViewData["DemoDetailInfo"] = DBHelper.DemoDetailInfoContext.FirstOrDefault(m =>
+                                                                                           m.DemoName == demoName);
             }
 
             return View();
         }
-
-
     }
 }

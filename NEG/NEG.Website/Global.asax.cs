@@ -6,6 +6,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Routing;
 using System.Web.Optimization;
+using NEG.Website.Controls.Common;
 
 namespace NEG.Website
 {
@@ -15,6 +16,9 @@ namespace NEG.Website
     {
         protected void Application_Start()
         {
+
+            LangResourceFileProvider.InitResource();
+            
             AreaRegistration.RegisterAllAreas();
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);

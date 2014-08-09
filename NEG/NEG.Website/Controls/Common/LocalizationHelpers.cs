@@ -52,77 +52,68 @@ namespace NEG.Website.Controls.Common
 
             string currentLang = MVCContext.GetCurrentLang();
 
-            if (currentLang == ResourceManager.LANG_ZH_CN)
-            {
-                langtype = LangType.cn;
-            }
 
-            return LangResourceFileProvider.GetLangString(key, langtype, FilePath);
+            return LangResourceFileProvider.GetLangString(key, currentLang, FilePath);
         }
     }
 
     public static class LangResourceFileProvider
     {
-
-        public const string DEFAULT_LANG = "en-US.resx";
+        public static string[] LangList = new string[] { "en-US", "zh-CN" };
 
         private static IDictionary<string, string> dataCollection = new Dictionary<string, string>();
 
-        public static string GetLangString(string Key, LangType langtype, string FilePath)
+        public static string GetLangString(string Key, string lang, string FilePath)
         {
-            var assembleKey = AssmbleKey(Key, langtype);
+            var assembleKey = AssmbleKey(Key, lang);
 
             if (dataCollection.ContainsKey(assembleKey))
             {
                 return dataCollection[assembleKey] as string;
             }
 
-
-            string filename;
-            switch (langtype)
+            /*没有维护中文，就找英文*/
+            if (lang != ResourceManager.LANG_DEFAULT)
             {
-                case LangType.cn:
-                    filename = "zh-CN.resx";
-                    break;
-                case LangType.en:
-                    filename = "en-US.resx";
-                    break;
-                default:
-                    filename = DEFAULT_LANG;
-                    break;
-            }
-
-            //System.Resources.ResourceReader reader = new System.Resources.ResourceReader(FilePath + filename);
-            ResXResourceReader reader = new ResXResourceReader(FilePath + filename);
-
-
-            try
-            {
-                foreach (DictionaryEntry d in reader)
+                var assembleDefaultKey = AssmbleKey(Key, ResourceManager.LANG_DEFAULT);
+                if (dataCollection.ContainsKey(assembleDefaultKey))
                 {
-                    dataCollection.Add(new KeyValuePair<string, string>(AssmbleKey(d.Key.ToString(), langtype), d.Value.ToString()));
+                    return dataCollection[assembleDefaultKey] as string;
                 }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                reader.Close();
-            }
-
-            if (dataCollection.ContainsKey(assembleKey))
-            {
-                return dataCollection[assembleKey] as string;
             }
 
             return string.Empty;
         }
 
-        public static string AssmbleKey(string key, LangType langtype)
+        public static string AssmbleKey(string key, string lang)
         {
-            return key + "-" + langtype.ToString();
+            return key + "-" + lang;
+        }
+
+        public static void InitResource()
+        {
+            string path = HttpContext.Current.Server.MapPath("/") + "Resource\\";
+
+            foreach (string lang in LangList)
+            {
+                ResXResourceReader reader = new ResXResourceReader(path + lang + ".resx");
+
+                try
+                {
+                    foreach (DictionaryEntry d in reader)
+                    {
+                        dataCollection.Add(new KeyValuePair<string, string>(AssmbleKey(d.Key.ToString(), lang), d.Value.ToString()));
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    reader.Close();
+                }
+            }
         }
     }
 

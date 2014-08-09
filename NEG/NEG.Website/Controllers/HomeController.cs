@@ -6,16 +6,21 @@ using System.Web;
 using System.Web.Mvc;
 using NEG.Website.Controls.Common;
 using NEG.Website.Models;
+using NEG.Website.Models.DataAccess;
 
 namespace NEG.Website.Controllers
 {
     public class HomeController : BaseController
     {
-        private NEGWebsiteEntities db = new NEGWebsiteEntities();
+        private NEGDbContext db;
+
+        public HomeController()
+        {
+            db = new NEGDbContext();
+        }
 
         public ActionResult Index()
         {
-
             return View();
         }
 

@@ -5,7 +5,7 @@ namespace NEG.Website.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<NEG.Website.Models.NEGWebsiteEntities>
+    internal sealed class Configuration : DbMigrationsConfiguration<NEG.Website.Models.DataAccess.NEGDbContext>
     {
         public Configuration()
         {
@@ -13,7 +13,7 @@ namespace NEG.Website.Migrations
             ContextKey = "NEG.Website.Models.NEGWebsiteEntities";
         }
 
-        protected override void Seed(NEG.Website.Models.NEGWebsiteEntities context)
+        protected override void Seed(NEG.Website.Models.DataAccess.NEGDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

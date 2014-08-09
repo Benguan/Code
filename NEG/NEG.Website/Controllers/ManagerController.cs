@@ -6,16 +6,17 @@ using System.Data.Entity.Infrastructure;
 using System.Data.Entity.Validation;
 using System.Linq;
 using System.Web.Mvc;
+using NEG.Website.Models.DataAccess;
 
 namespace NEG.Website.Controllers
 {
     public class ManagerController : BaseController
     {
-        private NEGWebsiteEntities db;
+        private NEGDbContext db;
 
         public ManagerController()
         {
-            db = new NEGWebsiteEntities();
+            db = new NEGDbContext();
         }
 
         #region Demo相关，list，add，update
