@@ -17,7 +17,7 @@
     </div>
 
 
-    <section class="page">
+    <section class="page"> 
 
         <%
             /*Summary Begin*/
@@ -44,7 +44,7 @@
         <div class="font02">
             Syntax
         </div>
-        <pre class="prettyprint lang-js prettyprinted" style=""><%= detailInfo.Syntax %></pre>
+        <pre class="prettyprint lang-js" style=""><%= detailInfo.Syntax %></pre>
         <%
             /*Syntax End*/
             }
@@ -65,7 +65,21 @@
             /*Parameter Begin*/
             }
         %>
-
+        
+        <%
+            /*Event Begin*/
+            if (!string.IsNullOrWhiteSpace(detailInfo.EventInfo))
+            {
+            
+        %>
+         <div class="font02">
+            Event
+        </div>
+        <%= detailInfo.EventInfo %>
+        <%
+            /*Event End*/
+            }
+        %>
         
         <%
             /*Example Begin*/
@@ -91,7 +105,7 @@
             <%
                 }
             %>
-<pre class="prettyprint lang-js prettyprinted" style="">
+<pre class="prettyprint lang-js " style="">
 <%= detailInfo.Example %>
 </pre>
         </div>

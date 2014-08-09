@@ -250,6 +250,8 @@ namespace NEG.Website.Controllers
             return RedirectToAction("ModuleList", "Manager");
         }
 
+        [HttpPost]
+        [ValidateInput(false)]
         public ActionResult ModuleUpdate(ModuleDetailInfo module)
         {
             if (module == null || module.ModuleID <= 0)

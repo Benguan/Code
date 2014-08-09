@@ -14,8 +14,14 @@ namespace NEG.Website.Controllers
 
             if (!string.IsNullOrWhiteSpace(demoName))
             {
-                ViewData["DemoDetailInfo"] = DBHelper.DemoDetailInfoContext.FirstOrDefault(m =>
-                                                                                           m.DemoName == demoName);
+                var detail = DBHelper.DemoDetailInfoContext.FirstOrDefault(m =>
+                                                                           m.DemoName == demoName);
+
+                if (detail != null)
+                {
+                    ViewData["DemoDetailInfo"] = detail;
+                }
+
             }
 
             return View();

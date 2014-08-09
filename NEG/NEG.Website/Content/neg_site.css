@@ -357,6 +357,14 @@ a {
         padding: 0px 5px;
     }
 
+.font03 .border_01 {
+    color: #333;
+    font-size: 14px;
+    font-family: '微软雅黑', Simsun;
+
+}
+
+
 .border_01 {
     border: 1px solid #dad2ae;
     line-height: 50px;
@@ -486,9 +494,13 @@ menu_04 {
     background: #e2d9c8;
 }
 
-.default_data {
+span.default_data {
     color: #89A41C;
     font-weight: bold;
+}
+
+.font03 span.default_data {
+    background: inherit;
 }
 
 .learmore {
