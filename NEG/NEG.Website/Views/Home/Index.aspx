@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<dynamic>" %>
+<%@ Import namespace="NEG.Website.Controls.Common" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
     NEG.JS
@@ -8,20 +9,27 @@
 
 <div class="center tutorial">
                 
-                <h3>PART 1 - GET SETUP</h3>
+                <h3><%= Html.Lang("Setup") %></h3>
 
                 <ol>
-                    <li>Download and unzip the NEG.JS from <a href="DownLoad/NEG.0.2.1.zip">here</a></li>
+                    <li>
+                        <%= string.Format(Html.Lang("SetupStep1"),"DownLoad/NEG.0.2.1.zip") %>
+                    </li>
 
-                    <li>Look inside the <pre class="prettyprint inline">release</pre > folder to find <pre class="prettyprint inline">NEG.0.2.1.js</pre> and load this file from your html page.load</li>
+                    <li>
+                        <%= string.Format( Html.Lang("SetupStep2"),"NEG.0.2.1") %>
+                    </li>
+                    
                     <br />
                     <pre class="prettyprint lang-js">
 &lt;script src="js/NEG.0.2.1.js"&gt;&lt;/script&gt;</pre>
                 </ol>
 
                 <br/>
-                <h3>PART 2 - [NEG.JS] INTRODUCTORY</h3>
-                    One of the most basic and useful feature is all of Javascript code run in a sandbox runtime.
+                <h3><%= Html.Lang("Introductory") %></h3>
+   
+    <%=Html.Lang("IntroductoryStep1") %>
+
                     <pre class="prettyprint lang-js">
 //This code is run in a security sandbox 
 NEG.run(function(require){
@@ -32,8 +40,8 @@ NEG.run(function(require){
                 <br/>
 
                 <div id="learmore">
-                    <h3>[NEG.JS] QUICK START</h3>
-                        <div>Let's define a module by NEG</div>
+                    <h3><%= Html.Lang("QuickStart") %></h3>
+                    <div><%= Html.Lang("QuickStartStep1") %></div>
                         <pre class="prettyprint lang-js">
 //Define module
 NEG.Module("Biz.Page.LoginAccount.LoginModule",function(){
@@ -53,7 +61,8 @@ NEG.Module("Biz.Page.LoginAccount.LoginModule",function(){
 		validateForm: validateForm
 	};
 });</pre>
-                        <div>Then, we can require module and use it.</div>
+                    <div><%= Html.Lang("QuickStartStep2") %></div>
+                        <div></div>
 <pre class="prettyprint lang-js">
 NEG.run(function(require){
     //we can get module by require function
@@ -88,7 +97,7 @@ NEG.run(function(require){
                 jQuery(".learmore").html(nextText);
             }
             else if ($this.html() == nextText) {
-                window.location.href = "API";
+                window.location.href = "/Home/API";
             }
         })
     </script>

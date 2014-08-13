@@ -23,8 +23,8 @@
             </div>
             <nav>
                 <ul class="menu_01_font01">
-                    <li><%:Html.TabLink("ABOUT NEG", "About", "Home") %></li>
-                    <li><%:Html.TabLink("TUTORIAL", "Tutorial", "Home") %></li>
+                    <li><%:Html.TabLink(Html.Lang("AboutNEG"), "About", "Home") %></li>
+                    <li><%:Html.TabLink(Html.Lang("Tutorial"), "Tutorial", "Home") %></li>
                     <li><%:Html.TabLink("API", "API", "Home") %></li>
                     <li><%:Html.TabLink("MODULE", "MODULE", "Home") %></li>
                     <li><%:Html.TabLink("DEMO", "DEMO", "Home") %></li>

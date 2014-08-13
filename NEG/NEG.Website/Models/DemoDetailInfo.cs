@@ -17,7 +17,7 @@ namespace NEG.Website.Models
 
         public string DemoShowParts { get; set; }
 
-        [StringLength(3000)]
+        [MaxLength]
         public string DemoCode { get; set; }
 
         [StringLength(3000)]
@@ -28,5 +28,10 @@ namespace NEG.Website.Models
         [StringLength(100)]
         public string ShowImage { get; set; }
 
+        [MaxLength]
+        public string ExecuteStyle { get; set; }
+
+        [MaxLength]
+        public string ExecuteScript { get; set; }
     }
 }

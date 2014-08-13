@@ -117,19 +117,95 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AboutNEG" xml:space="preserve">
+    <value>NEG简介</value>
+  </data>
+  <data name="AboutNEGBody" xml:space="preserve">
+    <value>&lt;!--&lt;h3&gt;WHY IS NEG ?&lt;/h3&gt; --&gt;
+                   &lt;h3&gt;为什么是 NEG ?&lt;/h3&gt; 
+                   &lt;p&gt;
+                        随着Newegg网站业务逐渐增加，前端交互日益复杂，旧版本的JS框架从性能，效果，业务上都满足不了开发需求；一个动态加载，擅长模块化的Javascript框架 NEG 可以很好地解决这个问题。
+                    &lt;/p&gt;
+
+                    &lt;br/&gt;
+
+                    &lt;h3&gt;不是有jQuery了吗 ?&lt;/h3&gt; 
+                    &lt;p&gt;
+                        jQuery 是一个功能非常强大的工具类，但不能很好地解决动态加载，模块化的问题（如header里引入很多JS 文件），而NEG也和jQuery 很好地兼容，你可以在NEG里将jQuery作为一个模块来使用。
+                    &lt;/p&gt;
+&lt;br/&gt;
+                    &lt;pre class="prettyprint lang-js"&gt;
+NEG.run(function(require){
+    var $ = require("Utility.jQuery");
+    $("domID").addClass("test");
+});&lt;/pre&gt;
+&lt;br/&gt;
+&lt;p&gt;
+    $ 是私有变量，可以在function内任意使用；并且这次加载回来的jQuery并不是绑定在全局之下，所以不会对方法体外边有任何的影响
+&lt;/p&gt;
+
+                    &lt;style&gt;
+                        .aboutNEG ol li{
+                            padding-top:2px;
+                            margin-top:2px;
+                        }
+                    &lt;/style&gt;
+
+                   &lt;h3&gt;关于NEG &lt;/h3&gt; 
+                   &lt;p&gt;
+                    &lt;ol style="padding-left:20px;"&gt;
+                        &lt;li&gt;
+                            NEG 提供了丰富、易用的API以及详细的说明。
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            NEG 可能会带给你崭新的编程习惯。
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            NEG 为后续合并JS文件等进一步优化前端架构提供了接口。
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            NEG 为跨平台，多终端提供了接口。
+                        &lt;/li&gt;
+                    &lt;/ol&gt;
+                   &lt;/p&gt;</value>
+  </data>
   <data name="Example" xml:space="preserve">
     <value>举例</value>
+  </data>
+  <data name="Introductory" xml:space="preserve">
+    <value>[NEG.JS] 简介</value>
+  </data>
+  <data name="IntroductoryStep1" xml:space="preserve">
+    <value>NEG最重要的一个特质：代码在沙箱里执行。</value>
   </data>
   <data name="Parameter" xml:space="preserve">
     <value>参数</value>
   </data>
+  <data name="QuickStartStep1" xml:space="preserve">
+    <value>首先，来定义一个Module</value>
+  </data>
+  <data name="QuickStartStep2" xml:space="preserve">
+    <value>然后，在NEG沙箱里Require回来，并使用</value>
+  </data>
   <data name="Return" xml:space="preserve">
     <value>返回值</value>
+  </data>
+  <data name="Setup" xml:space="preserve">
+    <value>安装</value>
+  </data>
+  <data name="SetupStep1" xml:space="preserve">
+    <value>&lt;a href="{0}"&gt;下载&lt;/a&gt;并解压缩 NEG.JS </value>
+  </data>
+  <data name="SetupStep2" xml:space="preserve">
+    <value>将 &lt;pre class="prettyprint inline"&gt;release&lt;/pre &gt; 目录拷贝到网站目录JS下，找到 &lt;pre class="prettyprint inline"&gt;{0}.js&lt;/pre&gt;，然后引入到页面</value>
   </data>
   <data name="Summary" xml:space="preserve">
     <value>简介</value>
   </data>
   <data name="Syntax" xml:space="preserve">
     <value>语法</value>
+  </data>
+  <data name="Tutorial" xml:space="preserve">
+    <value>教程</value>
   </data>
 </root>

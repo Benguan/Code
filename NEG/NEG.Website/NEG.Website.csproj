@@ -186,6 +186,18 @@
     <Compile Include="Migrations\201408060645287_update3.Designer.cs">
       <DependentUpon>201408060645287_update3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201408120054264_ExpandDemo.cs" />
+    <Compile Include="Migrations\201408120054264_ExpandDemo.Designer.cs">
+      <DependentUpon>201408120054264_ExpandDemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201408120115485_ExpandDemo_V2.cs" />
+    <Compile Include="Migrations\201408120115485_ExpandDemo_V2.Designer.cs">
+      <DependentUpon>201408120115485_ExpandDemo_V2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201408120232564_ExpandDemo_V3.cs" />
+    <Compile Include="Migrations\201408120232564_ExpandDemo_V3.Designer.cs">
+      <DependentUpon>201408120232564_ExpandDemo_V3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\APICategory.cs" />
     <Compile Include="Models\APIDetailInfo.cs" />
@@ -222,6 +234,7 @@
     <Content Include="Images\03.png" />
     <Content Include="Images\close.png" />
     <Content Include="Images\demo01.jpg" />
+    <Content Include="Images\Demo\AutoConfigurator.jpg" />
     <Content Include="Images\Demo\bigImage.jpg" />
     <Content Include="Images\Demo\FilterManager.png" />
     <Content Include="Images\Demo\imagegallery.png" />
@@ -339,6 +352,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201408060645287_update3.resx">
       <DependentUpon>201408060645287_update3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201408120054264_ExpandDemo.resx">
+      <DependentUpon>201408120054264_ExpandDemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201408120115485_ExpandDemo_V2.resx">
+      <DependentUpon>201408120115485_ExpandDemo_V2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201408120232564_ExpandDemo_V3.resx">
+      <DependentUpon>201408120232564_ExpandDemo_V3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resource\en-US.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -92,6 +92,8 @@ namespace NEG.Website.Controllers
                 entry.Property(m => m.DemoShowParts).IsModified = true;
                 entry.Property(m => m.HtmlCode).IsModified = true;
                 entry.Property(m => m.ShowImage).IsModified = true;
+                entry.Property(m => m.ExecuteScript).IsModified = true;
+                entry.Property(m => m.ExecuteStyle).IsModified = true;
 
                 db.SaveChanges();
             }

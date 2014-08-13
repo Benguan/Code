@@ -44,6 +44,20 @@
                     <textarea id="htmlCode" class="form-control " rows="10" name="htmlCode"><%:detail == null ? string.Empty : detail.HtmlCode %></textarea>
                 </div>
             </div>
+            
+             <div class="form-group">
+                <label class="col-xs-2 control-label" for="formGroupInputSmall">ExcuteStyle</label>
+                <div class="col-sm-5">
+                    <textarea id="ExecuteStyle" class="form-control " rows="10" name="ExecuteStyle"><%:detail == null ? string.Empty : detail.ExecuteStyle %></textarea>
+                </div>
+            </div>
+            
+             <div class="form-group">
+                <label class="col-xs-2 control-label" for="formGroupInputSmall">ExcuteScript</label>
+                <div class="col-sm-5">
+                    <textarea id="ExecuteScriptb" class="form-control " rows="10" name="ExecuteScript"><%:detail == null ? string.Empty : detail.ExecuteScript %></textarea>
+                </div>
+            </div>
 
             <div class="form-group">
                 <label class="col-xs-2 control-label" for="formGroupInputSmall">Image Url</label>

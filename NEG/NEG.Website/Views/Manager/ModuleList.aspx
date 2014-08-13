@@ -31,8 +31,10 @@
                         {
                             if (category.CategoryID == info.CategoryID)
                             {
+                                bool langTag = info.LANG != ResourceManager.LANG_EN_US;
+                                string langText = langTag ? "(" + info.LANG + ")" : "";
                 %>
-                <li><%: Html.ActionLink(info.ModuleName, "Module", "Manager", new {id= info.ModuleID},null) %></li>
+                <li><%: Html.ActionLink(info.ModuleName + langText, "Module", "Manager", new { id = info.ModuleID }, null) %></li>
                 <%
                             }
                         }
