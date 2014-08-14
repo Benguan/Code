@@ -1,5 +1,6 @@
 ﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
 
+<%@ Import Namespace="NEG.Website.Controls" %>
 <%@ Import Namespace="NEG.Website.Controls.Common" %>
 
 <!DOCTYPE html>
@@ -38,9 +39,64 @@
     <article>
         <div class="body">
             <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+
         </div>
     </article>
 
+    <section class="review">
+        <div class="font02">
+            Community 
+        </div>
+
+        <div id="disqus_thread"></div>
+
+        <% 
+            var key = ViewContext.RouteData.Values["id"];
+            if (key != null)
+            {
+        %>
+        <script type="text/javascript">
+            /* * * CON  FIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'neg-js'; // required: replace example with your forum shortname
+            //var disqus_shortname = 'neg-js'; // required: replace example with your forum shortname
+         <% if (MVCContext.GetCurrentLang() == ResourceManager.LANG_DEFAULT)
+            {
+                %>
+            var disqus_identifier = 'identifier-<%= key.ToString().ToLower() %>';
+         <%
+            }
+            else
+            {
+        %>
+            var disqus_identifier = 'identifier-<%= key.ToString().ToLower() %>-cn';
+         <%
+            }
+            %>
+
+
+            var disqus_url = "<%= this.Request.Url.ToString() %>";
+
+            NEG.run(function (require) {
+                var $ = require("NEG.ThirdParty.JQuery");
+                var cookie = require("Utility.Cookie");
+
+                if (cookie.get("NEGLang") == "1") {
+                    disqus_identifier += "-cn";
+                }
+
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function () {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            });
+
+        </script>
+        <%
+            }
+        %>
+    </section>
     <footer>
         <div class="foot01">
             NEG.JS © <%: DateTime.Now.Year %>·NESC &nbsp; &nbsp;<a href="mailto:nesc-sh.mis.neweggec.developer.UI@newegg.com">Contact Us</a>
@@ -48,27 +104,7 @@
     </footer>
 
     <script>if (prettyPrint) { prettyPrint(); }</script>
-    
-    <% 
-        var key = ViewContext.RouteData.Values["id"];
-        if (key != null)
-        {
-    %>
-     <script type="text/javascript">         /* * * CON  FIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-         var disqus_shortname = 'test-js'; // required: replace example with your forum shortname
-         //var disqus_shortname = 'neg-js'; // required: replace example with your forum shortname
-         var disqus_identifier = 'identifier-<%= key.ToString().ToLower() %>';
 
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function () {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();    </script>
-    <%
-        }
-    %>
 
-   
 </body>
 </html>

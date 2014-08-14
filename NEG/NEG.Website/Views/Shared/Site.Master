@@ -9,6 +9,7 @@
     <link href="<%: Url.Content("~/favicon.ico") %>" rel="shortcut icon" type="image/x-icon" />
      <%: Styles.Render("~/Content/CommonCSS") %>
      <%: Scripts.Render("~/Scripts/CommonJS") %>
+    
 </head>
 <body>
      <header  class="header">
