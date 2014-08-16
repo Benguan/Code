@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+﻿v<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
 
 <%@ Import Namespace="NEG.Website.Controls" %>
 <%@ Import Namespace="NEG.Website.Controls.Common" %>
@@ -102,6 +102,11 @@
             NEG.JS © <%: DateTime.Now.Year %>·NESC &nbsp; &nbsp;<a href="mailto:nesc-sh.mis.neweggec.developer.UI@newegg.com">Contact Us</a>
         </div>
     </footer>
+
+    <script type="text/javascript">
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3f49e85ecb034756f593b129b2a4eec4' type='text/javascript'%3E%3C/script%3E"));
+    </script>
 
     <script>if (prettyPrint) { prettyPrint(); }</script>
 
