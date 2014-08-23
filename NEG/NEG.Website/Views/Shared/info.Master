@@ -1,4 +1,4 @@
-﻿v<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
 
 <%@ Import Namespace="NEG.Website.Controls" %>
 <%@ Import Namespace="NEG.Website.Controls.Common" %>

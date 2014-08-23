@@ -3,9 +3,11 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
     NEG.JS
+    
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <% var NEGVersion = "NEG.0.2.1"; %>
 
 <div class="center tutorial">
                 
@@ -13,16 +15,16 @@
 
                 <ol>
                     <li>
-                        <%= string.Format(Html.Lang("SetupStep1"),"DownLoad/NEG.0.2.1.zip") %>
+                        <%= string.Format(Html.Lang("SetupStep1"), "DownLoad/" + NEGVersion + ".zip") %>
                     </li>
 
                     <li>
-                        <%= string.Format( Html.Lang("SetupStep2"),"NEG.0.2.1") %>
+                        <%= string.Format(Html.Lang("SetupStep2"), NEGVersion) %>
                     </li>
                     
                     <br />
                     <pre class="prettyprint lang-js">
-&lt;script src="js/NEG.0.2.1.js"&gt;&lt;/script&gt;</pre>
+&lt;script src="js/<%=NEGVersion %>.js"&gt;&lt;/script&gt;</pre>
                 </ol>
 
                 <br/>
