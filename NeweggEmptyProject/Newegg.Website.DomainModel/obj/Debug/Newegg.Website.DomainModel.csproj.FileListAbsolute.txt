@@ -6,3 +6,11 @@ G:\01.Project\NeweggEmptyProject\Newegg.Website.DomainModel\bin\Debug\Newegg.Fra
 G:\01.Project\NeweggEmptyProject\Newegg.Website.DomainModel\bin\Debug\Newegg.Framework.EntityAttribute.pdb
 G:\01.Project\NeweggEmptyProject\Newegg.Website.DomainModel\bin\Debug\Newegg.Framework.EntityAttribute.xml
 G:\01.Project\NeweggEmptyProject\Newegg.Website.DomainModel\obj\Debug\Newegg.Website.DomainModel.csprojResolveAssemblyReference.cache
+E:\05.Work\Git\Code\NeweggEmptyProject\Newegg.Website.DomainModel\bin\Debug\Newegg.Website.DomainModel.dll
+E:\05.Work\Git\Code\NeweggEmptyProject\Newegg.Website.DomainModel\bin\Debug\Newegg.Website.DomainModel.pdb
+E:\05.Work\Git\Code\NeweggEmptyProject\Newegg.Website.DomainModel\bin\Debug\Newegg.Framework.EntityAttribute.dll
+E:\05.Work\Git\Code\NeweggEmptyProject\Newegg.Website.DomainModel\bin\Debug\Newegg.Framework.EntityAttribute.pdb
+E:\05.Work\Git\Code\NeweggEmptyProject\Newegg.Website.DomainModel\bin\Debug\Newegg.Framework.EntityAttribute.xml
+E:\05.Work\Git\Code\NeweggEmptyProject\Newegg.Website.DomainModel\obj\Debug\Newegg.Website.DomainModel.csprojResolveAssemblyReference.cache
+E:\05.Work\Git\Code\NeweggEmptyProject\Newegg.Website.DomainModel\obj\Debug\Newegg.Website.DomainModel.dll
+E:\05.Work\Git\Code\NeweggEmptyProject\Newegg.Website.DomainModel\obj\Debug\Newegg.Website.DomainModel.pdb

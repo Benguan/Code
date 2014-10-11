@@ -9,3 +9,15 @@ G:\01.Project\NeweggEmptyProject\Newegg.Website.WebModel\bin\Debug\Newegg.Framew
 G:\01.Project\NeweggEmptyProject\Newegg.Website.WebModel\bin\Debug\Newegg.Framework.Common.pdb
 G:\01.Project\NeweggEmptyProject\Newegg.Website.WebModel\bin\Debug\Newegg.Framework.Common.xml
 G:\01.Project\NeweggEmptyProject\Newegg.Website.WebModel\obj\Debug\Newegg.Website.WebModel.csprojResolveAssemblyReference.cache
+E:\05.Work\Git\Code\NeweggEmptyProject\Newegg.Website.WebModel\bin\Debug\Newegg.Website.WebModel.dll
+E:\05.Work\Git\Code\NeweggEmptyProject\Newegg.Website.WebModel\bin\Debug\Newegg.Website.WebModel.pdb
+E:\05.Work\Git\Code\NeweggEmptyProject\Newegg.Website.WebModel\bin\Debug\Newegg.Framework.Web.dll
+E:\05.Work\Git\Code\NeweggEmptyProject\Newegg.Website.WebModel\bin\Debug\Newegg.Framework.Common.dll
+E:\05.Work\Git\Code\NeweggEmptyProject\Newegg.Website.WebModel\bin\Debug\Newtonsoft.Json.dll
+E:\05.Work\Git\Code\NeweggEmptyProject\Newegg.Website.WebModel\bin\Debug\Newegg.Framework.Web.pdb
+E:\05.Work\Git\Code\NeweggEmptyProject\Newegg.Website.WebModel\bin\Debug\Newegg.Framework.Web.xml
+E:\05.Work\Git\Code\NeweggEmptyProject\Newegg.Website.WebModel\bin\Debug\Newegg.Framework.Common.pdb
+E:\05.Work\Git\Code\NeweggEmptyProject\Newegg.Website.WebModel\bin\Debug\Newegg.Framework.Common.xml
+E:\05.Work\Git\Code\NeweggEmptyProject\Newegg.Website.WebModel\obj\Debug\Newegg.Website.WebModel.csprojResolveAssemblyReference.cache
+E:\05.Work\Git\Code\NeweggEmptyProject\Newegg.Website.WebModel\obj\Debug\Newegg.Website.WebModel.dll
+E:\05.Work\Git\Code\NeweggEmptyProject\Newegg.Website.WebModel\obj\Debug\Newegg.Website.WebModel.pdb

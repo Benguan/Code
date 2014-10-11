@@ -7,7 +7,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <% var NEGVersion = "NEG.0.2.1"; %>
+    <% var NEGVersion = "NEG.0.2.2"; %>
 
 <div class="center tutorial">
                 
@@ -15,7 +15,7 @@
 
                 <ol>
                     <li>
-                        <%= string.Format(Html.Lang("SetupStep1"), "DownLoad/" + NEGVersion + ".zip") %>
+                        <%= string.Format(Html.Lang("SetupStep1"), "/DownLoad/" + NEGVersion + ".zip") %>
                     </li>
 
                     <li>
